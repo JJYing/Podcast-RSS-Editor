@@ -1,0 +1,1804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Layout</title>
+    <link>http://layout.fm</link>
+    <description>Layout is a weekly podcast about design, technology, programming and everything else.</description>
+    <language>en</language>
+    <pubDate>Sat, 28 May 2016 00:00:00 +0000</pubDate>
+    <lastBuildDate>Sat, 28 May 2016 00:00:00 +0000</lastBuildDate>
+    <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+    <itunes:summary>Layout is a weekly podcast about design, technology, programming and everything else.</itunes:summary>
+    <itunes:subtitle>Layout is a weekly podcast about design, technology, programming and everything else.</itunes:subtitle>
+    <itunes:keywords>design, development, tech</itunes:keywords>
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+    <itunes:owner>
+      <itunes:name>Kevin Clark</itunes:name>
+      <itunes:email>kevin@kevinclark.ca</itunes:email>
+    </itunes:owner>
+    <itunes:category text="Technology">
+      <itunes:category text="Tech News"/>
+    </itunes:category>
+    <item>
+      <title>21: It’s Hard to Bake Gradients</title>
+      <link>http://layout.fm/episodes/21</link>
+      <guid>http://layout.fm/episodes/21</guid>
+      <pubDate>Sat, 28 May 2016 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>Our take on Google I/O: Daydream, Allo, Duo, Home, Android N and more!</p><h4>Follow up</h4>
+
+<h5>Instagram&rsquo;s new logo</h5>
+
+<ul>
+<li><a href="http://codegentstatic-codegentltd.netdna-ssl.com/media/original/52b31cebec1ce/845x2000.jpg">Flow for Instagram</a></li>
+<li><a href="http://www.elischiff.com/blog/2016/5/18/instagrams-abomination-part-i">Instagram&rsquo;s abomination</a></li>
+<li><a href="http://danieldelaney.net/the-eli-schiff-problem">The Eli Schiff Problem</a></li>
+</ul>
+
+<h4>Topics</h4>
+
+<h5><a href="https://events.google.com/io2016/">Google I/O</a></h5>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=mGojonPKBkY">MKBHD Preview video</a></li>
+<li>Google made a VR headset… sort of
+
+<ul>
+<li>Daydream is Google’s VR platform of the future</li>
+</ul></li>
+<li>Allo is a messaging app with a resident chatbot</li>
+<li>Duo is Google’s FaceTime competitor</li>
+<li>A smart speaker for the smart home</li>
+<li><img src="https://cdn0.vox-cdn.com/thumbor/nDhnw29dU2J89yJe5B6Tq-gXm9U=/400x0/filters:no_upscale()/cdn0.vox-cdn.com/uploads/chorus_asset/file/6504827/Google-IO-2016-event-verge_158.0.JPG" alt=""></li>
+<li>Android N is smarter, faster, better</li>
+<li>Running Android apps without downloading them</li>
+<li>Android Wear 2.0</li>
+</ul>
+
+<p><img src="http://franklarosa.com/beatoven/logo-small.png" alt=""></p>
+]]>
+      </descrition>
+      <itunes:summary>Our take on Google I/O: Daydream, Allo, Duo, Home, Android N and more!</itunes:summary>
+      <itunes:duration>01:27:34</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/266351481-layout-226185254-21-its-hard-to-bake-gradients.mp3" length="105082691" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>Our take on Google I/O: Daydream, Allo, Duo, Home, Android N and more!</p><h4>Follow up</h4>
+
+<h5>Instagram&rsquo;s new logo</h5>
+
+<ul>
+<li><a href="http://codegentstatic-codegentltd.netdna-ssl.com/media/original/52b31cebec1ce/845x2000.jpg">Flow for Instagram</a></li>
+<li><a href="http://www.elischiff.com/blog/2016/5/18/instagrams-abomination-part-i">Instagram&rsquo;s abomination</a></li>
+<li><a href="http://danieldelaney.net/the-eli-schiff-problem">The Eli Schiff Problem</a></li>
+</ul>
+
+<h4>Topics</h4>
+
+<h5><a href="https://events.google.com/io2016/">Google I/O</a></h5>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=mGojonPKBkY">MKBHD Preview video</a></li>
+<li>Google made a VR headset… sort of
+
+<ul>
+<li>Daydream is Google’s VR platform of the future</li>
+</ul></li>
+<li>Allo is a messaging app with a resident chatbot</li>
+<li>Duo is Google’s FaceTime competitor</li>
+<li>A smart speaker for the smart home</li>
+<li><img src="https://cdn0.vox-cdn.com/thumbor/nDhnw29dU2J89yJe5B6Tq-gXm9U=/400x0/filters:no_upscale()/cdn0.vox-cdn.com/uploads/chorus_asset/file/6504827/Google-IO-2016-event-verge_158.0.JPG" alt=""></li>
+<li>Android N is smarter, faster, better</li>
+<li>Running Android apps without downloading them</li>
+<li>Android Wear 2.0</li>
+</ul>
+
+<p><img src="http://franklarosa.com/beatoven/logo-small.png" alt=""></p>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>20: I Connect When I’m Drunk</title>
+      <link>http://layout.fm/episodes/20</link>
+      <guid>http://layout.fm/episodes/20</guid>
+      <pubDate>Fri, 13 May 2016 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>Instagram goes monochrome, Apple Music and Spotify design changes and Microsoft's new hover gestures.</p><ul>
+<li><a href="http://www.theverge.com/2016/4/26/11512718/instagram-redesign-black-white">White Instagram?</a></li>
+<li><a href="http://9to5mac.com/2016/05/04/apple-music-ios-10-revamp/">Apple Music redesign at WWDC?</a></li>
+<li><a href="http://www.theverge.com/2016/5/3/11580182/spotify-design-change-says-so-much-about-the-hamburger-button">Spotify’s Tab Bar and kerning is hard</a></li>
+<li><a href="https://twitter.com/jmdenisme/status/727925336290119680">Jean Marc Denis&rsquo;s tweet about the french kerning</a></li>
+<li><a href="https://medium.com/shyp-design/design-at-1x-its-a-fact-249c5b896536#.dfwqp2cad">Designing at 1x</a></li>
+<li><a href="http://hello.upspace.co/">Upspace</a></li>
+<li><a href="http://www.theverge.com/2016/5/5/11595564/microsoft-3d-touch-kinect-gestures-windows-phones?utm_source=designernews">Microsoft’s hover gestures</a></li>
+<li><a href="http://www.androidcentral.com/what-airview-galaxy-s5-and-what-it-can-do-you">Samsung did it first and it kinda sucked and no one cared</a></li>
+</ul>
+
+<h4>Recommendations:</h4>
+
+<ul>
+<li>Star Wars making of</li>
+<li><a href="https://www.youtube.com/channel/UCTOwGti_mRb2J1JfTdIkg_w">Dann Petty’s daily vlog</a></li>
+<li><a href="http://abstractapp.com/">Abstract App</a></li>
+</ul>
+
+<h4>Spread the love ❤️</h4>
+
+<ul>
+<li><a href="https://www.designernews.co/stories/69039">Upvote on Designer News</a></li>
+<li><a href="https://www.producthunt.com/podcasts/layout-i-connect-when-i-m-drunk">Upvote on Product Hunt</a></li>
+</ul>
+
+<h4>Sponsor the show</h4>
+
+<p>Have an interesting new product or service you&rsquo;d like to share with the listeners of Layout? <a href="http://layout.fm/sponsor">You should sponsor the show!</a></p>
+]]>
+      </descrition>
+      <itunes:summary>Instagram goes monochrome, Apple Music and Spotify design changes and Microsoft's new hover gestures.</itunes:summary>
+      <itunes:duration>01:13:52</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/263953098-layout-226185254-20_i_connect.mp3" length="88637042" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>Instagram goes monochrome, Apple Music and Spotify design changes and Microsoft's new hover gestures.</p><ul>
+<li><a href="http://www.theverge.com/2016/4/26/11512718/instagram-redesign-black-white">White Instagram?</a></li>
+<li><a href="http://9to5mac.com/2016/05/04/apple-music-ios-10-revamp/">Apple Music redesign at WWDC?</a></li>
+<li><a href="http://www.theverge.com/2016/5/3/11580182/spotify-design-change-says-so-much-about-the-hamburger-button">Spotify’s Tab Bar and kerning is hard</a></li>
+<li><a href="https://twitter.com/jmdenisme/status/727925336290119680">Jean Marc Denis&rsquo;s tweet about the french kerning</a></li>
+<li><a href="https://medium.com/shyp-design/design-at-1x-its-a-fact-249c5b896536#.dfwqp2cad">Designing at 1x</a></li>
+<li><a href="http://hello.upspace.co/">Upspace</a></li>
+<li><a href="http://www.theverge.com/2016/5/5/11595564/microsoft-3d-touch-kinect-gestures-windows-phones?utm_source=designernews">Microsoft’s hover gestures</a></li>
+<li><a href="http://www.androidcentral.com/what-airview-galaxy-s5-and-what-it-can-do-you">Samsung did it first and it kinda sucked and no one cared</a></li>
+</ul>
+
+<h4>Recommendations:</h4>
+
+<ul>
+<li>Star Wars making of</li>
+<li><a href="https://www.youtube.com/channel/UCTOwGti_mRb2J1JfTdIkg_w">Dann Petty’s daily vlog</a></li>
+<li><a href="http://abstractapp.com/">Abstract App</a></li>
+</ul>
+
+<h4>Spread the love ❤️</h4>
+
+<ul>
+<li><a href="https://www.designernews.co/stories/69039">Upvote on Designer News</a></li>
+<li><a href="https://www.producthunt.com/podcasts/layout-i-connect-when-i-m-drunk">Upvote on Product Hunt</a></li>
+</ul>
+
+<h4>Sponsor the show</h4>
+
+<p>Have an interesting new product or service you&rsquo;d like to share with the listeners of Layout? <a href="http://layout.fm/sponsor">You should sponsor the show!</a></p>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>19: Break This Safe Industries</title>
+      <link>http://layout.fm/episodes/19</link>
+      <guid>http://layout.fm/episodes/19</guid>
+      <pubDate>Fri, 29 Apr 2016 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>Rafa's new Apple Watch game and some of the challenges that a designer goes through while building an app.</p><ul>
+<li><a href="https://twitter.com/gregbarbosa/status/722426215923994625">Break this Safe, a &ldquo;creatively frustrating&rdquo; Apple Watch game</a></li>
+<li><a href="https://www.macstories.net/reviews/break-this-safe-review-a-superb-game-for-apple-watch/">MacStories&rsquo;s review of Break this Safe</a></li>
+<li><a href="http://www.macworld.com/article/3060141/ios/the-week-in-ios-apps-test-your-heist-skills-in-break-this-safe.html">MacWorld&rsquo;s feature of Break this Safe</a></li>
+<li><a href="http://blackboxpuzzles.com/">Blackbox</a></li>
+</ul>
+]]>
+      </descrition>
+      <itunes:summary>Rafa's new Apple Watch game and some of the challenges that a designer goes through while building an app.</itunes:summary>
+      <itunes:duration>01:08:21</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/261493895-layout-226185254-19-break-this-safe-industries.mp3" length="82029107" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>Rafa's new Apple Watch game and some of the challenges that a designer goes through while building an app.</p><ul>
+<li><a href="https://twitter.com/gregbarbosa/status/722426215923994625">Break this Safe, a &ldquo;creatively frustrating&rdquo; Apple Watch game</a></li>
+<li><a href="https://www.macstories.net/reviews/break-this-safe-review-a-superb-game-for-apple-watch/">MacStories&rsquo;s review of Break this Safe</a></li>
+<li><a href="http://www.macworld.com/article/3060141/ios/the-week-in-ios-apps-test-your-heist-skills-in-break-this-safe.html">MacWorld&rsquo;s feature of Break this Safe</a></li>
+<li><a href="http://blackboxpuzzles.com/">Blackbox</a></li>
+</ul>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>18: Faceless Layout FM Company</title>
+      <link>http://layout.fm/episodes/18</link>
+      <guid>http://layout.fm/episodes/18</guid>
+      <pubDate>Fri, 22 Apr 2016 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>Origami Studio, syncing and sharing Sketch files with a team and the pros and cons of using a personal account versus a separate account for posting design work.</p><h4>Follow up</h4>
+
+<ul>
+<li>Rafa tried Facebook Live</li>
+<li>It’s a good week for designers
+
+<ul>
+<li><a href="http://framerjs.com">Framer</a></li>
+<li><a href="http://www.sketchcasts.net/episodes/first-look-at-symbols-in-sketch-3-7">Sketch 3.7</a></li>
+<li><a href="https://www.facebook.com/groups/origami.community/permalink/918912874874262/">Origami</a></li>
+</ul></li>
+<li><a href="https://www.facebook.com/groups/origami.community/permalink/918912874874262/">Origami Studio</a>
+
+<ul>
+<li><a href="https://www.fbf8.com">Facebook F8</a></li>
+<li><a href="https://developers.facebook.com/videos/f8-2016/rapid-prototyping-made-easy-with-origami-studio/">Rapid Prototyping Made Easy with Origami Studio</a></li>
+<li><a href="https://developers.facebook.com/videos/f8-2016/designing-at-facebook/">Designing at Facebook</a></li>
+</ul></li>
+</ul>
+
+<h4>Sync and sharing Sketch files with a team</h4>
+
+<p>Question by Ken Li <a href="mailto:layoutpodcast@gmail.com">via email</a><a href="https://www.youtube.com/watch?v=yqVVv97pKGk">.</a></p>
+
+<ul>
+<li><a href="http://folioformac.com">Folio for Mac</a></li>
+<li><a href="https://www.pixelapse.com">Pixelapse</a></li>
+<li><a href="http://www.layervault.com">Layervault</a></li>
+<li><a href="https://medium.com/@dte/building-the-dropbox-design-cabin-9fdec4356671#.nyttqd7yo">Dropbox Design Cabin</a></li>
+</ul>
+
+<h4>Pros and cons of using a personal vs separate account for posting design work</h4>
+
+<p>Question by <a href="https://twitter.com/PeterssonDesign/status/719147256239255552">Niklas Petersson</a> on <a href="http://twitter.com/layoutfm">Twitter</a>.</p>
+]]>
+      </descrition>
+      <itunes:summary>Origami Studio, syncing and sharing Sketch files with a team and the pros and cons of using a personal account versus a separate account for posting design work.</itunes:summary>
+      <itunes:duration>01:06:35</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/260293983-layout-226185254-18-faceless-layout-fm-company.mp3" length="79896471" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>Origami Studio, syncing and sharing Sketch files with a team and the pros and cons of using a personal account versus a separate account for posting design work.</p><h4>Follow up</h4>
+
+<ul>
+<li>Rafa tried Facebook Live</li>
+<li>It’s a good week for designers
+
+<ul>
+<li><a href="http://framerjs.com">Framer</a></li>
+<li><a href="http://www.sketchcasts.net/episodes/first-look-at-symbols-in-sketch-3-7">Sketch 3.7</a></li>
+<li><a href="https://www.facebook.com/groups/origami.community/permalink/918912874874262/">Origami</a></li>
+</ul></li>
+<li><a href="https://www.facebook.com/groups/origami.community/permalink/918912874874262/">Origami Studio</a>
+
+<ul>
+<li><a href="https://www.fbf8.com">Facebook F8</a></li>
+<li><a href="https://developers.facebook.com/videos/f8-2016/rapid-prototyping-made-easy-with-origami-studio/">Rapid Prototyping Made Easy with Origami Studio</a></li>
+<li><a href="https://developers.facebook.com/videos/f8-2016/designing-at-facebook/">Designing at Facebook</a></li>
+</ul></li>
+</ul>
+
+<h4>Sync and sharing Sketch files with a team</h4>
+
+<p>Question by Ken Li <a href="mailto:layoutpodcast@gmail.com">via email</a><a href="https://www.youtube.com/watch?v=yqVVv97pKGk">.</a></p>
+
+<ul>
+<li><a href="http://folioformac.com">Folio for Mac</a></li>
+<li><a href="https://www.pixelapse.com">Pixelapse</a></li>
+<li><a href="http://www.layervault.com">Layervault</a></li>
+<li><a href="https://medium.com/@dte/building-the-dropbox-design-cabin-9fdec4356671#.nyttqd7yo">Dropbox Design Cabin</a></li>
+</ul>
+
+<h4>Pros and cons of using a personal vs separate account for posting design work</h4>
+
+<p>Question by <a href="https://twitter.com/PeterssonDesign/status/719147256239255552">Niklas Petersson</a> on <a href="http://twitter.com/layoutfm">Twitter</a>.</p>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>17: Make Apple Music Great Again</title>
+      <link>http://layout.fm/episodes/17</link>
+      <guid>http://layout.fm/episodes/17</guid>
+      <pubDate>Tue, 12 Apr 2016 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>The all new Framer, Spotify v. Apple Music, and the new Rogue One trailer.</p><ul>
+<li><p>Framer has a new face, and sweet new features</p>
+
+<ul>
+<li><a href="http://framerjs.com">Homepage, teaser</a></li>
+<li><a href="https://dribbble.com/shots/2638469-Framer-Logo">New logo: Dribbble</a></li>
+<li><a href="https://itunes.apple.com/us/app/origami-live-design-prototyping/id942636206?mt=8">Origami Icon</a></li>
+<li><a href="http://kevinclark.ca/assets/articles/sketch/sketch.jpg">Sketch 2</a></li>
+<li><a href="http://sketchcasts.net/episodes/68">SketchCasts episode on Framer</a></li>
+</ul></li>
+<li><p>Rafa rants: Apple Music v. Spotify</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=fK_zwl-lnmc">Taylor Swift&rsquo;s Ad</a></li>
+<li><a href="https://www.spotify.com/pt/running/">Spotify Running</a></li>
+</ul></li>
+<li><p>Rogue One: A Star Wars Story</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Wji-BZ0oCwg">New trailer</a></li>
+<li><a href="http://www.imdb.com/title/tt3748528/">IMDB page</a></li>
+</ul></li>
+</ul>
+]]>
+      </descrition>
+      <itunes:summary>The all new Framer, Spotify v. Apple Music, and the new Rogue One trailer.</itunes:summary>
+      <itunes:duration>01:20:41</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/258618155-layout-226185254-episode-17-with-chapters.mp3" length="96820683" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>The all new Framer, Spotify v. Apple Music, and the new Rogue One trailer.</p><ul>
+<li><p>Framer has a new face, and sweet new features</p>
+
+<ul>
+<li><a href="http://framerjs.com">Homepage, teaser</a></li>
+<li><a href="https://dribbble.com/shots/2638469-Framer-Logo">New logo: Dribbble</a></li>
+<li><a href="https://itunes.apple.com/us/app/origami-live-design-prototyping/id942636206?mt=8">Origami Icon</a></li>
+<li><a href="http://kevinclark.ca/assets/articles/sketch/sketch.jpg">Sketch 2</a></li>
+<li><a href="http://sketchcasts.net/episodes/68">SketchCasts episode on Framer</a></li>
+</ul></li>
+<li><p>Rafa rants: Apple Music v. Spotify</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=fK_zwl-lnmc">Taylor Swift&rsquo;s Ad</a></li>
+<li><a href="https://www.spotify.com/pt/running/">Spotify Running</a></li>
+</ul></li>
+<li><p>Rogue One: A Star Wars Story</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Wji-BZ0oCwg">New trailer</a></li>
+<li><a href="http://www.imdb.com/title/tt3748528/">IMDB page</a></li>
+</ul></li>
+</ul>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>16: No One's Trying to Make a Shitty Website</title>
+      <link>http://layout.fm/episodes/16</link>
+      <guid>http://layout.fm/episodes/16</guid>
+      <pubDate>Fri, 08 Apr 2016 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>How to work and collaborate with developers and how to make sure your designs and expectations are followed-through.</p><h3>Sketch 3.7</h3>
+
+<ul>
+<li><a href="https://rink.hockeyapp.net/apps/0172d48cceec171249a8d850fb16276b">Download the beta</a></li>
+<li>Style are awesome now (overrides)</li>
+<li>Shared Styles now no longer sync automatically</li>
+</ul>
+
+<h3>How you work and interact with engineers?</h3>
+
+<p>Question asked by <a href="https://twitter.com/jonyheim">Jony Heim</a> on Twitter</p>
+
+<h4>What&rsquo;s the problem?</h4>
+
+<ul>
+<li>Products don&rsquo;t end up like the mockups</li>
+<li>Things are lost in the process</li>
+<li>No one&rsquo;s happy</li>
+</ul>
+
+<h4>Kickoff</h4>
+
+<ul>
+<li>Bring developers early</li>
+</ul>
+
+<h4>While designing</h4>
+
+<ul>
+<li>Ask questions</li>
+<li>Ask for feedback
+
+<ul>
+<li>Show your work early</li>
+<li>Fresh Eyes session</li>
+</ul></li>
+<li>Consider edge cases
+
+<ul>
+<li>Error states</li>
+<li>Internationalization</li>
+<li>Empty states</li>
+<li>Transitions</li>
+<li>No internet connection</li>
+</ul></li>
+<li>Tip: Bootstrap Grids for example</li>
+<li><a href="http://spec.fm/specifics/8-pt-grid">8pt grid</a></li>
+</ul>
+
+<h4>Handoff</h4>
+
+<ul>
+<li>Prototypes</li>
+<li>Mockups</li>
+<li>Annotations</li>
+<li>Zeplin</li>
+</ul>
+
+<h4>While developing</h4>
+
+<ul>
+<li>Get them to care about good design</li>
+<li>Design reviews
+
+<ul>
+<li>Any code in the codebase that affects user experience needs to be reviewed by a designer</li>
+<li>Stuff doesn&rsquo;t go out unless we okay it</li>
+</ul></li>
+</ul>
+
+<h3>Aftershow</h3>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=fK_zwl-lnmc">Apple Music Ad</a></li>
+<li>Tesla Model 3</li>
+</ul>
+]]>
+      </descrition>
+      <itunes:summary>How to work and collaborate with developers and how to make sure your designs and expectations are followed-through.</itunes:summary>
+      <itunes:duration>01:20:19</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/257963863-layout-226185254-episode-16-with-chapter-marks.mp3" length="96381826" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>How to work and collaborate with developers and how to make sure your designs and expectations are followed-through.</p><h3>Sketch 3.7</h3>
+
+<ul>
+<li><a href="https://rink.hockeyapp.net/apps/0172d48cceec171249a8d850fb16276b">Download the beta</a></li>
+<li>Style are awesome now (overrides)</li>
+<li>Shared Styles now no longer sync automatically</li>
+</ul>
+
+<h3>How you work and interact with engineers?</h3>
+
+<p>Question asked by <a href="https://twitter.com/jonyheim">Jony Heim</a> on Twitter</p>
+
+<h4>What&rsquo;s the problem?</h4>
+
+<ul>
+<li>Products don&rsquo;t end up like the mockups</li>
+<li>Things are lost in the process</li>
+<li>No one&rsquo;s happy</li>
+</ul>
+
+<h4>Kickoff</h4>
+
+<ul>
+<li>Bring developers early</li>
+</ul>
+
+<h4>While designing</h4>
+
+<ul>
+<li>Ask questions</li>
+<li>Ask for feedback
+
+<ul>
+<li>Show your work early</li>
+<li>Fresh Eyes session</li>
+</ul></li>
+<li>Consider edge cases
+
+<ul>
+<li>Error states</li>
+<li>Internationalization</li>
+<li>Empty states</li>
+<li>Transitions</li>
+<li>No internet connection</li>
+</ul></li>
+<li>Tip: Bootstrap Grids for example</li>
+<li><a href="http://spec.fm/specifics/8-pt-grid">8pt grid</a></li>
+</ul>
+
+<h4>Handoff</h4>
+
+<ul>
+<li>Prototypes</li>
+<li>Mockups</li>
+<li>Annotations</li>
+<li>Zeplin</li>
+</ul>
+
+<h4>While developing</h4>
+
+<ul>
+<li>Get them to care about good design</li>
+<li>Design reviews
+
+<ul>
+<li>Any code in the codebase that affects user experience needs to be reviewed by a designer</li>
+<li>Stuff doesn&rsquo;t go out unless we okay it</li>
+</ul></li>
+</ul>
+
+<h3>Aftershow</h3>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=fK_zwl-lnmc">Apple Music Ad</a></li>
+<li>Tesla Model 3</li>
+</ul>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>15: Hiring a person, not a portfolio</title>
+      <link>http://layout.fm/episodes/15</link>
+      <guid>http://layout.fm/episodes/15</guid>
+      <pubDate>Tue, 15 Mar 2016 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>Job interviews, how to get and prepare for them</p><h4>Follow up</h4>
+
+<ul>
+<li><p><a href="http://blog.invisionapp.com/invision-acquires-silver-flows/">InVision bought Silver</a></p></li>
+<li><p><a href="http://layout.fm/episodes/13">Layout Episode 13</a></p></li>
+</ul>
+
+<h4>Show topic: Job interviews</h4>
+
+<h5>How to get an interview?</h5>
+
+<ul>
+<li><p>Have a portfolio</p></li>
+<li><p>Be out there! Twitter, Dribbble, Medium, etc.</p></li>
+<li><p>Be involved in community events, meetups</p></li>
+<li><p><a href="http://squaresconference.com/">Squares Conference</a></p>
+
+<ul>
+<li>Use discount code SQUARES25 for 25% off</li>
+</ul></li>
+<li><p>Ask people to grab a coffee</p></li>
+<li><p>Advice for people fresh out of college</p></li>
+</ul>
+
+<h5>Types of interviews</h5>
+
+<p>General life story</p>
+
+<ul>
+<li><p>Show you&rsquo;re passionate (reference articles, etc)</p></li>
+<li><p>Tell a good story</p></li>
+</ul>
+
+<p>Portfolio review</p>
+
+<ul>
+<li><p>Only show your best stuff</p></li>
+<li><p>Be honest (being critical of your work is good)</p></li>
+<li><p>Be open to feedback</p></li>
+</ul>
+
+<p>Design exercise (whiteboard)</p>
+
+<ul>
+<li><p>How is it like to work with you?</p></li>
+<li><p>What’s your thinking process like?</p></li>
+<li><p>Design Criticism (at Facebook)</p></li>
+</ul>
+
+<p><a href="https://twitter.com/SebastianSzturo/status/706376647713398784">Sebastian on Twitter asks</a>: “What’s your worst interview experience and what kind of question should the interviewee ask in an interview”</p>
+
+<h4>Help others find the show</h4>
+
+<ul>
+<li><a href="https://www.designernews.co/stories/66155-layout-podcast-job-interviews-how-to-get-and-prepare-for-them">Upvote on Designer News</a></li>
+<li><a href="https://www.producthunt.com/podcasts/layout-hiring-a-person-not-a-portfolio">Upvote on Product Hunt</a></li>
+</ul>
+]]>
+      </descrition>
+      <itunes:summary>Job interviews, how to get and prepare for them</itunes:summary>
+      <itunes:duration>01:10:00</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/254360213-layout-226185254-episode-15.mp3" length="84018071" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>Job interviews, how to get and prepare for them</p><h4>Follow up</h4>
+
+<ul>
+<li><p><a href="http://blog.invisionapp.com/invision-acquires-silver-flows/">InVision bought Silver</a></p></li>
+<li><p><a href="http://layout.fm/episodes/13">Layout Episode 13</a></p></li>
+</ul>
+
+<h4>Show topic: Job interviews</h4>
+
+<h5>How to get an interview?</h5>
+
+<ul>
+<li><p>Have a portfolio</p></li>
+<li><p>Be out there! Twitter, Dribbble, Medium, etc.</p></li>
+<li><p>Be involved in community events, meetups</p></li>
+<li><p><a href="http://squaresconference.com/">Squares Conference</a></p>
+
+<ul>
+<li>Use discount code SQUARES25 for 25% off</li>
+</ul></li>
+<li><p>Ask people to grab a coffee</p></li>
+<li><p>Advice for people fresh out of college</p></li>
+</ul>
+
+<h5>Types of interviews</h5>
+
+<p>General life story</p>
+
+<ul>
+<li><p>Show you&rsquo;re passionate (reference articles, etc)</p></li>
+<li><p>Tell a good story</p></li>
+</ul>
+
+<p>Portfolio review</p>
+
+<ul>
+<li><p>Only show your best stuff</p></li>
+<li><p>Be honest (being critical of your work is good)</p></li>
+<li><p>Be open to feedback</p></li>
+</ul>
+
+<p>Design exercise (whiteboard)</p>
+
+<ul>
+<li><p>How is it like to work with you?</p></li>
+<li><p>What’s your thinking process like?</p></li>
+<li><p>Design Criticism (at Facebook)</p></li>
+</ul>
+
+<p><a href="https://twitter.com/SebastianSzturo/status/706376647713398784">Sebastian on Twitter asks</a>: “What’s your worst interview experience and what kind of question should the interviewee ask in an interview”</p>
+
+<h4>Help others find the show</h4>
+
+<ul>
+<li><a href="https://www.designernews.co/stories/66155-layout-podcast-job-interviews-how-to-get-and-prepare-for-them">Upvote on Designer News</a></li>
+<li><a href="https://www.producthunt.com/podcasts/layout-hiring-a-person-not-a-portfolio">Upvote on Product Hunt</a></li>
+</ul>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>14: I Love Taxes</title>
+      <link>http://layout.fm/episodes/14</link>
+      <guid>http://layout.fm/episodes/14</guid>
+      <pubDate>Thu, 03 Mar 2016 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>The differences between independent, freelance, agencies, product companies and why you'd choose one over the other.</p><h4>Follow up</h4>
+
+<ul>
+<li><a href="https://medium.com/@randileeharper/putting-out-the-twitter-trashfire-3ac6cb1af3e#.bfgq6b4zm">Putting out the Twitter trashfire</a>
+
+<ul>
+<li><a href="https://twitter.com/jack/status/698586265361330176">Jack’s tweet</a></li>
+</ul></li>
+<li><a href="https://medium.com/sketch-app-sources/ready-to-prototype-from-within-sketch-then-say-hello-to-silver-a9e68b0ce3db#.m71917cau">More details about Silver</a></li>
+</ul>
+
+<h4>Topics</h4>
+
+<h5>Agency Work vs Product Company vs Independent vs Freelance</h5>
+
+<p><a href="https://twitter.com/santihbc/status/699176522750541824">Requested by Santi Herrero (@santihbc)</a></p>
+
+<ul>
+<li><strong>Independent:</strong>
+
+<ul>
+<li><a href="http://www.sketchcasts.net">SketchCasts</a></li>
+<li><a href="http://breakthissafe.com">Break this Safe</a></li>
+<li><a href="http://frames.design">Frames.design</a></li>
+<li><a href="http://invisionapp.com">Invision</a></li>
+<li><a href="https://teamtreehouse.com">Treehouse</a></li>
+</ul></li>
+<li><strong>Freelance:</strong>
+
+<ul>
+<li><a href="http://layout.fm/episodes/10">Layout episode 10: California Style Sheets</a></li>
+</ul></li>
+<li><strong>Product Company</strong>
+
+<ul>
+<li>Shopify</li>
+</ul></li>
+<li><a href="http://www.sazzy.co.uk/the-elephant-in-the-room/">The Elephant in the Room</a></li>
+</ul>
+]]>
+      </descrition>
+      <itunes:summary>The differences between independent, freelance, agencies, product companies and why you'd choose one over the other.</itunes:summary>
+      <itunes:duration>01:39:52</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/250013589-layout-226185254-episode-14-with-chapter-marks.mp3" length="119836127" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>The differences between independent, freelance, agencies, product companies and why you'd choose one over the other.</p><h4>Follow up</h4>
+
+<ul>
+<li><a href="https://medium.com/@randileeharper/putting-out-the-twitter-trashfire-3ac6cb1af3e#.bfgq6b4zm">Putting out the Twitter trashfire</a>
+
+<ul>
+<li><a href="https://twitter.com/jack/status/698586265361330176">Jack’s tweet</a></li>
+</ul></li>
+<li><a href="https://medium.com/sketch-app-sources/ready-to-prototype-from-within-sketch-then-say-hello-to-silver-a9e68b0ce3db#.m71917cau">More details about Silver</a></li>
+</ul>
+
+<h4>Topics</h4>
+
+<h5>Agency Work vs Product Company vs Independent vs Freelance</h5>
+
+<p><a href="https://twitter.com/santihbc/status/699176522750541824">Requested by Santi Herrero (@santihbc)</a></p>
+
+<ul>
+<li><strong>Independent:</strong>
+
+<ul>
+<li><a href="http://www.sketchcasts.net">SketchCasts</a></li>
+<li><a href="http://breakthissafe.com">Break this Safe</a></li>
+<li><a href="http://frames.design">Frames.design</a></li>
+<li><a href="http://invisionapp.com">Invision</a></li>
+<li><a href="https://teamtreehouse.com">Treehouse</a></li>
+</ul></li>
+<li><strong>Freelance:</strong>
+
+<ul>
+<li><a href="http://layout.fm/episodes/10">Layout episode 10: California Style Sheets</a></li>
+</ul></li>
+<li><strong>Product Company</strong>
+
+<ul>
+<li>Shopify</li>
+</ul></li>
+<li><a href="http://www.sazzy.co.uk/the-elephant-in-the-room/">The Elephant in the Room</a></li>
+</ul>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>13: We Don’t Have Geniuses in this Country</title>
+      <link>http://layout.fm/episodes/13</link>
+      <guid>http://layout.fm/episodes/13</guid>
+      <pubDate>Wed, 10 Feb 2016 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>Uber's rebranding and Twitter's hypothetical algorithmic timeline.</p><h4>Topics</h4>
+
+<h5>Uber&rsquo;s new branding:</h5>
+
+<ul>
+<li><a href="https://brand.uber.com/">New branding page</a></li>
+<li><a href="http://www.wired.com/2016/02/the-inside-story-behind-ubers-colorful-redesign/">The Inside Story of Uber’s Radical Rebranding</a></li>
+<li><a href="https://twitter.com/codeblue87/status/694606913955328000">Uber loading screen</a></li>
+<li><a href="http://uxtimeline.com/uber.html">Old Uber website</a></li>
+<li><a href="http://layout.fm/episodes/1">Layout Episode 1: Medium&rsquo;s new logo</a></li>
+</ul>
+
+<h5>Algorithmic Twitter</h5>
+
+<ul>
+<li><a href="http://www.buzzfeed.com/alexkantrowitz/twitter-to-introduce-algorithmic-timeline-as-soon-as-next-we#.tuWERZa3P">Buzzfeed&rsquo;s article</a></li>
+<li><a href="http://d.pr/i/1dfpr/5XQNkyl0">Twitter&rsquo;s new logged out homepage</a></li>
+</ul>
+
+<h4>Recommendations</h4>
+
+<ul>
+<li><a href="http://labs.invisionapp.com/craft">Craft from InVision Labs</a></li>
+<li><a href="http://blog.framerjs.com/posts/new-multi-touch-gestures.html">Multitouch gestures in Framer</a></li>
+</ul>
+
+<h4>Spread the word about the show</h4>
+
+<ul>
+<li><a href="https://www.designernews.co/stories/63688">Designer News</a></li>
+<li><a href="https://www.producthunt.com/podcasts/layout-we-don-t-have-geniuses-in-this-country">Product Hunt</a></li>
+<li>Please tweet about it if you liked the show!</li>
+</ul>
+]]>
+      </descrition>
+      <itunes:summary>Uber's rebranding and Twitter's hypothetical algorithmic timeline.</itunes:summary>
+      <itunes:duration>01:13:51</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/246390766-layout-226185254-13-we-dont-have-geniuses-in-this-country.mp3" length="89024720" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>Uber's rebranding and Twitter's hypothetical algorithmic timeline.</p><h4>Topics</h4>
+
+<h5>Uber&rsquo;s new branding:</h5>
+
+<ul>
+<li><a href="https://brand.uber.com/">New branding page</a></li>
+<li><a href="http://www.wired.com/2016/02/the-inside-story-behind-ubers-colorful-redesign/">The Inside Story of Uber’s Radical Rebranding</a></li>
+<li><a href="https://twitter.com/codeblue87/status/694606913955328000">Uber loading screen</a></li>
+<li><a href="http://uxtimeline.com/uber.html">Old Uber website</a></li>
+<li><a href="http://layout.fm/episodes/1">Layout Episode 1: Medium&rsquo;s new logo</a></li>
+</ul>
+
+<h5>Algorithmic Twitter</h5>
+
+<ul>
+<li><a href="http://www.buzzfeed.com/alexkantrowitz/twitter-to-introduce-algorithmic-timeline-as-soon-as-next-we#.tuWERZa3P">Buzzfeed&rsquo;s article</a></li>
+<li><a href="http://d.pr/i/1dfpr/5XQNkyl0">Twitter&rsquo;s new logged out homepage</a></li>
+</ul>
+
+<h4>Recommendations</h4>
+
+<ul>
+<li><a href="http://labs.invisionapp.com/craft">Craft from InVision Labs</a></li>
+<li><a href="http://blog.framerjs.com/posts/new-multi-touch-gestures.html">Multitouch gestures in Framer</a></li>
+</ul>
+
+<h4>Spread the word about the show</h4>
+
+<ul>
+<li><a href="https://www.designernews.co/stories/63688">Designer News</a></li>
+<li><a href="https://www.producthunt.com/podcasts/layout-we-don-t-have-geniuses-in-this-country">Product Hunt</a></li>
+<li>Please tweet about it if you liked the show!</li>
+</ul>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>12: Major Lazer Used Figma</title>
+      <link>http://layout.fm/episodes/12</link>
+      <guid>http://layout.fm/episodes/12</guid>
+      <pubDate>Wed, 03 Feb 2016 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>Our design process, more thoughts on Figma and the Shopify Summit.</p><p><strong>Follow up</strong></p>
+
+<p>Kevin had more time to play with Figma</p>
+
+<ul>
+<li><img src="https://cdn-images-1.medium.com/max/1600/1*42qL7ns-wPyFR7v6wpkGZQ.gif" alt=""></li>
+<li><a href="http://layout.fm/episodes/8">Layout episode 8 — Figma and the future of design tools</a></li>
+<li><a href="http://rsms.me/">Rasmus Andersson</a></li>
+</ul>
+
+<p><strong>Topics</strong></p>
+
+<p>Our design process</p>
+
+<p><strong>Recommendations</strong></p>
+
+<ul>
+<li><a href="https://bjango.com/designresources/">Bjango Design Resources – New App Icon Template</a></li>
+<li><a href="http://www.imdb.com/title/tt1632701/">Suits</a></li>
+</ul>
+]]>
+      </descrition>
+      <itunes:summary>Our design process, more thoughts on Figma and the Shopify Summit.</itunes:summary>
+      <itunes:duration>01:19:45</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/245252750-layout-226185254-12-major-lazer-used-figma.mp3" length="107580430" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>Our design process, more thoughts on Figma and the Shopify Summit.</p><p><strong>Follow up</strong></p>
+
+<p>Kevin had more time to play with Figma</p>
+
+<ul>
+<li><img src="https://cdn-images-1.medium.com/max/1600/1*42qL7ns-wPyFR7v6wpkGZQ.gif" alt=""></li>
+<li><a href="http://layout.fm/episodes/8">Layout episode 8 — Figma and the future of design tools</a></li>
+<li><a href="http://rsms.me/">Rasmus Andersson</a></li>
+</ul>
+
+<p><strong>Topics</strong></p>
+
+<p>Our design process</p>
+
+<p><strong>Recommendations</strong></p>
+
+<ul>
+<li><a href="https://bjango.com/designresources/">Bjango Design Resources – New App Icon Template</a></li>
+<li><a href="http://www.imdb.com/title/tt1632701/">Suits</a></li>
+</ul>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>11: I’m a Sucker for Updates</title>
+      <link>http://layout.fm/episodes/11</link>
+      <guid>http://layout.fm/episodes/11</guid>
+      <pubDate>Mon, 25 Jan 2016 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>Desktop Neo, rethinking the desktop interface and Dribbble Playbook.</p><p><strong>Follow up</strong></p>
+
+<ul>
+<li>We beat <a href="http://www.vanschneider.com/show/">Tobias</a> on Product Hunt ​🙌​</li>
+<li>Recommendation from listener “<a href="https://mobile.twitter.com/henriquitto/status/689530870441598977">Funny Quitto</a>”
+
+<ul>
+<li><a href="https://medium.com/swlh/introducing-silver-lightweight-mobile-prototyping-in-sketch-3-cee46d267f1f">Introducing Silver</a></li>
+<li><a href="http://www.sketchcasts.net/episodes/prototyping-in-xcode-without-a-single-line-of-code">Prototyping with Xcode</a></li>
+</ul></li>
+</ul>
+
+<p><strong>Topics</strong></p>
+
+<ul>
+<li><a href="https://www.desktopneo.com/">Desktop Neo</a> — Rethinking the desktop interface for productivity.</li>
+<li><a href="https://dribbble.com/playbook/info">Dribbble Playbook</a> — An instant portfolio, powered by Dribbble.
+
+<ul>
+<li><a href="http://www.cockos.com/licecap/">LiceCap</a></li>
+<li><a href="http://gifbrewery.com/">GIFBrewery</a></li>
+</ul></li>
+<li><a href="http://chaptersapp.com/">Chapters</a> — A great chapter app by listener of the show Thomas Pritchard.</li>
+</ul>
+
+<p><strong>Recommendations</strong></p>
+
+<ul>
+<li><a href="http://www.imdb.com/title/tt1478964/">Attack the Block (2011)</a></li>
+<li><a href="https://vimeo.com/151277875">Susan Kare, John Gruber — Layers 2015</a></li>
+<li><a href="https://vimeo.com/151277888">Soroush Khanlou — Layers 2015</a></li>
+</ul>
+
+<p><strong>Please upvote the episode so that more people can discover the show! ❤️</strong></p>
+
+<ul>
+<li><a href="https://www.producthunt.com/podcasts/layout-i-m-a-sucker-for-updates">Upvote on ProductHunt</a></li>
+<li><a href="https://www.designernews.co/stories/62651">Upvote on DesignerNews</a></li>
+</ul>
+]]>
+      </descrition>
+      <itunes:summary>Desktop Neo, rethinking the desktop interface and Dribbble Playbook.</itunes:summary>
+      <itunes:duration>01:09:26</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/243727863-layout-226185254-11-im-a-sucker-for-updates.mp3" length="83482490" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>Desktop Neo, rethinking the desktop interface and Dribbble Playbook.</p><p><strong>Follow up</strong></p>
+
+<ul>
+<li>We beat <a href="http://www.vanschneider.com/show/">Tobias</a> on Product Hunt ​🙌​</li>
+<li>Recommendation from listener “<a href="https://mobile.twitter.com/henriquitto/status/689530870441598977">Funny Quitto</a>”
+
+<ul>
+<li><a href="https://medium.com/swlh/introducing-silver-lightweight-mobile-prototyping-in-sketch-3-cee46d267f1f">Introducing Silver</a></li>
+<li><a href="http://www.sketchcasts.net/episodes/prototyping-in-xcode-without-a-single-line-of-code">Prototyping with Xcode</a></li>
+</ul></li>
+</ul>
+
+<p><strong>Topics</strong></p>
+
+<ul>
+<li><a href="https://www.desktopneo.com/">Desktop Neo</a> — Rethinking the desktop interface for productivity.</li>
+<li><a href="https://dribbble.com/playbook/info">Dribbble Playbook</a> — An instant portfolio, powered by Dribbble.
+
+<ul>
+<li><a href="http://www.cockos.com/licecap/">LiceCap</a></li>
+<li><a href="http://gifbrewery.com/">GIFBrewery</a></li>
+</ul></li>
+<li><a href="http://chaptersapp.com/">Chapters</a> — A great chapter app by listener of the show Thomas Pritchard.</li>
+</ul>
+
+<p><strong>Recommendations</strong></p>
+
+<ul>
+<li><a href="http://www.imdb.com/title/tt1478964/">Attack the Block (2011)</a></li>
+<li><a href="https://vimeo.com/151277875">Susan Kare, John Gruber — Layers 2015</a></li>
+<li><a href="https://vimeo.com/151277888">Soroush Khanlou — Layers 2015</a></li>
+</ul>
+
+<p><strong>Please upvote the episode so that more people can discover the show! ❤️</strong></p>
+
+<ul>
+<li><a href="https://www.producthunt.com/podcasts/layout-i-m-a-sucker-for-updates">Upvote on ProductHunt</a></li>
+<li><a href="https://www.designernews.co/stories/62651">Upvote on DesignerNews</a></li>
+</ul>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>10: California Style Sheets</title>
+      <link>http://layout.fm/episodes/10</link>
+      <guid>http://layout.fm/episodes/10</guid>
+      <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>The future of Sketch and the story of how we got where we are today.</p><p><strong>Follow Up</strong>:</p>
+
+<ul>
+<li><a href="https://medium.com/habit-of-introspection/the-past-present-and-future-of-sketch-d5237879b7af#.d874gir4q">The Past, Present and Future of Sketch</a> – Interview with Pieter Omvlee</li>
+</ul>
+
+<p><strong>What’s our background story?</strong></p>
+
+<ul>
+<li><p>Rafa’s Journey:</p>
+
+<ul>
+<li><a href="http://rafaelconde.net/">Rafael Conde</a></li>
+<li><a href="http://thinkorange.pt/">Think Orange</a></li>
+<li><a href="http://www.sketchcasts.net/">SketchCasts</a></li>
+<li><a href="http://imaginarycloud.com/">Imaginary Cloud</a></li>
+<li><a href="http://frames.design/">Frames</a></li>
+</ul></li>
+<li><p>Kevin’s Journey:</p>
+
+<ul>
+<li><a href="http://kevinclark.ca/">Kevin Clark</a></li>
+<li><a href="http://www.okam.ca/en/">OKAM</a></li>
+<li><a href="https://www.busbud.com/">Busbud</a></li>
+<li><a href="http://shopify.com">Shopify</a></li>
+</ul></li>
+</ul>
+
+<p><strong>Recommendations:</strong></p>
+
+<ul>
+<li><a href="http://designlife.fm/">Design Life Podcast</a> – A new podcast by two designers</li>
+<li><a href="https://itunes.apple.com/ca/app/marvel-design-apps-on-your/id765801658?mt=8">Marvel for iOS</a> – The most delightful app Rafa has used in years</li>
+<li><a href="https://gyrosco.pe/">Gyroscope</a>
+
+<ul>
+<li><a href="http://aprilzero.com/reports/2015/?utm_source=designernews">Gyroscope’s Year in Review</a></li>
+</ul></li>
+</ul>
+]]>
+      </descrition>
+      <itunes:summary>The future of Sketch and the story of how we got where we are today.</itunes:summary>
+      <itunes:duration>01:24:43</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/242555729-layout-226185254-10-california-style-sheets.mp3" length="101812375" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>The future of Sketch and the story of how we got where we are today.</p><p><strong>Follow Up</strong>:</p>
+
+<ul>
+<li><a href="https://medium.com/habit-of-introspection/the-past-present-and-future-of-sketch-d5237879b7af#.d874gir4q">The Past, Present and Future of Sketch</a> – Interview with Pieter Omvlee</li>
+</ul>
+
+<p><strong>What’s our background story?</strong></p>
+
+<ul>
+<li><p>Rafa’s Journey:</p>
+
+<ul>
+<li><a href="http://rafaelconde.net/">Rafael Conde</a></li>
+<li><a href="http://thinkorange.pt/">Think Orange</a></li>
+<li><a href="http://www.sketchcasts.net/">SketchCasts</a></li>
+<li><a href="http://imaginarycloud.com/">Imaginary Cloud</a></li>
+<li><a href="http://frames.design/">Frames</a></li>
+</ul></li>
+<li><p>Kevin’s Journey:</p>
+
+<ul>
+<li><a href="http://kevinclark.ca/">Kevin Clark</a></li>
+<li><a href="http://www.okam.ca/en/">OKAM</a></li>
+<li><a href="https://www.busbud.com/">Busbud</a></li>
+<li><a href="http://shopify.com">Shopify</a></li>
+</ul></li>
+</ul>
+
+<p><strong>Recommendations:</strong></p>
+
+<ul>
+<li><a href="http://designlife.fm/">Design Life Podcast</a> – A new podcast by two designers</li>
+<li><a href="https://itunes.apple.com/ca/app/marvel-design-apps-on-your/id765801658?mt=8">Marvel for iOS</a> – The most delightful app Rafa has used in years</li>
+<li><a href="https://gyrosco.pe/">Gyroscope</a>
+
+<ul>
+<li><a href="http://aprilzero.com/reports/2015/?utm_source=designernews">Gyroscope’s Year in Review</a></li>
+</ul></li>
+</ul>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>9: Sketch It's Not You, It's Me</title>
+      <link>http://layout.fm/episodes/9</link>
+      <guid>http://layout.fm/episodes/9</guid>
+      <pubDate>Fri, 08 Jan 2016 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>Designing in code, MacBook vs iPad pro as a secondary machine and Icon Design Awards.</p><ul>
+<li><a href="http://www.sketchcasts.net/episodes/design-with-css-in-sketch">Design with CSS in Sketch</a></li>
+<li>Designing in code</li>
+<li>Rafa bought a new iMac</li>
+<li>MacBook vs. iPad Pro as a secondary machine</li>
+<li>We are going to be broke in 2016</li>
+<li><a href="https://itunes.apple.com/ca/app/graphic-illustration-design/id363317633?mt=8">Graphic for iPad</a></li>
+<li><a href="http://www.elischiff.com/blog/2016/1/5/apple-icon-design-awards">Icon Design Awards</a></li>
+<li><a href="https://twitter.com/jadlimcaco/status/637360108737990656">Instagram&rsquo;s &ldquo;new&rdquo; icon</a></li>
+<li><a href="https://dribbble.com/mantia">Louie Mantia</a></li>
+</ul>
+]]>
+      </descrition>
+      <itunes:summary>Designing in code, MacBook vs iPad pro as a secondary machine and Icon Design Awards.</itunes:summary>
+      <itunes:duration>01:29:31</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/241005330-layout-226185254-9-sketch-its-not-you-its-me.mp3" length="107580430" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>Designing in code, MacBook vs iPad pro as a secondary machine and Icon Design Awards.</p><ul>
+<li><a href="http://www.sketchcasts.net/episodes/design-with-css-in-sketch">Design with CSS in Sketch</a></li>
+<li>Designing in code</li>
+<li>Rafa bought a new iMac</li>
+<li>MacBook vs. iPad Pro as a secondary machine</li>
+<li>We are going to be broke in 2016</li>
+<li><a href="https://itunes.apple.com/ca/app/graphic-illustration-design/id363317633?mt=8">Graphic for iPad</a></li>
+<li><a href="http://www.elischiff.com/blog/2016/1/5/apple-icon-design-awards">Icon Design Awards</a></li>
+<li><a href="https://twitter.com/jadlimcaco/status/637360108737990656">Instagram&rsquo;s &ldquo;new&rdquo; icon</a></li>
+<li><a href="https://dribbble.com/mantia">Louie Mantia</a></li>
+</ul>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>8: Cropping is Hard</title>
+      <link>http://layout.fm/episodes/8</link>
+      <guid>http://layout.fm/episodes/8</guid>
+      <pubDate>Wed, 23 Dec 2015 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>Figma and the future of design tools.</p><ul>
+<li>Follow up:
+
+<ul>
+<li><a href="https://filtron.co">Filtron</a></li>
+<li><a href="http://blog.drewwilson.com/building-filtron">Building Filtron</a></li>
+<li><a href="http://blog.drewwilson.com/designing-filtron">Designing Filtron</a></li>
+</ul></li>
+<li><a href="https://www.figma.com">Figma</a>:
+
+<ul>
+<li><a href="https://medium.com/figma-design/grid-systems-for-screen-design-46d86ea9fd48#.sz02g5c55">Grid Systems for Screen Design</a></li>
+<li><a href="http://www.fastcodesign.com/3054382/figma-aims-to-be-a-github-for-designers?partner=socialflow&amp;utm_content=buffer30a3a&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer#2">Figma aims to be Github for designers</a></li>
+<li><a href="https://medium.com/figma-design/slack-from-the-start-635ea20f417e#.fakjy4kfd">Slack from the Start</a></li>
+<li>Related: <a href="https://medium.com/@ashorten/update-on-project-comet-where-we-are-and-what-s-to-come-889aa3ea08d2#.98mvgl8lt">Update on Project Comet</a></li>
+<li><a href="http://www.theverge.com/2015/12/9/9878464/djay-pro-ipad-app-announced-released">Djay iPad app</a></li>
+</ul></li>
+</ul>
+]]>
+      </descrition>
+      <itunes:summary>Figma and the future of design tools.</itunes:summary>
+      <itunes:duration>56:21</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/238811320-layout-226185254-8-cropping-is-hard.mp3" length="68021178" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>Figma and the future of design tools.</p><ul>
+<li>Follow up:
+
+<ul>
+<li><a href="https://filtron.co">Filtron</a></li>
+<li><a href="http://blog.drewwilson.com/building-filtron">Building Filtron</a></li>
+<li><a href="http://blog.drewwilson.com/designing-filtron">Designing Filtron</a></li>
+</ul></li>
+<li><a href="https://www.figma.com">Figma</a>:
+
+<ul>
+<li><a href="https://medium.com/figma-design/grid-systems-for-screen-design-46d86ea9fd48#.sz02g5c55">Grid Systems for Screen Design</a></li>
+<li><a href="http://www.fastcodesign.com/3054382/figma-aims-to-be-a-github-for-designers?partner=socialflow&amp;utm_content=buffer30a3a&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer#2">Figma aims to be Github for designers</a></li>
+<li><a href="https://medium.com/figma-design/slack-from-the-start-635ea20f417e#.fakjy4kfd">Slack from the Start</a></li>
+<li>Related: <a href="https://medium.com/@ashorten/update-on-project-comet-where-we-are-and-what-s-to-come-889aa3ea08d2#.98mvgl8lt">Update on Project Comet</a></li>
+<li><a href="http://www.theverge.com/2015/12/9/9878464/djay-pro-ipad-app-announced-released">Djay iPad app</a></li>
+</ul></li>
+</ul>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>Star Wars Special</title>
+      <link>http://layout.fm/episodes/tfa</link>
+      <guid>http://layout.fm/episodes/tfa</guid>
+      <pubDate>Sat, 19 Dec 2015 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>The Force Awakens is finally here. We talk about the many things we liked, the few things that we didn't like and how we're so happy that Star Wars is back.</p><ul>
+<li><a href="https://www.youtube.com/watch?v=sGbxmsDFVnE">Star Wars: The Force Awakens Trailer</a></li>
+<li><a href="http://feeds.theincomparable.com/starwars">The Incomparable Star Wars Feed</a></li>
+<li><a href="https://youtu.be/5ZMmbYUi_dg">Robot Chicken</a></li>
+<li><a href="https://www.youtube.com/watch?v=zAOqTpr4_dY">John Boyega on Jimmy Fallon</a></li>
+</ul>
+]]>
+      </descrition>
+      <itunes:summary>The Force Awakens is finally here. We talk about the many things we liked, the few things that we didn't like and how we're so happy that Star Wars is back.</itunes:summary>
+      <itunes:duration>01:43:26</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/238317834-layout-226185254-star-wars-special.mp3" length="124750820" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/starwars-artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>The Force Awakens is finally here. We talk about the many things we liked, the few things that we didn't like and how we're so happy that Star Wars is back.</p><ul>
+<li><a href="https://www.youtube.com/watch?v=sGbxmsDFVnE">Star Wars: The Force Awakens Trailer</a></li>
+<li><a href="http://feeds.theincomparable.com/starwars">The Incomparable Star Wars Feed</a></li>
+<li><a href="https://youtu.be/5ZMmbYUi_dg">Robot Chicken</a></li>
+<li><a href="https://www.youtube.com/watch?v=zAOqTpr4_dY">John Boyega on Jimmy Fallon</a></li>
+</ul>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>7: Mailbox is the new Rdio</title>
+      <link>http://layout.fm/episodes/7</link>
+      <guid>http://layout.fm/episodes/7</guid>
+      <pubDate>Mon, 14 Dec 2015 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>Design interviews, Mailbox officially shuts down, how we feel about personal websites and Apple's ugly new battery case.</p><ul>
+<li>Pre-show:
+
+<ul>
+<li>Running design interviews</li>
+</ul></li>
+<li>Follow up:
+
+<ul>
+<li>Mailbox officially shuts down:</li>
+<li><a href="https://blogs.dropbox.com/dropbox/2015/12/saying-goodbye-to-carousel-and-mailbox/">Dropbox&rsquo;s blog post</a></li>
+<li><a href="https://twitter.com/maxvoltar/status/671418026936307712">Tim Van Damme&rsquo;s tweet announcing he&rsquo;s leaving Dropbox</a></li>
+</ul></li>
+<li>Personal websites
+
+<ul>
+<li><a href="https://dribbble.com">Dribbble</a></li>
+<li><a href="http://www.ios.uplabs.io">iosup</a></li>
+</ul></li>
+<li>Rafa hates <del>fun</del> Instagram</li>
+<li>Apple&rsquo;s ugly new battery case
+
+<ul>
+<li><a href="http://www.theverge.com/2015/12/8/9872238/is-apples-smart-battery-case-mophie-patents">Nilay&rsquo;s theory</a></li>
+<li><a href="http://www.theverge.com/2015/12/8/9872746/apple-bad-hardware-design-iphone-case-pencil-magic-mouse">The year of ugly Apple accessories</a></li>
+</ul></li>
+</ul>
+]]>
+      </descrition>
+      <itunes:summary>Design interviews, Mailbox officially shuts down, how we feel about personal websites and Apple's ugly new battery case.</itunes:summary>
+      <itunes:duration>01:07:21</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/237530358-layout-226185254-7-mailbox-is-the-new-rdio.mp3" length="80823818" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>Design interviews, Mailbox officially shuts down, how we feel about personal websites and Apple's ugly new battery case.</p><ul>
+<li>Pre-show:
+
+<ul>
+<li>Running design interviews</li>
+</ul></li>
+<li>Follow up:
+
+<ul>
+<li>Mailbox officially shuts down:</li>
+<li><a href="https://blogs.dropbox.com/dropbox/2015/12/saying-goodbye-to-carousel-and-mailbox/">Dropbox&rsquo;s blog post</a></li>
+<li><a href="https://twitter.com/maxvoltar/status/671418026936307712">Tim Van Damme&rsquo;s tweet announcing he&rsquo;s leaving Dropbox</a></li>
+</ul></li>
+<li>Personal websites
+
+<ul>
+<li><a href="https://dribbble.com">Dribbble</a></li>
+<li><a href="http://www.ios.uplabs.io">iosup</a></li>
+</ul></li>
+<li>Rafa hates <del>fun</del> Instagram</li>
+<li>Apple&rsquo;s ugly new battery case
+
+<ul>
+<li><a href="http://www.theverge.com/2015/12/8/9872238/is-apples-smart-battery-case-mophie-patents">Nilay&rsquo;s theory</a></li>
+<li><a href="http://www.theverge.com/2015/12/8/9872746/apple-bad-hardware-design-iphone-case-pencil-magic-mouse">The year of ugly Apple accessories</a></li>
+</ul></li>
+</ul>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>6: My Flash Ghetto</title>
+      <link>http://layout.fm/episodes/6</link>
+      <guid>http://layout.fm/episodes/6</guid>
+      <pubDate>Mon, 30 Nov 2015 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>This week we talk about the apps we use to get our work done.</p><ul>
+<li>Follow up:
+
+<ul>
+<li>Photo editing apps for iOS:</li>
+<li><a href="https://twitter.com/guiseiz/status/669221098530013184?ref_src=twsrc%5Etfw">Gui Seiz&rsquo;s tweet</a></li>
+<li><a href="http://afterlight.us">Afterlight</a></li>
+<li><a href="http://www.enlightapp.com">Enlight</a></li>
+<li><a href="https://filtron.co/">Filtron</a></li>
+</ul></li>
+<li>Tools that we use:
+
+<ul>
+<li>Safari vs Chrome</li>
+<li>Calendar vs <a href="https://flexibits.com/fantastical">Fantastical</a></li>
+<li>Mail vs <a href="http://www.mailboxapp.com">Mailbox</a></li>
+<li><a href="https://slack.com">Slack</a></li>
+<li><a href="https://programmerbird.com/letterspace/">Letterspace</a></li>
+<li><a href="https://ia.net/writer/">iA Writer</a> vs <a href="http://bywordapp.com">Byword</a></li>
+<li><a href="http://framerjs.com">Framer</a> vs <a href="http://origami.facebook.com">Origami</a></li>
+<li><a href="http://ricks-apps.com/osx/sitesucker/index.html">SiteSucker</a></li>
+<li><a href="http://apple.com/ca/final-cut-pro">Final Cut Pro X</a></li>
+<li><a href="http://www.apple.com/ca/logic-pro/">Logic Pro X</a></li>
+<li><a href="http://www.apple.com/ca/final-cut-pro/motion/">Motion</a></li>
+<li><a href="https://affinity.serif.com/en-us/designer/">Affinity Designer</a> vs <a href="http://www.pixelmator.com">Pixelmator</a></li>
+<li><a href="https://incident57.com/codekit/">Codekit 2</a></li>
+<li><a href="http://www.git-tower.com">Tower</a></li>
+<li><a href="https://www.panic.com/transmit/">Transmit</a></li>
+<li><a href="http://xscopeapp.com">xScope</a></li>
+<li><a href="https://imageoptim.com">ImageOptim</a></li>
+<li><a href="http://www.telestream.net/screenflow/overview.htm">Screenflow</a></li>
+<li><a href="https://kapeli.com/dash">Dash</a></li>
+<li><a href="http://www.eigenlogik.com/spectrum/">Spectrum</a></li>
+<li><a href="https://color.adobe.com">Adobe Kuler</a></li>
+<li><a href="http://macrabbit.com/slicy/">Slicy</a></li>
+<li><a href="http://pasteapp.me">Paste</a></li>
+<li><a href="http://theolabrothers.com">Sip</a></li>
+</ul></li>
+<li>Recommendations of the week
+
+<ul>
+<li><a href="https://www.kickstarter.com/projects/mikaelcho/the-unsplash-book">Unsplash book</a></li>
+<li><a href="https://www.wall.cat">Wallcat</a></li>
+<li><a href="http://waitbutwhy.com">Waitbutwhy</a></li>
+</ul></li>
+</ul>
+]]>
+      </descrition>
+      <itunes:summary>This week we talk about the apps we use to get our work done.</itunes:summary>
+      <itunes:duration>01:18:04</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/235401082-layout-226185254-6-my-flash-ghetto.mp3" length="93683899" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>This week we talk about the apps we use to get our work done.</p><ul>
+<li>Follow up:
+
+<ul>
+<li>Photo editing apps for iOS:</li>
+<li><a href="https://twitter.com/guiseiz/status/669221098530013184?ref_src=twsrc%5Etfw">Gui Seiz&rsquo;s tweet</a></li>
+<li><a href="http://afterlight.us">Afterlight</a></li>
+<li><a href="http://www.enlightapp.com">Enlight</a></li>
+<li><a href="https://filtron.co/">Filtron</a></li>
+</ul></li>
+<li>Tools that we use:
+
+<ul>
+<li>Safari vs Chrome</li>
+<li>Calendar vs <a href="https://flexibits.com/fantastical">Fantastical</a></li>
+<li>Mail vs <a href="http://www.mailboxapp.com">Mailbox</a></li>
+<li><a href="https://slack.com">Slack</a></li>
+<li><a href="https://programmerbird.com/letterspace/">Letterspace</a></li>
+<li><a href="https://ia.net/writer/">iA Writer</a> vs <a href="http://bywordapp.com">Byword</a></li>
+<li><a href="http://framerjs.com">Framer</a> vs <a href="http://origami.facebook.com">Origami</a></li>
+<li><a href="http://ricks-apps.com/osx/sitesucker/index.html">SiteSucker</a></li>
+<li><a href="http://apple.com/ca/final-cut-pro">Final Cut Pro X</a></li>
+<li><a href="http://www.apple.com/ca/logic-pro/">Logic Pro X</a></li>
+<li><a href="http://www.apple.com/ca/final-cut-pro/motion/">Motion</a></li>
+<li><a href="https://affinity.serif.com/en-us/designer/">Affinity Designer</a> vs <a href="http://www.pixelmator.com">Pixelmator</a></li>
+<li><a href="https://incident57.com/codekit/">Codekit 2</a></li>
+<li><a href="http://www.git-tower.com">Tower</a></li>
+<li><a href="https://www.panic.com/transmit/">Transmit</a></li>
+<li><a href="http://xscopeapp.com">xScope</a></li>
+<li><a href="https://imageoptim.com">ImageOptim</a></li>
+<li><a href="http://www.telestream.net/screenflow/overview.htm">Screenflow</a></li>
+<li><a href="https://kapeli.com/dash">Dash</a></li>
+<li><a href="http://www.eigenlogik.com/spectrum/">Spectrum</a></li>
+<li><a href="https://color.adobe.com">Adobe Kuler</a></li>
+<li><a href="http://macrabbit.com/slicy/">Slicy</a></li>
+<li><a href="http://pasteapp.me">Paste</a></li>
+<li><a href="http://theolabrothers.com">Sip</a></li>
+</ul></li>
+<li>Recommendations of the week
+
+<ul>
+<li><a href="https://www.kickstarter.com/projects/mikaelcho/the-unsplash-book">Unsplash book</a></li>
+<li><a href="https://www.wall.cat">Wallcat</a></li>
+<li><a href="http://waitbutwhy.com">Waitbutwhy</a></li>
+</ul></li>
+</ul>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>5: Fifty Shades of White</title>
+      <link>http://layout.fm/episodes/5</link>
+      <guid>http://layout.fm/episodes/5</guid>
+      <pubDate>Tue, 24 Nov 2015 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>Public Speaking, Photo editing apps, using the iPad Pro to design and a eulogy to Rdio.</p><ul>
+<li>Follow up:
+
+<ul>
+<li><a href="https://twitter.com/Betraydan/status/666956039674269696?ref_src=twsrc%5Etfw">Daniel Klopper reminded us of Inboard</a></li>
+</ul></li>
+<li>Kevin&rsquo;s talk at MacTech
+
+<ul>
+<li><a href="http://antifragile.design">Antifragile Design</a></li>
+</ul></li>
+<li>Photo editing apps for the iPad
+
+<ul>
+<li>VSCO and their <a href="https://twitter.com/vernalkick/status/666241573001150465">inscrutable</a> <a href="https://twitter.com/vernalkick/status/666243410940919808">icons</a></li>
+<li><a href="http://usedarkroom.com">Darkroom</a></li>
+<li><a href="https://filtron.co">Filtron</a></li>
+</ul></li>
+<li>Using the iPad Pro to design</li>
+<li>RIP Rdio
+
+<ul>
+<li><a href="http://www.theatlantic.com/technology/archive/2015/11/a-eulogy-for-rdio/416310/">A eulogy</a></li>
+<li><a href="http://blog.rdio.com/us/2015/11/important-news-from-rdio.html">Important news from Rdio</a></li>
+<li><a href="http://sandwichvideo.com/projects/rdio/">The Rdio Sandwich Video</a></li>
+<li><a href="https://twitter.com/wilsonminer/status/667016968021544961?ref_src=twsrc%5Etfw">Wilson Miner&rsquo;s tweets</a></li>
+</ul></li>
+<li>Star Wars Battlefront
+
+<ul>
+<li><a href="https://youtu.be/V2xp-qtUlsQ">Trailer</a></li>
+<li>Rafa’s PSN ID: <em>RafaelConde</em></li>
+</ul></li>
+<li><a href="https://www.netflix.com/ca/title/80049714">Master of None</a></li>
+</ul>
+]]>
+      </descrition>
+      <itunes:summary>Public Speaking, Photo editing apps, using the iPad Pro to design and a eulogy to Rdio.</itunes:summary>
+      <itunes:duration>01:02:57</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/234513071-layout-226185254-5-fifty-shades-of-white.mp3" length="75546038" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>Public Speaking, Photo editing apps, using the iPad Pro to design and a eulogy to Rdio.</p><ul>
+<li>Follow up:
+
+<ul>
+<li><a href="https://twitter.com/Betraydan/status/666956039674269696?ref_src=twsrc%5Etfw">Daniel Klopper reminded us of Inboard</a></li>
+</ul></li>
+<li>Kevin&rsquo;s talk at MacTech
+
+<ul>
+<li><a href="http://antifragile.design">Antifragile Design</a></li>
+</ul></li>
+<li>Photo editing apps for the iPad
+
+<ul>
+<li>VSCO and their <a href="https://twitter.com/vernalkick/status/666241573001150465">inscrutable</a> <a href="https://twitter.com/vernalkick/status/666243410940919808">icons</a></li>
+<li><a href="http://usedarkroom.com">Darkroom</a></li>
+<li><a href="https://filtron.co">Filtron</a></li>
+</ul></li>
+<li>Using the iPad Pro to design</li>
+<li>RIP Rdio
+
+<ul>
+<li><a href="http://www.theatlantic.com/technology/archive/2015/11/a-eulogy-for-rdio/416310/">A eulogy</a></li>
+<li><a href="http://blog.rdio.com/us/2015/11/important-news-from-rdio.html">Important news from Rdio</a></li>
+<li><a href="http://sandwichvideo.com/projects/rdio/">The Rdio Sandwich Video</a></li>
+<li><a href="https://twitter.com/wilsonminer/status/667016968021544961?ref_src=twsrc%5Etfw">Wilson Miner&rsquo;s tweets</a></li>
+</ul></li>
+<li>Star Wars Battlefront
+
+<ul>
+<li><a href="https://youtu.be/V2xp-qtUlsQ">Trailer</a></li>
+<li>Rafa’s PSN ID: <em>RafaelConde</em></li>
+</ul></li>
+<li><a href="https://www.netflix.com/ca/title/80049714">Master of None</a></li>
+</ul>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>4: That Little Swipey Thing</title>
+      <link>http://layout.fm/episodes/4</link>
+      <guid>http://layout.fm/episodes/4</guid>
+      <pubDate>Tue, 17 Nov 2015 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>RIP Ember, Twitter favorites (err likes) and the new Apple TV UI</p><ul>
+<li>Follow up:
+
+<ul>
+<li><a href="http://blog.realmacsoftware.com/article/a-long-overdue-update-on-our-product-roadmap">RIP Ember</a></li>
+<li>Want to help build an alternative? <a href="mailto:kevin@kevinclark.ca">Shoot Kevin an email</a></li>
+</ul></li>
+<li>Twitter <del>favorites</del> likes
+
+<ul>
+<li><a href="https://blog.twitter.com/2015/hearts-on-twitter">Twitter&rsquo;s announcement blog post</a></li>
+<li><a href="https://twitter.com/akik/status/661561714094161920">Announcement tweet from a Twitter PM</a> (looks like they removed the awful replies)</li>
+<li><a href="http://techcrunch.com/2015/11/10/twitter-sees-6-increase-in-like-activity-after-first-week-of-hearts/">Twitter sees a 6% increase in &ldquo;like&rdquo; activity after first week of hearts</a></li>
+<li><a href="http://thenextweb.com/dd/2015/07/20/wow-thats-green/">People complaining about the &ldquo;new&rdquo; Spotify green</a></li>
+</ul></li>
+<li>People hate change
+
+<ul>
+<li><a href="https://www.uie.com/articles/magic_escalator/">Riding the Magic Escalator of Acquired Knowledge</a></li>
+</ul></li>
+<li>The new Apple TV
+
+<ul>
+<li><a href="http://www.apple.com/tv/">Apple&rsquo;s marketing page</a></li>
+<li><a href="https://developer.apple.com/tvos/human-interface-guidelines/">tvOS HIG</a></li>
+</ul></li>
+<li>Rafael&rsquo;s Apple ID woes</li>
+</ul>
+]]>
+      </descrition>
+      <itunes:summary>RIP Ember, Twitter favorites (err likes) and the new Apple TV UI</itunes:summary>
+      <itunes:duration>00:58:54</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/233461581-layout-226185254-4-that-little-swipey-thing.mp3" length="70826668" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>RIP Ember, Twitter favorites (err likes) and the new Apple TV UI</p><ul>
+<li>Follow up:
+
+<ul>
+<li><a href="http://blog.realmacsoftware.com/article/a-long-overdue-update-on-our-product-roadmap">RIP Ember</a></li>
+<li>Want to help build an alternative? <a href="mailto:kevin@kevinclark.ca">Shoot Kevin an email</a></li>
+</ul></li>
+<li>Twitter <del>favorites</del> likes
+
+<ul>
+<li><a href="https://blog.twitter.com/2015/hearts-on-twitter">Twitter&rsquo;s announcement blog post</a></li>
+<li><a href="https://twitter.com/akik/status/661561714094161920">Announcement tweet from a Twitter PM</a> (looks like they removed the awful replies)</li>
+<li><a href="http://techcrunch.com/2015/11/10/twitter-sees-6-increase-in-like-activity-after-first-week-of-hearts/">Twitter sees a 6% increase in &ldquo;like&rdquo; activity after first week of hearts</a></li>
+<li><a href="http://thenextweb.com/dd/2015/07/20/wow-thats-green/">People complaining about the &ldquo;new&rdquo; Spotify green</a></li>
+</ul></li>
+<li>People hate change
+
+<ul>
+<li><a href="https://www.uie.com/articles/magic_escalator/">Riding the Magic Escalator of Acquired Knowledge</a></li>
+</ul></li>
+<li>The new Apple TV
+
+<ul>
+<li><a href="http://www.apple.com/tv/">Apple&rsquo;s marketing page</a></li>
+<li><a href="https://developer.apple.com/tvos/human-interface-guidelines/">tvOS HIG</a></li>
+</ul></li>
+<li>Rafael&rsquo;s Apple ID woes</li>
+</ul>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>3: It Has a Dinosaur So I Like It Already</title>
+      <link>http://layout.fm/episodes/3</link>
+      <guid>http://layout.fm/episodes/3</guid>
+      <pubDate>Fri, 30 Oct 2015 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>Microsoft's autocomplete for animation, robots taking your job, and being a jack of all trades.</p><ul>
+<li>Follow up:
+
+<ul>
+<li>Twitter Flight:</li>
+<li><a href="http://techcrunch.com/2015/10/21/twitter-ceo-dorsey-apologizes-to-developers-says-he-wants-to-reset-relations/#.bir2j3:YmdS">Jack Dorsey apologizes to developers</a></li>
+<li><a href="https://twitter.com/henriquitto/status/659058674401415168">Listener @heriquitto confirms there&rsquo;s a light and dark mode on Twitter</a></li>
+<li><a href="http://techcrunch.com/tag/twitterflight2015/">TechCrunch has a good recap of what happened at Twitter Flight</a></li>
+</ul></li>
+<li><a href="https://medium.com/@marksluckie/millennials-are-terrible-people-84ba66f74b3f#.x840j81rx">Millenials are terrible people (but not really)</a></li>
+<li>Microsoft debuts autocomplete for animation
+
+<ul>
+<li><img src="http://b.fastcompany.net/multisite_files/fastcompany/imagecache/inline-large/inline/2015/10/3052463-inline-4-microsoft-research-debuts-autocomplete-for-animation-and-its-amazing.gif" alt=""></li>
+<li><a href="http://www.fastcodesign.com/3052463/microsoft-research-debuts-autocomplete-for-animation-and-its-incredible#4">Article on FastCompany</a></li>
+<li><a href="https://www.youtube.com/watch?v=ozLaklIFWUI">Microsoft&rsquo;s concept video for how it sees 2020</a></li>
+<li><a href="https://www.youtube.com/watch?v=7Pq-S557XQU">Humans need not apply</a></li>
+</ul></li>
+<li>Jack of all trades, master of none?
+
+<ul>
+<li><a href="http://vanschneider.us5.list-manage1.com/subscribe?u=56217f3273816b2f6aa899689&amp;id=caff987a9a">Tobias Van Schneider&rsquo;s email newsletter</a></li>
+<li><a href="https://twitter.com/vernalkick/status/658637312696459264">Kevin&rsquo;s tweet about it</a></li>
+</ul></li>
+</ul>
+]]>
+      </descrition>
+      <itunes:summary>Microsoft's autocomplete for animation, robots taking your job, and being a jack of all trades.</itunes:summary>
+      <itunes:duration>00:55:44</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/230782178-layout-226185254-3-it-has-a-dinosaur-so-i-like-it-already.mp3" length="66882267" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>Microsoft's autocomplete for animation, robots taking your job, and being a jack of all trades.</p><ul>
+<li>Follow up:
+
+<ul>
+<li>Twitter Flight:</li>
+<li><a href="http://techcrunch.com/2015/10/21/twitter-ceo-dorsey-apologizes-to-developers-says-he-wants-to-reset-relations/#.bir2j3:YmdS">Jack Dorsey apologizes to developers</a></li>
+<li><a href="https://twitter.com/henriquitto/status/659058674401415168">Listener @heriquitto confirms there&rsquo;s a light and dark mode on Twitter</a></li>
+<li><a href="http://techcrunch.com/tag/twitterflight2015/">TechCrunch has a good recap of what happened at Twitter Flight</a></li>
+</ul></li>
+<li><a href="https://medium.com/@marksluckie/millennials-are-terrible-people-84ba66f74b3f#.x840j81rx">Millenials are terrible people (but not really)</a></li>
+<li>Microsoft debuts autocomplete for animation
+
+<ul>
+<li><img src="http://b.fastcompany.net/multisite_files/fastcompany/imagecache/inline-large/inline/2015/10/3052463-inline-4-microsoft-research-debuts-autocomplete-for-animation-and-its-amazing.gif" alt=""></li>
+<li><a href="http://www.fastcodesign.com/3052463/microsoft-research-debuts-autocomplete-for-animation-and-its-incredible#4">Article on FastCompany</a></li>
+<li><a href="https://www.youtube.com/watch?v=ozLaklIFWUI">Microsoft&rsquo;s concept video for how it sees 2020</a></li>
+<li><a href="https://www.youtube.com/watch?v=7Pq-S557XQU">Humans need not apply</a></li>
+</ul></li>
+<li>Jack of all trades, master of none?
+
+<ul>
+<li><a href="http://vanschneider.us5.list-manage1.com/subscribe?u=56217f3273816b2f6aa899689&amp;id=caff987a9a">Tobias Van Schneider&rsquo;s email newsletter</a></li>
+<li><a href="https://twitter.com/vernalkick/status/658637312696459264">Kevin&rsquo;s tweet about it</a></li>
+</ul></li>
+</ul>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>2: What's a Radio?</title>
+      <link>http://layout.fm/episodes/2</link>
+      <guid>http://layout.fm/episodes/2</guid>
+      <pubDate>Fri, 23 Oct 2015 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>Twitter's latest announcements, Paper by Dropbox, YouTube Red, Framer's interesting new pricing model and the new Star Wars trailer.</p><ul>
+<li>Follow up:
+
+<ul>
+<li>Mobile first:</li>
+<li><a href="https://twitter.com/jvgreenaway/status/656173425736744960">Listener James Greenaway&rsquo;s comment on Twitter</a></li>
+<li><a href="https://twitter.com/doodzik/status/656147856341008384">Listener Frederik Dudzik&rsquo;s comment on Twitter</a></li>
+<li>Medium&rsquo;s new logo:</li>
+<li><a href="https://medium.com/@gnclmorais/i-love-it-290e4fc37e33#.mexk4rkcg">Listener Gonçalo Morais&rsquo;s Medium post on why he likes the logo</a></li>
+</ul></li>
+<li>Twitter announcements:
+
+<ul>
+<li><a href="https://twitterflight.com">Twitter Flight</a></li>
+<li><a href="https://blog.twitter.com/2015/tell-compelling-stories-with-twitter-on-mobile-or-web">Tell Compelling Stories with Twitter on Mobile or Web</a></li>
+<li><a href="https://mobile.twitter.com/mikeindustries/status/656883564038885376">New official Twitter app for OS X</a>:
+<img src="https://pbs.twimg.com/media/CR24HjrUcAAr0Jw.jpg" alt=""></li>
+</ul></li>
+<li><a href="http://www.wired.com/2015/10/dropbox-paper-all-in-one-work-tool/">Paper, by Dropbox</a></li>
+<li><a href="http://www.theverge.com/2015/10/21/9566973/youtube-red-ad-free-offline-paid-subscription-service">Youtube is getting rid of ads, for $9.99 a month</a></li>
+<li><a href="http://blog.framerjs.com/posts/license-versioning-update.html">Framer&rsquo;s new app pricing model</a></li>
+<li><a href="https://trac.webkit.org/changeset/191072">Webkit removed 350ms delay on links</a></li>
+<li>The new Star Wars trailer:
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=sGbxmsDFVnE">Watch it on YouTube</a></li>
+<li><a href="http://www.theverge.com/2015/10/20/9572469/new-star-wars-7-trailer-3-analysis">The Verge analyses the trailer</a></li>
+</ul></li>
+<li>Back to the Future
+
+<ul>
+<li><a href="http://news.nike.com/news/nike-mag-2015">Nike made Marty&rsquo;s shoes</a></li>
+</ul></li>
+</ul>
+]]>
+      </descrition>
+      <itunes:summary>Twitter's latest announcements, Paper by Dropbox, YouTube Red, Framer's interesting new pricing model and the new Star Wars trailer.</itunes:summary>
+      <itunes:duration>01:06:23</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/229724940-layout-226185254-2-whats-a-radio.mp3" length="80055267" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>Twitter's latest announcements, Paper by Dropbox, YouTube Red, Framer's interesting new pricing model and the new Star Wars trailer.</p><ul>
+<li>Follow up:
+
+<ul>
+<li>Mobile first:</li>
+<li><a href="https://twitter.com/jvgreenaway/status/656173425736744960">Listener James Greenaway&rsquo;s comment on Twitter</a></li>
+<li><a href="https://twitter.com/doodzik/status/656147856341008384">Listener Frederik Dudzik&rsquo;s comment on Twitter</a></li>
+<li>Medium&rsquo;s new logo:</li>
+<li><a href="https://medium.com/@gnclmorais/i-love-it-290e4fc37e33#.mexk4rkcg">Listener Gonçalo Morais&rsquo;s Medium post on why he likes the logo</a></li>
+</ul></li>
+<li>Twitter announcements:
+
+<ul>
+<li><a href="https://twitterflight.com">Twitter Flight</a></li>
+<li><a href="https://blog.twitter.com/2015/tell-compelling-stories-with-twitter-on-mobile-or-web">Tell Compelling Stories with Twitter on Mobile or Web</a></li>
+<li><a href="https://mobile.twitter.com/mikeindustries/status/656883564038885376">New official Twitter app for OS X</a>:
+<img src="https://pbs.twimg.com/media/CR24HjrUcAAr0Jw.jpg" alt=""></li>
+</ul></li>
+<li><a href="http://www.wired.com/2015/10/dropbox-paper-all-in-one-work-tool/">Paper, by Dropbox</a></li>
+<li><a href="http://www.theverge.com/2015/10/21/9566973/youtube-red-ad-free-offline-paid-subscription-service">Youtube is getting rid of ads, for $9.99 a month</a></li>
+<li><a href="http://blog.framerjs.com/posts/license-versioning-update.html">Framer&rsquo;s new app pricing model</a></li>
+<li><a href="https://trac.webkit.org/changeset/191072">Webkit removed 350ms delay on links</a></li>
+<li>The new Star Wars trailer:
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=sGbxmsDFVnE">Watch it on YouTube</a></li>
+<li><a href="http://www.theverge.com/2015/10/20/9572469/new-star-wars-7-trailer-3-analysis">The Verge analyses the trailer</a></li>
+</ul></li>
+<li>Back to the Future
+
+<ul>
+<li><a href="http://news.nike.com/news/nike-mag-2015">Nike made Marty&rsquo;s shoes</a></li>
+</ul></li>
+</ul>
+]]>
+      </content:encoded>
+    </item>
+    <item>
+      <title>1: I Wish I Could Force Touch This</title>
+      <link>http://layout.fm/episodes/1</link>
+      <guid>http://layout.fm/episodes/1</guid>
+      <pubDate>Fri, 16 Oct 2015 00:00:00 +0000</pubDate>
+      <descrition>
+        <![CDATA[<p>Our take on Medium's latest design changes, Kevin's Apple Watch app is now in beta and Rafa gets his new iPhone.</p><ul>
+<li>Medium design changes:
+
+<ul>
+<li><a href="https://medium.com/the-story/the-story-behind-medium-s-new-logo-4cd3e143dfcf">The Story Behind Medium’s New Logo</a></li>
+<li><a href="https://medium.com/@pasql/is-this-a-joke-160d6163cea8">Pasquale&rsquo;s comment</a></li>
+</ul></li>
+<li><a href="https://medium.com/sketch-app-sources/designing-at-1x-33240842180c">Designing at 1x</a></li>
+<li><a href="http://www.paintcodeapp.com/news/iphone-6-screens-demystified">iPhone 6 Plus screen demystified</a></li>
+<li>Project Comet:
+
+<ul>
+<li><a href="http://www.subtraction.com/2015/10/05/project-comet/">Khoi&rsquo;s take on it</a></li>
+<li><a href="http://blogs.adobe.com/creativecloud/introducing-project-comet-a-new-tool-for-designing-and-prototyping-user-experiences/">Adobe&rsquo;s anouncement</a></li>
+</ul></li>
+<li><a href="http://facebook.github.io/design/">Facebook Design Resources</a></li>
+<li>&ldquo;Mobile First&rdquo; design:
+
+<ul>
+<li><a href="https://blog.twitter.com/2015/building-a-more-unified-twitter-for-ios">Twitter&rsquo;s blown up iPhone app</a></li>
+</ul></li>
+<li>Kevin&rsquo;s Apple Watch app, Climate, goes in beta:
+
+<ul>
+<li><a href="https://dribbble.com/shots/2284231-Climate-Weather-app-for-Apple-Watch">Climate Dribbble shot</a></li>
+<li>Teaser photos on Instagram: <a href="https://instagram.com/p/6aRr4TK-rX/">1</a>, <a href="https://instagram.com/p/6dIK2IK-hM/">2</a></li>
+</ul></li>
+<li>Rafa&rsquo;s new phone
+
+<ul>
+<li><a href="http://www.apple.com/ca/iphone-6s/">iPhone 6s</a></li>
+<li><a href="http://www.bloomberg.com/features/2015-how-apple-built-3d-touch-iphone-6s/">Bloomberg: How Apple built 3D Touch</a></li>
+<li><a href="http://www.relay.fm/upgrade/55">Upgrade #55: Your Watch is Full</a></li>
+<li><a href="http://www.relay.fm/upgrade/56">Upgrade #56: The Migration Experience</a></li>
+</ul></li>
+</ul>
+]]>
+      </descrition>
+      <itunes:summary>Our take on Medium's latest design changes, Kevin's Apple Watch app is now in beta and Rafa gets his new iPhone.</itunes:summary>
+      <itunes:duration>01:40:21</itunes:duration>
+      <enclosure url="http://feeds.soundcloud.com/stream/228694862-layout-226185254-1-i-wish-i-could-force-touch-this.mp3" length="120507114" type="audio/mpeg"/>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:author>Kevin Clark and Rafael Conde</itunes:author>
+      <itunes:image href="http://layout.fm/assets/artwork.jpg"/>
+      <content:encoded>
+        <![CDATA[<p>Our take on Medium's latest design changes, Kevin's Apple Watch app is now in beta and Rafa gets his new iPhone.</p><ul>
+<li>Medium design changes:
+
+<ul>
+<li><a href="https://medium.com/the-story/the-story-behind-medium-s-new-logo-4cd3e143dfcf">The Story Behind Medium’s New Logo</a></li>
+<li><a href="https://medium.com/@pasql/is-this-a-joke-160d6163cea8">Pasquale&rsquo;s comment</a></li>
+</ul></li>
+<li><a href="https://medium.com/sketch-app-sources/designing-at-1x-33240842180c">Designing at 1x</a></li>
+<li><a href="http://www.paintcodeapp.com/news/iphone-6-screens-demystified">iPhone 6 Plus screen demystified</a></li>
+<li>Project Comet:
+
+<ul>
+<li><a href="http://www.subtraction.com/2015/10/05/project-comet/">Khoi&rsquo;s take on it</a></li>
+<li><a href="http://blogs.adobe.com/creativecloud/introducing-project-comet-a-new-tool-for-designing-and-prototyping-user-experiences/">Adobe&rsquo;s anouncement</a></li>
+</ul></li>
+<li><a href="http://facebook.github.io/design/">Facebook Design Resources</a></li>
+<li>&ldquo;Mobile First&rdquo; design:
+
+<ul>
+<li><a href="https://blog.twitter.com/2015/building-a-more-unified-twitter-for-ios">Twitter&rsquo;s blown up iPhone app</a></li>
+</ul></li>
+<li>Kevin&rsquo;s Apple Watch app, Climate, goes in beta:
+
+<ul>
+<li><a href="https://dribbble.com/shots/2284231-Climate-Weather-app-for-Apple-Watch">Climate Dribbble shot</a></li>
+<li>Teaser photos on Instagram: <a href="https://instagram.com/p/6aRr4TK-rX/">1</a>, <a href="https://instagram.com/p/6dIK2IK-hM/">2</a></li>
+</ul></li>
+<li>Rafa&rsquo;s new phone
+
+<ul>
+<li><a href="http://www.apple.com/ca/iphone-6s/">iPhone 6s</a></li>
+<li><a href="http://www.bloomberg.com/features/2015-how-apple-built-3d-touch-iphone-6s/">Bloomberg: How Apple built 3D Touch</a></li>
+<li><a href="http://www.relay.fm/upgrade/55">Upgrade #55: Your Watch is Full</a></li>
+<li><a href="http://www.relay.fm/upgrade/56">Upgrade #56: The Migration Experience</a></li>
+</ul></li>
+</ul>
+]]>
+      </content:encoded>
+    </item>
+  </channel>
+</rss>

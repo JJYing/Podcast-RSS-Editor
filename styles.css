@@ -1,0 +1,221 @@
+/*Designed by JJ Ying
+http://jjying.com*/
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	outline: none;
+	box-sizing: border-box;
+}
+body{
+	text-rendering: optimizeLegibility;
+	font-size: 62.5%;
+	font-family: 'Source Sans Pro', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+	color: #5a6779;
+	line-height: 1;
+	background: #1f222c;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	margin: 0;
+	list-style-position: inside;
+}
+input{
+	-webkit-transition: all .1s ease-in;
+}
+.hide{
+	opacity: 0;
+}
+/*~Nav*/
+nav{
+	background: #313541;
+	width: 8%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	box-shadow: 0px 13px 35px rgba(25,31,54,0.6);
+}
+.logo{
+	color: #fff;
+	font-size: 2.5em;
+	font-weight: 100;
+	width: 100%;
+	background: #e85b5d;
+	padding: .5em;
+	display: block;
+	height: 110px;
+	font-style: italic;
+}
+/*~Dashboard*/
+.dashboard{
+	font-size: 1em;
+	line-height: 1.5;
+	color: #66707d;
+	width: 8%;
+	position: fixed;
+	bottom: 0;
+}
+.dashboard ul li{
+	display: block;
+	list-style: none;
+	padding: 1em;
+	border-top: 1px solid #222;
+	text-align: center;
+	line-height: 1.1;
+}
+.dashboard strong{
+	font-weight: 700;
+	font-size: 3em;
+	color: #e85b5d;
+	font-family: 'Avenir Next Condensed';
+}
+/*~Item List*/
+aside{
+	width: 33%;
+	display: fixed;
+	height: 100%;
+	position: fixed;
+	overflow: scroll;
+	left: 8%;
+	z-index: 900;
+	box-shadow: 0px 13px 35px rgba(25,31,54,0.6);
+}
+.item{
+	background: #282c37;
+	font-size: 1.5em;
+	display: block;
+	font-weight: 700;
+	line-height: 1.25;
+	display: block;
+	padding: 1em 1.3em;
+	border-bottom: 1px solid #222630;
+	border-right: 5px solid #282c37;
+	cursor: pointer;	
+	-webkit-transition: all .1s ease-in;
+}
+.item:hover{
+	background: #33bc8c;
+	border-right: 5px solid #3ee6ab;
+	border-bottom: 1px solid #33bc8c;
+}
+.add-new-item{
+	text-align: center;
+	background: #1f222c;
+}
+.add-new-item h1{
+	font-weight: 100;
+}
+.add-new-item h1:before{
+	content: "+";
+	font-weight: 900;
+	color: #33bc8c;
+	margin: 0 .3em 0 0;
+}
+.item:hover h1,
+.item:hover h1:before,
+.item:hover .item-date{
+	color: #fff;
+}
+h1{
+	font-size: 1.25em;
+	color: #cecfd1;
+	font-weight: 400;
+	-webkit-transition: all .1s ease-in;
+}
+.item-date{
+	font-size: .75em;
+	color: #656f7c;
+	font-weight: 300;
+	-webkit-transition: all .1s ease-in;
+}
+.item-date:before{
+content: "•";
+font-weight: 900;
+color: #e85b5d;
+margin: 0 .3em 0 0;
+}
+/* Edit Panel */
+.panel{
+	font-size: 2em;
+	overflow: hidden;
+	width: 59%;	
+	background: #fff;
+	position: fixed;
+	right: 0;
+	height: 100%;
+	display: inline-block;
+}
+.edit-panel{
+	font-size: 2em;
+	padding: 1em 2em;
+	line-height: 2;
+}
+h2{
+	font-weight: 700;
+}
+.edit-panel section{
+	width: 100%;
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+}
+h3{
+	display: inline-block;
+	width: 20%;
+	padding: 0 1em 0 0;
+	font-weight: 100;
+	letter-spacing: -.03em;
+	text-transform: uppercase;
+	font-size: .7em;
+	line-height: 50px;
+	vertical-align: middle;
+}
+h3:before{
+	content: "#";
+	padding: 0 .3em 0 0;
+	color: #e85b5d;
+	font-weight: 700;
+}
+.edit-panel .edit-date,
+.edit-panel .edit-duration{
+
+}
+.edit-panel .edit-desc textarea{
+	height: 200px;
+}
+input[type=text],textarea{
+	border: 1px solid #ddd;
+	color: #5a6778;
+	padding: .25em .3em;
+	width: 72%;
+	float: right;
+	font-size: .8em;
+	border-radius: .2em;
+	margin: 14px 8% 0 0;
+	font-family: monospace;
+}
+input[type=submit]{
+	width: 100px;
+	height: 32px;
+	font-size: 16px;
+	line-height: 32px;
+	background: #33bc8c;
+	color: #fff;
+	font-weight: 700;
+	font-family: "Source Sans Pro";
+	border-radius: 1em;
+	letter-spacing: .2em;
+	cursor: pointer;
+	text-transform: uppercase;
+	position: fixed;
+	bottom: 30px;
+}
+input[type=submit]:hover{
+	background: #e85b5d;
+}
