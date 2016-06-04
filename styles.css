@@ -31,7 +31,7 @@ input{
 }
 /*~Nav*/
 nav{
-	background: #313541;
+	background: #20252e;
 	width: 8%;
 	height: 100%;
 	position: fixed;
@@ -45,7 +45,7 @@ nav{
 	font-size: 2.5em;
 	font-weight: 100;
 	width: 100%;
-	background: #e85b5d;
+	background: #ff6668;
 	padding: .5em;
 	display: block;
 	height: 110px;
@@ -67,11 +67,12 @@ nav{
 	border-top: 1px solid #222;
 	text-align: center;
 	line-height: 1.1;
+	font-weight: 400;
 }
 .dashboard strong{
-	font-weight: 700;
+	font-weight: 100;
 	font-size: 3em;
-	color: #e85b5d;
+	color: #ff6668;
 	font-family: 'Avenir Next Condensed';
 }
 /*~Item List*/
@@ -81,31 +82,37 @@ aside{
 	height: 100%;
 	position: fixed;
 	overflow: scroll;
+	overflow-x: auto;
 	left: 8%;
 	z-index: 900;
-	box-shadow: 0px 13px 35px rgba(25,31,54,0.6);
+	box-shadow: 0px 13px 35px rgba(41,54,105,0.6);
 }
 .item{
-	background: #282c37;
+	background: #2c313c;
 	font-size: 1.5em;
 	display: block;
 	font-weight: 700;
 	line-height: 1.25;
 	display: block;
 	padding: 1em 1.3em;
-	border-bottom: 1px solid #222630;
-	border-right: 5px solid #282c37;
+	border-bottom: 1px solid #252a33;
+	border-right: 5px solid #252a33;
 	cursor: pointer;	
 	-webkit-transition: all .1s ease-in;
 }
+.item.highlight{
+	background: #222730;
+	border-right: 5px solid #171922;
+}
 .item:hover{
-	background: #33bc8c;
+	background: #34c295;
 	border-right: 5px solid #3ee6ab;
-	border-bottom: 1px solid #33bc8c;
+	border-bottom: 1px solid #34c295;
 }
 .add-new-item{
 	text-align: center;
 	background: #1f222c;
+	border-right: 5px solid #1f222c;
 }
 .add-new-item h1{
 	font-weight: 100;
@@ -113,7 +120,7 @@ aside{
 .add-new-item h1:before{
 	content: "+";
 	font-weight: 900;
-	color: #33bc8c;
+	color: #34c295;
 	margin: 0 .3em 0 0;
 }
 .item:hover h1,
@@ -123,21 +130,29 @@ aside{
 }
 h1{
 	font-size: 1.25em;
-	color: #cecfd1;
+	color: #737a8a;
 	font-weight: 400;
 	-webkit-transition: all .1s ease-in;
 }
+.item.highlight h1{
+	font-weight: 900;
+	color: #cecfd1;
+}
 .item-date{
 	font-size: .75em;
-	color: #656f7c;
+	color: #737a8a;
+	background: rgba(0, 0, 0, .25);
+	padding: .1em .75em;
+	border-radius: 1em;
 	font-weight: 300;
+	text-transform: uppercase;
 	-webkit-transition: all .1s ease-in;
 }
 .item-date:before{
-content: "•";
-font-weight: 900;
-color: #e85b5d;
-margin: 0 .3em 0 0;
+	content: "•";
+	font-weight: 900;
+	color: #ff6668;
+	margin: 0 .3em 0 0;
 }
 /* Edit Panel */
 .panel{
@@ -157,6 +172,15 @@ margin: 0 .3em 0 0;
 }
 h2{
 	font-weight: 700;
+	line-height: 1.5em;
+	margin: 0 0 .5em;
+	border-bottom: 2px solid #f4f7fa;
+}
+h2:before{
+	content: "*";
+	font-weight: 900;
+	color: #ff6668;
+	margin: 0 .2em 0 0;
 }
 .edit-panel section{
 	width: 100%;
@@ -164,23 +188,30 @@ h2{
 	height: 50px;
 	line-height: 50px;
 	vertical-align: middle;
+	background: #fff;
 }
 h3{
 	display: inline-block;
-	width: 20%;
+	width: 18%;
 	padding: 0 1em 0 0;
 	font-weight: 100;
-	letter-spacing: -.03em;
+	letter-spacing: -.02em;
 	text-transform: uppercase;
 	font-size: .7em;
 	line-height: 50px;
 	vertical-align: middle;
+	-webkit-transition: all .1s ease-in;
 }
 h3:before{
 	content: "#";
 	padding: 0 .3em 0 0;
-	color: #e85b5d;
+	color: #ff6668;
 	font-weight: 700;
+	-webkit-transition: all .1s ease-in;
+}
+.edit-panel section:hover h3,
+.edit-panel section:hover h3:before{
+	color: #34c295;
 }
 .edit-panel .edit-date,
 .edit-panel .edit-duration{
@@ -190,9 +221,9 @@ h3:before{
 	height: 200px;
 }
 input[type=text],textarea{
-	border: 1px solid #ddd;
+	border: 1px solid #eef2f6;
 	color: #5a6778;
-	padding: .25em .3em;
+	padding: .35em .5em;
 	width: 72%;
 	float: right;
 	font-size: .8em;
@@ -200,12 +231,16 @@ input[type=text],textarea{
 	margin: 14px 8% 0 0;
 	font-family: monospace;
 }
+input[type=text]:hover,textarea:hover{
+	border: 1px solid #34c295;
+	background: #fefefe;
+}
 input[type=submit]{
 	width: 100px;
 	height: 32px;
 	font-size: 16px;
 	line-height: 32px;
-	background: #33bc8c;
+	background: #34c295;
 	color: #fff;
 	font-weight: 700;
 	font-family: "Source Sans Pro";
@@ -215,7 +250,9 @@ input[type=submit]{
 	text-transform: uppercase;
 	position: fixed;
 	bottom: 30px;
+	box-shadow: 0px 9px 25px rgba(26,204,156,0.35);	
 }
 input[type=submit]:hover{
-	background: #e85b5d;
+	background: #ff6668;
+	box-shadow: 0px 9px 25px rgba(255,102,104,0.35);	
 }
