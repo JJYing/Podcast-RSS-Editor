@@ -16,6 +16,7 @@ $xmlDoc = simplexml_load_file('rss.xml','my_node');
 
 //Process episodes
 $t = 0;
+$totalShownoteLinks = 0;
 foreach($xmlDoc->channel->item as $thisItem){
 	$thisDuration = $thisItem->children('itunes', true)->duration;
 	if (substr($thisDuration,-3,1) == ':') {
@@ -33,6 +34,8 @@ foreach($xmlDoc->channel->item as $thisItem){
 	$thisDesc[$t] = $thisItem->description;
 	$thisFile[$t] = $thisItem->enclosure['url'];
 	$thisImage[$t] = $thisItem->image['href'];
+	$thisShownoteLinks[$t] = substr_count($thisItem->description,"</a>");
+	$totalShownoteLinks += $thisShownoteLinks[$t];
 	if ( (int) $_GET['ep'] == $t) {$highLightItem = "highlight";}
 	else {$highLightItem = "";}
 	$thisContent = "<a href='?ep=$t' class='item $highLightItem'><h1>$thisTitle[$t]</h1><span class='item-date'>$thisDate2[$t]</span></a>";
@@ -43,11 +46,14 @@ foreach($xmlDoc->channel->item as $thisItem){
 //Process summaries
 $totalHours = number_format(($totalSeconds / 3600),1);
 $averageMinutes = number_format(($totalSeconds / 60 / $t),1);
+$sinceLastUpdate = ceil((strtotime(now)-strtotime($thisDate[0]))/86400);
 $dashboardContent = "
 	<ul>
+		<li><strong>$sinceLastUpdate</strong><br />Days Since Last Ep.</li>
 		<li><strong>$t</strong><br />Total Episodes</li>
 		<li><strong>$totalHours</strong><br />Total Hours</li>
-		<li><strong>$averageMinutes</strong><br />Ave. Minutes</li>
+		<li><strong>$averageMinutes</strong><br />Ave. Minutes per Ep.</li>
+		<li><strong>$totalShownoteLinks</strong><br />Links in Shownotes</li>
 	</ul>";
 
 
@@ -127,18 +133,18 @@ class my_node extends SimpleXMLElement
 	<section class="dashboard"><?php echo($dashboardContent);?></section>
 </nav>
 <article class="panel edit-panel">	
-	<h2 class="panel-title"><?php echo $panelTitle ?></h2>
+	<h2 class="panel-title right-in-1"><?php echo $panelTitle ?></h2>
 	<form action="index.php?ep=<?php echo $ep?>" method="post">
-		<section class="edit-title"><h3>Title: </h3><input type="text" name="newTitle" value="<?php echo $currentTitle ?>" /></section>
-		<section class="edit-date even"><h3>Publish Time: </h3><input type="text" name="newDate" value="<?php echo $currentDate2 ?>" /></section>
-		<section class="edit-duration"><h3>Duration: </h3><input type="text" name="newDuration" value="<?php echo $currentDuration ?>" /></section>
-		<section class="edit-link even"><h3>Link: </h3><input type="text" name="newLink" value="<?php echo $currentLink ?>" /></section>
-		<section class="edit-author"><h3>Authors: </h3><input type="text" name="newAuthor" value="<?php echo $currentAuthor ?>" /></section>
-		<section class="edit-image even"><h3>Cover Image: </h3><input type="text" name="newDuration" value="<?php echo $currentImage ?>" /></section>
-		<section class="edit-audio"><h3>Audio File: </h3><input type="text" name="newAudio" value="<?php echo $currentFile ?>" /></section>
+		<section class="edit-title right-in-1"><h3>Title: </h3><input type="text" name="newTitle" value="<?php echo $currentTitle ?>" /></section>
+		<section class="edit-date right-in-1"><h3>Publish Time: </h3><input type="text" name="newDate" value="<?php echo $currentDate2 ?>" /></section>
+		<section class="edit-duration right-in-2"><h3>Duration: </h3><input type="text" name="newDuration" value="<?php echo $currentDuration ?>" /></section>
+		<section class="edit-link right-in-2"><h3>Link: </h3><input type="text" name="newLink" value="<?php echo $currentLink ?>" /></section>
+		<section class="edit-author right-in-2"><h3>Authors: </h3><input type="text" name="newAuthor" value="<?php echo $currentAuthor ?>" /></section>
+		<section class="edit-image right-in-3"><h3>Cover Image: </h3><input type="text" name="newDuration" value="<?php echo $currentImage ?>" /></section>
+		<section class="edit-audio right-in-3"><h3>Audio File: </h3><input type="text" name="newAudio" value="<?php echo $currentFile ?>" /></section>
 		
-		<section class="edit-desc"><h3>Description: </h3><textarea name="newDesc"  /><?php echo $currentDesc ?></textarea></section>
-	<input type="submit" value="Save">
+		<section class="edit-desc right-in-3"><h3>Description: </h3><textarea name="newDesc"  /><?php echo $currentDesc ?></textarea></section>
+	<input type="submit" value="Save" class="right-in-3">
 	<input type="checkbox" checked name="yy" value="yes" class="hide"/>	
 	</form>
 </article>
