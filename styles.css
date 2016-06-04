@@ -64,7 +64,7 @@ nav{
 	display: block;
 	list-style: none;
 	padding: 1em;
-	border-top: 1px solid #222;
+	border-top: 1px solid #1b1f26;
 	text-align: center;
 	line-height: 1.1;
 	font-weight: 400;
@@ -111,7 +111,6 @@ aside{
 }
 .add-new-item{
 	text-align: center;
-	background: #1f222c;
 	border-right: 5px solid #1f222c;
 }
 .add-new-item h1{
@@ -175,6 +174,8 @@ h2{
 	line-height: 1.5em;
 	margin: 0 0 .5em;
 	border-bottom: 2px solid #f4f7fa;
+	-webkit-animation: right-in .25s ease-out 0.1s 1 forwards;
+	opacity: 0;
 }
 h2:before{
 	content: "*";
@@ -215,7 +216,7 @@ h3:before{
 }
 .edit-panel .edit-date,
 .edit-panel .edit-duration{
-
+	
 }
 .edit-panel .edit-desc textarea{
 	height: 200px;
@@ -250,9 +251,30 @@ input[type=submit]{
 	text-transform: uppercase;
 	position: fixed;
 	bottom: 30px;
-	box-shadow: 0px 9px 25px rgba(26,204,156,0.35);	
+	box-shadow: 0px 9px 25px rgba(26,204,156,0.35);
 }
 input[type=submit]:hover{
 	background: #ff6668;
 	box-shadow: 0px 9px 25px rgba(255,102,104,0.35);	
+}
+/*~Animations*/
+.right-in-1{
+	-webkit-animation: right-in .3s ease-out 0s 1 forwards;
+	opacity: 0;
+}
+.right-in-2{
+	-webkit-animation: right-in .3s ease-out 0.075s 1 forwards;
+	opacity: 0;
+}
+.right-in-3{
+	-webkit-animation: right-in .3s ease-out 0.15s 1 forwards;
+	opacity: 0;
+}
+
+@-webkit-keyframes 'right-in' {
+	0%{-webkit-transform: translate(90px, 0);opacity:0}
+	50%{-webkit-transform: translate(-15px, 0);opacity:0.5}
+	70%{-webkit-transform: translate(10px, 0);opacity:0.7}
+	85%{-webkit-transform: translate(-5px, 0);opacity:0.85}
+	100%{-webkit-transform: translate(0, 0);opacity:1}
 }
