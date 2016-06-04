@@ -17,13 +17,13 @@ $xmlDoc = simplexml_load_file('rss.xml','my_node');
 //Process episodes
 $t = 0;
 foreach($xmlDoc->channel->item as $thisItem){
-   $thisDuration = $thisItem->children('itunes', true)->duration;
-   if (substr($thisDuration,-3,1) == ':') {
-   	$thisSeconds[$t] = substr($thisDuration,0,2) * 3600 + substr($thisDuration,3,2) * 60 + substr($thisDuration,6,2);
-   }
-   else {
-   	$thisSeconds[$t] = $thisDuration;
-   }
+	$thisDuration = $thisItem->children('itunes', true)->duration;
+	if (substr($thisDuration,-3,1) == ':') {
+		$thisSeconds[$t] = substr($thisDuration,0,2) * 3600 + substr($thisDuration,3,2) * 60 + substr($thisDuration,6,2);
+	}
+	else {
+		$thisSeconds[$t] = $thisDuration;
+	}
 	$totalSeconds += $thisSeconds[$t];
 	$thisTitle[$t] = $thisItem->title;
 	$thisLink[$t] = $thisItem->link;
@@ -33,7 +33,9 @@ foreach($xmlDoc->channel->item as $thisItem){
 	$thisDesc[$t] = $thisItem->description;
 	$thisFile[$t] = $thisItem->enclosure['url'];
 	$thisImage[$t] = $thisItem->image['href'];
-	$thisContent = "<a href='?ep=$t' class='item'><h1>$thisTitle[$t]</h1><span class='item-date'>$thisDate[$t]</span></a>";
+	if ( (int) $_GET['ep'] == $t) {$highLightItem = "highlight";}
+	else {$highLightItem = "";}
+	$thisContent = "<a href='?ep=$t' class='item $highLightItem'><h1>$thisTitle[$t]</h1><span class='item-date'>$thisDate2[$t]</span></a>";
 	$itemList.=$thisContent;
 	$t+=1;
 }
@@ -128,11 +130,11 @@ class my_node extends SimpleXMLElement
 	<h2 class="panel-title"><?php echo $panelTitle ?></h2>
 	<form action="index.php?ep=<?php echo $ep?>" method="post">
 		<section class="edit-title"><h3>Title: </h3><input type="text" name="newTitle" value="<?php echo $currentTitle ?>" /></section>
-		<section class="edit-date"><h3>Publish Time: </h3><input type="text" name="newDate" value="<?php echo $currentDate2 ?>" /></section>
+		<section class="edit-date even"><h3>Publish Time: </h3><input type="text" name="newDate" value="<?php echo $currentDate2 ?>" /></section>
 		<section class="edit-duration"><h3>Duration: </h3><input type="text" name="newDuration" value="<?php echo $currentDuration ?>" /></section>
-		<section class="edit-link"><h3>Link: </h3><input type="text" name="newLink" value="<?php echo $currentLink ?>" /></section>
+		<section class="edit-link even"><h3>Link: </h3><input type="text" name="newLink" value="<?php echo $currentLink ?>" /></section>
 		<section class="edit-author"><h3>Authors: </h3><input type="text" name="newAuthor" value="<?php echo $currentAuthor ?>" /></section>
-		<section class="edit-image"><h3>Cover Image: </h3><input type="text" name="newDuration" value="<?php echo $currentImage ?>" /></section>
+		<section class="edit-image even"><h3>Cover Image: </h3><input type="text" name="newDuration" value="<?php echo $currentImage ?>" /></section>
 		<section class="edit-audio"><h3>Audio File: </h3><input type="text" name="newAudio" value="<?php echo $currentFile ?>" /></section>
 		
 		<section class="edit-desc"><h3>Description: </h3><textarea name="newDesc"  /><?php echo $currentDesc ?></textarea></section>
