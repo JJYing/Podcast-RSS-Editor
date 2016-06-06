@@ -31,7 +31,7 @@ foreach($xmlDoc->channel->item as $thisItem){
 	$thisLink[$t] = $thisItem->link;
 	$thisAuthor[$t] = $thisItem->author;
 	$thisDate[$t] = $thisItem->pubDate;
-	$thisDate2[$t] = gmdate('M j, Y', strtotime($thisDate[$t]));
+	$thisDate2[$t] = date('M j, Y', strtotime($thisDate[$t]));
 	$thisDesc[$t] = $thisItem->description;
 	$thisFile[$t] = $thisItem->enclosure['url'];
 	$thisImage[$t] = $thisItem->children('itunes', true)->image->attributes()->href;
@@ -46,6 +46,7 @@ foreach($xmlDoc->channel->item as $thisItem){
 }
 
 //Process summaries
+$currentTimezone =  substr($thisDate[0],-5,5);
 $totalHours = number_format(($totalSeconds / 3600),1);
 $averageMinutes = number_format(($totalSeconds / 60 / $t),1);
 $sinceLastUpdate = ceil((strtotime(now)-strtotime($thisDate[0]))/86400);
@@ -68,6 +69,12 @@ if ($ep >= 0) {
 	$currentHH = floor($thisSeconds[$ep] / 3600);
 	$currentMM = floor($thisSeconds[$ep] / 60 - $currentHH * 60);
 	$currentSS = $thisSeconds[$ep] - $currentHH * 3600 - $currentMM * 60;
+	$currentMonth = gmdate('m',  strtotime($thisDate[$ep]));
+	$currentDay = gmdate('d',  strtotime($thisDate[$ep]));
+	$currentYear = gmdate('Y',  strtotime($thisDate[$ep]));
+	$currentHour = gmdate('H',  strtotime($thisDate[$ep]));
+	$currentMinute = gmdate('i',  strtotime($thisDate[$ep]));
+	$currentSecond = gmdate('s',  strtotime($thisDate[$ep]));
 	$currentLink = "$thisLink[$ep]";
 	$currentAuthor = "$thisAuthor[$ep]";
 	$currentImage = "$thisImage[$ep]";
@@ -78,15 +85,31 @@ if ($ep >= 0) {
 	$currentDate = "$thisDate[$ep]";
 	$currentDate2 = "$thisDate2[$ep]";
 	$currentAuthor = "$thisAuthor[$ep]";
-	if ($_POST["yy"] =="yes") {	//Edit existing episodes
-		$xmlDoc->channel->item[$ep]->title = $_POST["newTitle"];
-		$xmlDoc->channel->item[$ep]->link =  $_POST["newLink"];
+	if ($_POST["yy"] =="yes") {	
+	
+		//Edit existing episodes
+	
+		$NS = array( 
+		    'itunes' => 'http://www.itunes.com/dtds/podcast-1.0.dtd' 
+		);
+		$xmlDoc->registerXPathNamespace('itunes', $NS['itunes']);
+		$thisEdit = $xmlDoc->channel->item[$ep];
+		$thisEdit->title = $_POST["newTitle"];
+		$thisEdit->pubDate = gmdate(DATE_RFC2822, gmmktime($_POST["newHour"], $_POST["newMinute"], $_POST["newSecond"], $_POST["newMonth"], $_POST["newDay"], $_POST["newYear"]));
+		$thisEdit->children('itunes', true)->duration = $_POST["newHH"] * 3600 + $_POST["newMM"] * 60 + $_POST["newSS"];
+		$thisEdit->enclosure->attributes()->url=$_POST["newFile"];
+		$thisEdit->link =  $_POST["newLink"];
+		$thisEdit->guid = $_POST["newLink"];
+		$thisEdit->author =  $_POST["newAuthor"];
+		$thisEdit->children('itunes', true)->image->attributes()->href = $_POST["newImage"];
+		$thisEdit->description = '';
+		$thisEdit->description->addCData($_POST["newDesc"]);		
 		$xmlDoc->asXML('rss.xml');
-		echo "<script>location.href='".$_SERVER["HTTP_REFERER"]."#ep-$ep"."';</script>";
+		echo "<script>location.href='".$_SERVER["HTTP_REFERER"]."#ep-$ep"."';</script>";		
 	}
 }
 else {
-	$panelTitle = "Add New Item";
+	$panelTitle = "Add New Episode";
 	$currentAuthor = "$thisAuthor[0]";
 	$currentDay = date('d',time());
 	$currentMonth = date('m',time());
@@ -94,16 +117,20 @@ else {
 	$currentHour = 0;
 	$currentMinute = 0;
 	$currentSecond = 0;
-	if ($_POST["yy"] =="yes") { 	//Add new episode
+	if ($_POST["yy"] =="yes") { 	
+		
+		//Add new episode
+		
 		$newDuration = $_POST["newHH"] * 3600 + $_POST["newMM"] * 60 + $_POST["newSS"];
+		$newDate = gmdate(DATE_RFC2822, gmmktime($_POST["newHour"], $_POST["newMinute"], $_POST["newSecond"], $_POST["newMonth"], $_POST["newDay"], $_POST["newYear"]));
 		$NS = array( 
 		    'itunes' => 'http://www.itunes.com/dtds/podcast-1.0.dtd' 
 		);
 		$xmlDoc->registerXPathNamespace('itunes', $NS['itunes']); 
 		$newItem = $xmlDoc->channel->addNewItem();
 		$newItem->addChild('title', $_POST["newTitle"]);
-		$newDesc = '<![CDATA[' . $_POST["newDesc"] . ']]>';    
-		$newItem->addChild('description', $newDesc);
+		$newItem->addChild('description','');
+		$newItem->description->addCData($_POST["newDesc"]);
 		$newItem->addChild('link', $_POST["newLink"]);
 		$newItem->addChild('explicit', 'no',$NS['itunes']);
 		$newItem->addChild('guid', $_POST["newLink"]);
@@ -111,7 +138,7 @@ else {
 		$newItem->addChild('author', $_POST["newAuthor"]);
 		$newItem->addChild('image', "",$NS['itunes']);
 		$newItem->children('itunes', true)->image->addAttribute('href', $_POST["newImage"]);
-		$newItem->addChild('pubDate', $_POST["newDate"]);
+		$newItem->addChild('pubDate', $newDate);
 		$newItem->addChild('enclosure');
 		$newItem->enclosure->addAttribute('type', 'audio/mpeg');
 		$newItem->enclosure->addAttribute('url', $_POST["newFile"]);
@@ -124,16 +151,11 @@ else {
 //Extras
 class my_node extends SimpleXMLElement
 {
-    public function prependChild($name)
-    {
-        $dom = dom_import_simplexml($this);
-
-        $new = $dom->insertBefore(
-            $dom->ownerDocument->createElement($name),
-            $dom->firstChild
-        );
-        return simplexml_import_dom($new, get_class($this));
-    }
+	public function addCData($cdata_text) {
+		$node = dom_import_simplexml($this); 
+		$no   = $node->ownerDocument; 
+		$node->appendChild($no->createCDATASection($cdata_text)); 
+	}
     public function addNewItem()
     {
     	$dom = dom_import_simplexml($this);
@@ -157,7 +179,7 @@ class my_node extends SimpleXMLElement
 			<h3>Publish Time: </h3>
 			<span>
 				<input type="text" name="newMonth" value="<?php echo $currentMonth ?>" /><label for="newMonth">Month</label>
-				<input type="text" name="newDday" value="<?php echo $currentDay ?>" /><label for="newDday">Day</label>
+				<input type="text" name="newDay" value="<?php echo $currentDay ?>" /><label for="newDay">Day</label>
 				<input type="text" name="newYear" value="<?php echo $currentYear ?>" /><label for="newYear">Year</label>
 				<input type="text" name="newHour" value="<?php echo $currentHour ?>" /><label for="newHour">Hour</label>
 				<input type="text" name="newMinute" value="<?php echo $currentMinute ?>" /><label for="newMinute">Minute</label>

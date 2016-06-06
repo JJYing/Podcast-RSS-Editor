@@ -233,12 +233,12 @@ h3:before{
 input[type=text],textarea{
 	border: 2px solid #eef2f6;
 	color: #5a6778;
-	padding: .35em .5em;
+	padding: .15em .5em;
 	font-size: .8em;
 	width: 100%;
 	border-radius: .2em;
 	margin: 14px 8% 0 0;
-	font-family: monospace;
+	font-family: 'Source Sans Pro', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
 	-webkit-transition: all .1s ease-in;
 	font-size: 1rem;
 }
@@ -254,7 +254,7 @@ input[type=text],textarea{
 	margin-right: .4em;
 }
 input[name=newYear]{
-	width: 50px;
+	width: 55px;
 }
 .edit-panel label{
 	margin-right: 1em;

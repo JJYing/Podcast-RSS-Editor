@@ -4,16 +4,17 @@ After hosting a design podcast, I started manually updating the RSS feed for eve
 ![](https://raw.githubusercontent.com/JJYing/Podcast-RSS-Editor/master/screenshot.jpg)
 
 # To-do
-- 'Add new item' function
+- ~~'Add new item' function~~
 - 'Remove item' function
 - ~~Cover image field~~
+- ~~Edit in CDATA for item description~~
 - Cover image preview
 - Audio preview
 - Put a logo
 
-# Exsiting alternatives
+# Alternatives
 - [Itunes podcast XML generator](http://codepen.io/jon-walstedt/pen/jsIup) by Jon Wålstedt
 - [Podcast Generator](http://www.podcastgenerator.net/)
 
 # Known Issues
-**Quite a lot**
+- After editing an episode, the page jumped to still shows the old data. 
