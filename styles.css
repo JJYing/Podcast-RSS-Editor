@@ -29,9 +29,14 @@ input{
 .hide{
 	opacity: 0;
 }
+::selection{ 
+	background: #34c295;
+	color: #fff;
+	text-shadow: none;
+}
 /*~Nav*/
 nav{
-	background: #20252e;
+	background: #191c24;
 	width: 8%;
 	height: 100%;
 	position: fixed;
@@ -77,7 +82,7 @@ nav{
 }
 /*~Item List*/
 aside{
-	width: 33%;
+	width: 30%;
 	display: fixed;
 	height: 100%;
 	position: fixed;
@@ -101,7 +106,7 @@ aside{
 	-webkit-transition: all .1s ease-in;
 }
 .item.highlight{
-	background: #222730;
+	background: #252b36;
 	border-right: 5px solid #171922;
 }
 .item:hover{
@@ -157,7 +162,7 @@ h1{
 .panel{
 	font-size: 2em;
 	overflow: hidden;
-	width: 59%;	
+	width: 62%;	
 	background: #fff;
 	position: fixed;
 	right: 0;
@@ -166,7 +171,7 @@ h1{
 }
 .edit-panel{
 	font-size: 2em;
-	padding: 1em 2em;
+	padding: 1.5em 3.5em 1.5em 2.5em;
 	line-height: 2;
 }
 h2{
@@ -197,7 +202,7 @@ h3{
 	width: 18%;
 	padding: 0 1em 0 0;
 	font-weight: 100;
-	letter-spacing: -.02em;
+	letter-spacing: -0.02em;
 	text-transform: uppercase;
 	font-size: .7em;
 	line-height: 50px;
@@ -214,30 +219,47 @@ h3:before{
 .edit-panel section:hover h3,
 .edit-panel section:hover h3:before{
 	color: #34c295;
-}
-.edit-panel .edit-date,
-.edit-panel .edit-duration{
-	
+	text-indent: .8em;
+	font-weight: 400;
 }
 .edit-panel .edit-desc textarea{
 	height: 200px;
 }
+.edit-panel section span{
+	width: 78%;
+	float: right;
+	font-size: .75rem;
+}
 input[type=text],textarea{
-	border: 1px solid #eef2f6;
+	border: 2px solid #eef2f6;
 	color: #5a6778;
 	padding: .35em .5em;
-	width: 72%;
-	float: right;
 	font-size: .8em;
+	width: 100%;
 	border-radius: .2em;
 	margin: 14px 8% 0 0;
 	font-family: monospace;
 	-webkit-transition: all .1s ease-in;
+	font-size: 1rem;
 }
 .edit-panel section:hover input[type=text],
 .edit-panel section:hover textarea{
-	border: 1px solid #34c295;
+	border: 2px solid #34c295;
 	background: #fefefe;
+}
+.edit-duration input,
+.edit-date input{
+	width: 35px;
+	text-align: center;
+	margin-right: .4em;
+}
+input[name=newYear]{
+	width: 50px;
+}
+.edit-panel label{
+	margin-right: 1em;
+	width: 30px;
+	display: inline-block;
 }
 input[type=submit]{
 	width: 100px;

@@ -37,9 +37,10 @@ foreach($xmlDoc->channel->item as $thisItem){
 	$thisImage[$t] = $thisItem->children('itunes', true)->image->attributes()->href;
 	$thisShownoteLinks[$t] = substr_count($thisItem->description,"</a>");
 	$totalShownoteLinks += $thisShownoteLinks[$t];
+	if ($t >= 10) {$jumpto = "#ep-$t";}else {$jumpto = "";} //Set jump to in item list
 	if ( (int) $_GET['ep'] == $t) {$highLightItem = "highlight";}
 	else {$highLightItem = "";}
-	$thisContent = "<a href='?ep=$t' class='item $highLightItem'><h1>$thisTitle[$t]</h1><span class='item-date'>$thisDate2[$t]</span></a>";
+	$thisContent = "<a href='?ep=$t$jumpto' class='item $highLightItem' name='ep-$t'><h1>$thisTitle[$t]</h1><span class='item-date'>$thisDate2[$t]</span></a>";
 	$itemList.=$thisContent;
 	$t+=1;
 }
@@ -64,6 +65,9 @@ if ($ep >= 0) {
 	$panelTitle = "Edit Episode #$ep2";
 	$currentTitle = "$thisTitle[$ep]";
 	$currentDuration = "$thisSeconds[$ep]";
+	$currentHH = floor($thisSeconds[$ep] / 3600);
+	$currentMM = floor($thisSeconds[$ep] / 60 - $currentHH * 60);
+	$currentSS = $thisSeconds[$ep] - $currentHH * 3600 - $currentMM * 60;
 	$currentLink = "$thisLink[$ep]";
 	$currentAuthor = "$thisAuthor[$ep]";
 	$currentImage = "$thisImage[$ep]";
@@ -78,28 +82,40 @@ if ($ep >= 0) {
 		$xmlDoc->channel->item[$ep]->title = $_POST["newTitle"];
 		$xmlDoc->channel->item[$ep]->link =  $_POST["newLink"];
 		$xmlDoc->asXML('rss.xml');
-		echo "<script>location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+		echo "<script>location.href='".$_SERVER["HTTP_REFERER"]."#ep-$ep"."';</script>";
 	}
 }
 else {
 	$panelTitle = "Add New Item";
 	$currentAuthor = "$thisAuthor[0]";
+	$currentDay = date('d',time());
+	$currentMonth = date('m',time());
+	$currentYear = date('Y',time());
+	$currentHour = 0;
+	$currentMinute = 0;
+	$currentSecond = 0;
 	if ($_POST["yy"] =="yes") { 	//Add new episode
+		$newDuration = $_POST["newHH"] * 3600 + $_POST["newMM"] * 60 + $_POST["newSS"];
 		$NS = array( 
 		    'itunes' => 'http://www.itunes.com/dtds/podcast-1.0.dtd' 
 		);
 		$xmlDoc->registerXPathNamespace('itunes', $NS['itunes']); 
 		$newItem = $xmlDoc->channel->addNewItem();
 		$newItem->addChild('title', $_POST["newTitle"]);
-		$newItem->addChild('description', $_POST["newTitle"]);
-		$newItem->addChild('link', $_POST["newTitle"]);
-		$newItem->addChild('explicit', $_POST["newTitle"],$NS['itunes']);
-		$newItem->addChild('guid', $_POST["newTitle"]);
-		$newItem->addChild('author', $_POST["newTitle"]);
-		$newItem->addChild('image', $_POST["newTitle"],$NS['itunes']);
-		$newItem->addChild('pubDate', $_POST["newTitle"]);
-		$newItem->addChild('enclosure', $_POST["newTitle"]);
-		$newItem->addChild('duration', '★★★★★★★',$NS['itunes']);
+		$newDesc = '<![CDATA[' . $_POST["newDesc"] . ']]>';    
+		$newItem->addChild('description', $newDesc);
+		$newItem->addChild('link', $_POST["newLink"]);
+		$newItem->addChild('explicit', 'no',$NS['itunes']);
+		$newItem->addChild('guid', $_POST["newLink"]);
+		$newItem->guid->addAttribute('isPermaLink', 'true');
+		$newItem->addChild('author', $_POST["newAuthor"]);
+		$newItem->addChild('image', "",$NS['itunes']);
+		$newItem->children('itunes', true)->image->addAttribute('href', $_POST["newImage"]);
+		$newItem->addChild('pubDate', $_POST["newDate"]);
+		$newItem->addChild('enclosure');
+		$newItem->enclosure->addAttribute('type', 'audio/mpeg');
+		$newItem->enclosure->addAttribute('url', $_POST["newFile"]);
+		$newItem->addChild('duration',  $newDuration, $NS['itunes']);
 		$xmlDoc->asXML('rss.xml');			
 		echo "<script>location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 	}	
@@ -136,15 +152,30 @@ class my_node extends SimpleXMLElement
 <article class="panel edit-panel">	
 	<h2 class="panel-title right-in-1"><?php echo $panelTitle ?></h2>
 	<form action="index.php?ep=<?php echo $ep?>" method="post">
-		<section class="edit-title right-in-2"><h3>Title: </h3><input type="text" name="newTitle" value="<?php echo $currentTitle ?>" /></section>
-		<section class="edit-date right-in-3"><h3>Publish Time: </h3><input type="text" name="newDate" value="<?php echo $currentDate2 ?>" /></section>
-		<section class="edit-duration right-in-4"><h3>Duration: </h3><input type="text" name="newDuration" value="<?php echo $currentDuration ?>" /></section>
-		<section class="edit-link right-in-5"><h3>Link: </h3><input type="text" name="newLink" value="<?php echo $currentLink ?>" /></section>
-		<section class="edit-author right-in-6"><h3>Authors: </h3><input type="text" name="newAuthor" value="<?php echo $currentAuthor ?>" /></section>
-		<section class="edit-image right-in-7"><h3>Cover Image: </h3><input type="text" name="newDuration" value="<?php echo $currentImage ?>" /></section>
-		<section class="edit-audio right-in-8"><h3>Audio File: </h3><input type="text" name="newAudio" value="<?php echo $currentFile ?>" /></section>
-		
-		<section class="edit-desc right-in-9"><h3>Description: </h3><textarea name="newDesc"  /><?php echo $currentDesc ?></textarea></section>
+		<section class="edit-title right-in-2"><h3>Title: </h3><span><input type="text" name="newTitle" value="<?php echo $currentTitle ?>" /></span></section>
+		<section class="edit-date right-in-3">
+			<h3>Publish Time: </h3>
+			<span>
+				<input type="text" name="newMonth" value="<?php echo $currentMonth ?>" /><label for="newMonth">Month</label>
+				<input type="text" name="newDday" value="<?php echo $currentDay ?>" /><label for="newDday">Day</label>
+				<input type="text" name="newYear" value="<?php echo $currentYear ?>" /><label for="newYear">Year</label>
+				<input type="text" name="newHour" value="<?php echo $currentHour ?>" /><label for="newHour">Hour</label>
+				<input type="text" name="newMinute" value="<?php echo $currentMinute ?>" /><label for="newMinute">Minute</label>
+				<input type="text" name="newSecond" value="<?php echo $currentSecond ?>" /><label for="newSecond">Second</label>
+			</span></section>
+		<section class="edit-duration right-in-4">
+			<h3>Duration: </h3>
+			<span>
+				<input type="text" name="newHH" value="<?php echo $currentHH ?>" /><label for="newHH">HH</label>
+				<input type="text" name="newMM" value="<?php echo $currentMM ?>" /><label for="newMM">MM</label>
+				<input type="text" name="newSS" value="<?php echo $currentSS ?>" /><label for="newSS">SS</label>
+			</span>
+		</section>
+		<section class="edit-link right-in-5"><h3>Link: </h3><span><input type="text" name="newLink" value="<?php echo $currentLink ?>" /></span></section>
+		<section class="edit-author right-in-6"><h3>Authors: </h3><span><input type="text" name="newAuthor" value="<?php echo $currentAuthor ?>" /></span></section>
+		<section class="edit-image right-in-7"><h3>Cover Image: </h3><span><input type="text" name="newImage" value="<?php echo $currentImage ?>" /></span></section>
+		<section class="edit-audio right-in-8"><h3>Audio File: </h3><span><input type="text" name="newFile" value="<?php echo $currentFile ?>" /></span></section>
+		<section class="edit-desc right-in-9"><h3>Description: </h3><span><textarea name="newDesc"  /><?php echo $currentDesc ?></textarea></span></section>
 	<input type="submit" value="Save" class="right-in-10">
 	<input type="checkbox" checked name="yy" value="yes" class="hide"/>	
 	</form>
