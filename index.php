@@ -7,6 +7,7 @@
 	<meta name="description" content="Podcast RSS Editor" />
 	<title>Podcast RSS Editor</title>
 	<link rel="stylesheet" rev="stylesheet" href="styles.css" type="text/css" media="all" />
+	<link rel="shortcut icon" href="assets/favicon.png" />
 </head>
 <body>
 <?php
@@ -33,7 +34,7 @@ foreach($xmlDoc->channel->item as $thisItem){
 	$thisDate2[$t] = gmdate('M j, Y', strtotime($thisDate[$t]));
 	$thisDesc[$t] = $thisItem->description;
 	$thisFile[$t] = $thisItem->enclosure['url'];
-	$thisImage[$t] = $thisItem->image['href'];
+	$thisImage[$t] = $thisItem->children('itunes', true)->image->attributes()->href;
 	$thisShownoteLinks[$t] = substr_count($thisItem->description,"</a>");
 	$totalShownoteLinks += $thisShownoteLinks[$t];
 	if ( (int) $_GET['ep'] == $t) {$highLightItem = "highlight";}
@@ -73,10 +74,10 @@ if ($ep >= 0) {
 	$currentDate = "$thisDate[$ep]";
 	$currentDate2 = "$thisDate2[$ep]";
 	$currentAuthor = "$thisAuthor[$ep]";
-	$xmlDoc->channel->item[$ep]->title = $_POST["newTitle"];
-	$xmlDoc->channel->item[$ep]->link =  $_POST["newLink"];
 	if ($_POST["yy"] =="yes") {	//Edit existing episodes
-		$xmlDoc->asXML('rss.xml');	
+		$xmlDoc->channel->item[$ep]->title = $_POST["newTitle"];
+		$xmlDoc->channel->item[$ep]->link =  $_POST["newLink"];
+		$xmlDoc->asXML('rss.xml');
 		echo "<script>location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 	}
 }
@@ -135,16 +136,16 @@ class my_node extends SimpleXMLElement
 <article class="panel edit-panel">	
 	<h2 class="panel-title right-in-1"><?php echo $panelTitle ?></h2>
 	<form action="index.php?ep=<?php echo $ep?>" method="post">
-		<section class="edit-title right-in-1"><h3>Title: </h3><input type="text" name="newTitle" value="<?php echo $currentTitle ?>" /></section>
-		<section class="edit-date right-in-1"><h3>Publish Time: </h3><input type="text" name="newDate" value="<?php echo $currentDate2 ?>" /></section>
-		<section class="edit-duration right-in-2"><h3>Duration: </h3><input type="text" name="newDuration" value="<?php echo $currentDuration ?>" /></section>
-		<section class="edit-link right-in-2"><h3>Link: </h3><input type="text" name="newLink" value="<?php echo $currentLink ?>" /></section>
-		<section class="edit-author right-in-2"><h3>Authors: </h3><input type="text" name="newAuthor" value="<?php echo $currentAuthor ?>" /></section>
-		<section class="edit-image right-in-3"><h3>Cover Image: </h3><input type="text" name="newDuration" value="<?php echo $currentImage ?>" /></section>
-		<section class="edit-audio right-in-3"><h3>Audio File: </h3><input type="text" name="newAudio" value="<?php echo $currentFile ?>" /></section>
+		<section class="edit-title right-in-2"><h3>Title: </h3><input type="text" name="newTitle" value="<?php echo $currentTitle ?>" /></section>
+		<section class="edit-date right-in-3"><h3>Publish Time: </h3><input type="text" name="newDate" value="<?php echo $currentDate2 ?>" /></section>
+		<section class="edit-duration right-in-4"><h3>Duration: </h3><input type="text" name="newDuration" value="<?php echo $currentDuration ?>" /></section>
+		<section class="edit-link right-in-5"><h3>Link: </h3><input type="text" name="newLink" value="<?php echo $currentLink ?>" /></section>
+		<section class="edit-author right-in-6"><h3>Authors: </h3><input type="text" name="newAuthor" value="<?php echo $currentAuthor ?>" /></section>
+		<section class="edit-image right-in-7"><h3>Cover Image: </h3><input type="text" name="newDuration" value="<?php echo $currentImage ?>" /></section>
+		<section class="edit-audio right-in-8"><h3>Audio File: </h3><input type="text" name="newAudio" value="<?php echo $currentFile ?>" /></section>
 		
-		<section class="edit-desc right-in-3"><h3>Description: </h3><textarea name="newDesc"  /><?php echo $currentDesc ?></textarea></section>
-	<input type="submit" value="Save" class="right-in-3">
+		<section class="edit-desc right-in-9"><h3>Description: </h3><textarea name="newDesc"  /><?php echo $currentDesc ?></textarea></section>
+	<input type="submit" value="Save" class="right-in-10">
 	<input type="checkbox" checked name="yy" value="yes" class="hide"/>	
 	</form>
 </article>
