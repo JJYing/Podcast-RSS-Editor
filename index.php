@@ -62,7 +62,7 @@ $dashboardContent = "
 
 $ep = (int) $_GET['ep']; 
 if ($ep >= 0) {
-	$ep2 = $ep + 1;
+	$ep2 = $t  -$ep;
 	$panelTitle = "Edit Episode #$ep2";
 	$currentTitle = "$thisTitle[$ep]";
 	$currentDuration = "$thisSeconds[$ep]";
@@ -105,7 +105,9 @@ if ($ep >= 0) {
 		$thisEdit->description = '';
 		$thisEdit->description->addCData($_POST["newDesc"]);		
 		$xmlDoc->asXML('rss.xml');
-		echo "<script>location.href='".$_SERVER["HTTP_REFERER"]."#ep-$ep"."';</script>";		
+		echo "<script>
+			location.href='".$_SERVER["HTTP_REFERER"]."#ep-$ep"."';
+		</script>";
 	}
 }
 else {
@@ -198,8 +200,10 @@ class my_node extends SimpleXMLElement
 		<section class="edit-image right-in-7"><h3>Cover Image: </h3><span><input type="text" name="newImage" value="<?php echo $currentImage ?>" /></span></section>
 		<section class="edit-audio right-in-8"><h3>Audio File: </h3><span><input type="text" name="newFile" value="<?php echo $currentFile ?>" /></span></section>
 		<section class="edit-desc right-in-9"><h3>Description: </h3><span><textarea name="newDesc"  /><?php echo $currentDesc ?></textarea></span></section>
-	<input type="submit" value="Save" class="right-in-10">
-	<input type="checkbox" checked name="yy" value="yes" class="hide"/>	
+		<footer>
+			<input type="submit" value="Save" class="right-in-10">
+			<input type="checkbox" checked name="yy" value="yes" class="hide"/>	
+		</footer>
 	</form>
 </article>
 <aside>

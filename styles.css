@@ -73,6 +73,7 @@ nav{
 	text-align: center;
 	line-height: 1.1;
 	font-weight: 400;
+	position: relative;
 }
 .dashboard strong{
 	font-weight: 100;
@@ -100,10 +101,11 @@ aside{
 	line-height: 1.25;
 	display: block;
 	padding: 1em 1.3em;
-	border-bottom: 1px solid #252a33;
+	border-bottom: 1px solid #252b36;
 	border-right: 5px solid #252a33;
 	cursor: pointer;	
 	-webkit-transition: all .1s ease-in;
+	position: relative;
 }
 .item.highlight{
 	background: #252b36;
@@ -117,9 +119,10 @@ aside{
 .add-new-item{
 	text-align: center;
 	border-right: 5px solid #1f222c;
+	text-transform: uppercase;
 }
 .add-new-item h1{
-	font-weight: 100;
+	font-weight: 700;
 }
 .add-new-item h1:before{
 	content: "+";
@@ -142,14 +145,19 @@ h1{
 	font-weight: 900;
 	color: #cecfd1;
 }
+.item.highlight:hover h1{
+	color: #fff;
+}
 .item-date{
 	font-size: .75em;
 	color: #737a8a;
+	display: inline-block;
+	margin-top: .3em;
 	background: rgba(0, 0, 0, .25);
+	line-height: 1;
 	padding: .1em .75em;
 	border-radius: 1em;
 	font-weight: 300;
-	text-transform: uppercase;
 	-webkit-transition: all .1s ease-in;
 }
 .item-date:before{
@@ -158,10 +166,12 @@ h1{
 	color: #ff6668;
 	margin: 0 .3em 0 0;
 }
+.item.highlight .item-date:before{
+	color: #34c295;
+}
 /* Edit Panel */
 .panel{
 	font-size: 2em;
-	overflow: hidden;
 	width: 62%;	
 	background: #fff;
 	position: fixed;
@@ -173,6 +183,10 @@ h1{
 	font-size: 2em;
 	padding: 1.5em 3.5em 1.5em 2.5em;
 	line-height: 2;
+}
+.edit-panel form{
+	overflow: scroll;
+	height: 100%;
 }
 h2{
 	font-weight: 700;
@@ -194,7 +208,6 @@ h2:before{
 	height: 50px;
 	line-height: 50px;
 	vertical-align: middle;
-	background: #fff;
 	opacity: 0;
 }
 h3{
@@ -219,11 +232,11 @@ h3:before{
 .edit-panel section:hover h3,
 .edit-panel section:hover h3:before{
 	color: #34c295;
-	text-indent: .8em;
+/*	text-indent: .4em;*/
 	font-weight: 400;
 }
 .edit-panel .edit-desc textarea{
-	height: 200px;
+	height: 300px;
 }
 .edit-panel section span{
 	width: 78%;
@@ -246,10 +259,13 @@ input[type=text],textarea{
 .edit-panel section:hover textarea{
 	border: 2px solid #34c295;
 	background: #fefefe;
+	box-shadow: 0px 8px 19px rgba(26,204,156,0.15);
+	z-index: 99999;
+	-webkit-transform: translate(0,-2px);
 }
 .edit-duration input,
 .edit-date input{
-	width: 35px;
+	width: 38px;
 	text-align: center;
 	margin-right: .4em;
 }
@@ -261,9 +277,20 @@ input[name=newYear]{
 	width: 30px;
 	display: inline-block;
 }
+.edit-panel footer{
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+	display: block;
+	height: 80px;
+	width: 62%;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 99999;
+}
 input[type=submit]{
 	width: 100px;
 	height: 32px;
+	display: block;
 	font-size: 16px;
 	line-height: 32px;
 	background: #34c295;
@@ -274,8 +301,7 @@ input[type=submit]{
 	letter-spacing: .2em;
 	cursor: pointer;
 	text-transform: uppercase;
-	position: fixed;
-	bottom: 30px;
+	margin: 25px auto 0;
 	box-shadow: 0px 9px 25px rgba(26,204,156,0.35);
 	opacity: 0;
 }
@@ -321,4 +347,24 @@ input[type=submit]:hover{
 	70%{-webkit-transform: translate(10px, 0);opacity:0.7}
 	85%{-webkit-transform: translate(-5px, 0);opacity:0.85}
 	100%{-webkit-transform: translate(0, 0);opacity:1}
+}
+/*~Decorations*/
+.item:before,
+.dashboard li:before{
+	content: "";
+	width: 3px;
+	height: 3px;
+	border-top: 2px solid #3d4452;
+	border-right: 2px solid #3d4452;
+	display: block;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	-webkit-transition: all .1s ease-out;
+}
+.dashboard li:before{
+	border-color: #242833;
+}
+.item:hover:before{
+	border-color: #fff;
 }
