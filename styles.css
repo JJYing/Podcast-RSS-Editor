@@ -59,12 +59,36 @@ nav{
 nav>ul li{
 	list-style: none;
 }
+nav>ul li .highlight{
+	background: #13151c;
+	color: #8d98a6;
+}
+nav>ul li .highlight path{
+	fill: #8d98a6;
+}
 nav>ul li a{
 	color: #66707d;
 	display: block;
 	padding: 1.5em 2em;
-	border-bottom: 1px solid #333;
+	border-bottom: 1px solid #13151c;
 	text-align: center;
+	-webkit-transition: all .1s ease-out;
+}
+nav>ul li a:hover{
+	color: #fff;
+}
+nav>ul li svg{
+	display: block;
+	margin: 0 auto .6em;
+	width: 30px;
+	height: 30px;
+}
+nav>ul li svg path{
+	fill: #66707d;
+	-webkit-transition: all .1s ease-out;	
+}
+nav>ul li a:hover path{
+	fill: #fff;
 }
 /*~Nav Dashboard*/
 .nav-dashboard{
@@ -347,6 +371,7 @@ input[type=submit]:hover{
 	text-align: center;
 	font-weight: 700;
 	color: rgba(0, 0, 0, .2);
+	position: relative;
 }
 .dashboard strong{
 	font-size: 8em;
@@ -431,7 +456,8 @@ input[type=submit]:hover{
 }
 /*~Decorations*/
 .item:before,
-.nav-dashboard li:before{
+.nav-dashboard li:before,
+.dashboard section:before{
 	content: "";
 	width: 3px;
 	height: 3px;
