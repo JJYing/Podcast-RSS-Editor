@@ -8,13 +8,13 @@
 	<title>Podcast RSS Editor</title>
 	<link rel="stylesheet" rev="stylesheet" href="styles.css" type="text/css" media="all" />
 	<link rel="shortcut icon" href="assets/favicon.png" />
+	<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,100,300,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <?php
 
 //Load the XML file
 $xmlDoc = simplexml_load_file('rss.xml','my_node');
-
 //Process episodes
 $t = 0;
 $totalShownoteLinks = 0;
@@ -50,13 +50,10 @@ $currentTimezone =  substr($thisDate[0],-5,5);
 $totalHours = number_format(($totalSeconds / 3600),1);
 $averageMinutes = number_format(($totalSeconds / 60 / $t),1);
 $sinceLastUpdate = ceil((strtotime(now)-strtotime($thisDate[0]))/86400);
-$dashboardContent = "
+$navDashboard = "
 	<ul>
 		<li><strong>$sinceLastUpdate</strong><br />Days Since Last Ep.</li>
 		<li><strong>$t</strong><br />Total Episodes</li>
-		<li><strong>$totalHours</strong><br />Total Hours</li>
-		<li><strong>$averageMinutes</strong><br />Ave. Minutes per Ep.</li>
-		<li><strong>$totalShownoteLinks</strong><br />Links in Shownotes</li>
 	</ul>";
 
 
@@ -109,6 +106,15 @@ if ($ep >= 0) {
 			location.href='".$_SERVER["HTTP_REFERER"]."#ep-$ep"."';
 		</script>";
 	}
+}
+elseif ($ep == -2) {
+
+	//Show Dashboard
+	$fileSize = 	number_format((filesize('rss.xml') / 1024),1);
+	$showDashboard = "dashboard-show";
+	$fullDuration = strtotime($thisDate[0]) - strtotime($thisDate[($t-1)]);
+	$averageCycle = number_format(($fullDuration / $t / 86400),1);
+	$totalYears = number_format(($fullDuration / 31536000),1);
 }
 else {
 	$panelTitle = "Add New Episode";
@@ -170,8 +176,13 @@ class my_node extends SimpleXMLElement
 }
 ?>
 <nav>
-	<a href="#" class="logo"><strong>Podcast</strong> RSS Editor</a>
-	<section class="dashboard"><?php echo($dashboardContent);?></section>
+	<a href="?ep=-1" class="logo"><strong>Podcast</strong> RSS Editor</a>
+		<ul>
+			<li><a href="?ep=-1">Episodes</a></li>
+			<li><a href="?ep=-2">Dashboard</a></li>
+			<li><a href="?ep=-1">Channel Settings</a></li>
+		</ul>
+	<section class="nav-dashboard"><?php echo($navDashboard);?></section>
 </nav>
 <article class="panel edit-panel">	
 	<h2 class="panel-title right-in-1"><?php echo $panelTitle ?></h2>
@@ -210,7 +221,19 @@ class my_node extends SimpleXMLElement
 	<a href='?ep=-1' class="item add-new-item"><h1>Add New Episode</h1></a>
 	<?php echo($itemList);?>
 </aside>
-
+<article class="dashboard panel-in <?php echo($showDashboard);?>">
+	<section class="last-udpate"><strong class="scale-in-1"><?php echo($sinceLastUpdate);?></strong><br />Days Since Last Ep.</section>
+	<section><strong class="scale-in-2"><?php echo($t);?></strong><br />Total Episodes</section>
+	<section class="total-hours"><strong class="scale-in-3"><?php echo($totalHours);?></strong><br />Total Hours</section>
+	<section class="d-total-links"><strong class="scale-in-4"><?php echo($totalShownoteLinks);?></strong><br />Links in Shownotes</section>
+	<section class="d-file-size"><strong class="scale-in-5"><?php echo($fileSize);?></strong><br />KB for RSS file</section>
+	
+	<section class="d-average-cycle"><strong class="scale-in-2"><?php echo($averageCycle);?></strong><br />Average Update Cycle</section>
+	<section><strong class="scale-in-3"><?php echo($totalYears);?></strong><br />Years after first Episode</section>
+	<section class="total-hours"><strong class="scale-in-4"><?php echo($totalHours);?></strong><br />Total Hours</section>
+	<section class="d-total-links"><strong class="scale-in-5"><?php echo($totalShownoteLinks);?></strong><br />Links in Shownotes</section>
+	<section class="d-file-size"><strong class="scale-in-5"><?php echo($fileSize);?></strong><br />KB for RSS file</section>
+</article>
 <script type="text/javascript">
 	
 </script>
