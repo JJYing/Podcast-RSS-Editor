@@ -11,13 +11,14 @@ http://jjying.com*/
 body{
 	text-rendering: optimizeLegibility;
 	font-size: 62.5%;
-	font-family: 'Source Sans Pro', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+	font-family: 'Alegreya Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
 	color: #5a6779;
 	line-height: 1;
 	background: #1f222c;
 }
 a{
 	text-decoration: none;
+	color: #66707d;
 }
 ul{
 	margin: 0;
@@ -36,7 +37,7 @@ input{
 }
 /*~Nav*/
 nav{
-	background: #191c24;
+	background: #191d24;
 	width: 8%;
 	height: 100%;
 	position: fixed;
@@ -60,7 +61,7 @@ nav>ul li{
 	list-style: none;
 }
 nav>ul li .highlight{
-	background: #13151c;
+	background: #13171c;
 	color: #8d98a6;
 }
 nav>ul li .highlight path{
@@ -72,7 +73,7 @@ nav>ul li a{
 	padding: 1.5em 2em;
 	border-bottom: 1px solid #13151c;
 	text-align: center;
-	-webkit-transition: all .1s ease-out;
+	-webkit-transition: color .1s ease-out;
 }
 nav>ul li a:hover{
 	color: #fff;
@@ -113,7 +114,7 @@ nav>ul li a:hover path{
 	font-weight: 200;
 	font-size: 3em;
 	color: #ff6668;
-	font-family: 'Titillium Web';
+	font-family: 'Alegreya Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
 }
 /*~Item List*/
 aside{
@@ -286,7 +287,7 @@ input[type=text],textarea{
 	width: 100%;
 	border-radius: .2em;
 	margin: 14px 8% 0 0;
-	font-family: 'Source Sans Pro', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+	font-family: 'Alegreya Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
 	-webkit-transition: all .1s ease-in;
 	font-size: 1rem;
 }
@@ -331,7 +332,7 @@ input[type=submit]{
 	background: #34c295;
 	color: #fff;
 	font-weight: 700;
-	font-family: "Source Sans Pro";
+	font-family: 'Alegreya Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
 	border-radius: 1em;
 	letter-spacing: .2em;
 	cursor: pointer;
@@ -342,13 +343,14 @@ input[type=submit]{
 }
 input[type=submit]:hover{
 	background: #ff6668;
-	box-shadow: 0px 9px 25px rgba(255,102,104,0.35);	
+	box-shadow: 0px 9px 25px rgba(255,102,104,0.35);
 }
 /*~Dashboard*/
 .dashboard{
 	width: 92%;
 	height: 100%;
 	background: #fff;
+	background: #13171c;
 	z-index: 99999;
 	position: absolute;
 	top: 0;
@@ -356,13 +358,10 @@ input[type=submit]:hover{
 	display: none;
 	opacity: 0;
 }
-.dashboard-show{
-	display: block;
-	opacity: 0;
-}
 .dashboard section{
 	border-bottom: 1px solid #ddd;
 	border-right: 1px solid #ddd;
+	border-color: #111;
 	width: 20%;
 	float: left;
 	height: 50%;
@@ -371,20 +370,70 @@ input[type=submit]:hover{
 	text-align: center;
 	font-weight: 700;
 	color: rgba(0, 0, 0, .2);
+	color: #334;
 	position: relative;
+	-webkit-transition: all .1s ease-out;
+}
+.dashboard section:hover{
+	background: rgba(0, 0, 0, .1);
 }
 .dashboard strong{
 	font-size: 8em;
 	font-weight: 100;
 	color: #789;
-	font-family: 'Titillium Web', 'Avenir Next Condensed';
+	font-family: 'Alegreya Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
 	display: block;
 	letter-spacing: -.03em;
+	color: #ff6668;
 }
-.last-udpate{
+.dashboard .d-weekday{
+	width: 40%;
+}
+.dashboard .d-weekday ul{
+	display: block;
+	margin: 0 auto;
+	width: 80%;
+}
+.dashboard .d-weekday li{
+	list-style: none;
+	float: left;
+	width: 14.2857%;
+}
+.dashboard .d-weekday li label{
+	font-size: 1rem;
+	padding: .5em 0 0;
+	display: block;
+	text-align: center;
+	border-top: 1px solid #334;
+}
+.dashboard rect{
+	fill: #ff6668;	
+}
+.dashboard .d-weekday .highest rect{
+	fill: #34c295;
+}
+/*~Settings*/
+.settings{
+	width: 92%;
+	height: 100%;
 	background: #f5f5f5;
+	z-index: 99999;
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: none;
+	opacity: 0;
+	text-align: center;
 }
-.total-hours{
+.panel-show{
+	display: block;
+	opacity: 0;
+}
+.settings span{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 4em;
 }
 /*~Animations*/
 .right-in-1{
@@ -474,7 +523,4 @@ input[type=submit]:hover{
 }
 .item:hover:before{
 	border-color: #fff;
-}
-*{
-	font-family: Alegreya Sans !important;
 }
