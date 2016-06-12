@@ -12,9 +12,18 @@
 </head>
 <body>
 <?php
-
+include("config.php"); 
 //Load the XML file
-$xmlDoc = simplexml_load_file('rss.xml','my_node');
+
+if ($_POST["newXMLFile"]) {
+	$oldXMLFileName = $xmlFileName;
+	$xmlFileName = $_POST["newXMLFile"];
+	$content = file_get_contents('config.php');
+	$content = str_replace($oldXMLFileName, $_POST["newXMLFile"],$content);
+	file_put_contents('config.php',$content);
+}
+
+$xmlDoc = simplexml_load_file($xmlFileName,'my_node');
 
 //Process episodes
 $t = 0;
@@ -177,6 +186,26 @@ elseif ($ep == -3) {
 	//Show Settings
 	$showSettings = "panel-show";
 	$navHighlight3 = "highlight";
+	$settingsContent = "
+		<form method='post' action='index.php?ep=-1'>
+			<label for='newXMLFile'>Select the file to edit</label>
+			<select id='content' name='newXMLFile' class='right-in-1'>
+	";
+	foreach (glob('*.{rss,xml}', GLOB_BRACE) as $filename) {
+		if ($xmlFileName == $filename) {
+			$settingsContent .= "<option selected='selected' value='$filename'>$filename</option>";
+		}
+		else {
+			$settingsContent .= "<option value='$filename'>$filename</option>";	
+		}
+	}
+	$settingsContent .= "
+			</select>
+			<label><br />
+			And...there is nothing else to set....<br />for now...</label>
+			<input type='submit' value='Save' class='right-in-10'>
+		</form>
+	";
 }
 else {
 	$panelTitle = "Add New Episode";
@@ -307,7 +336,7 @@ class my_node extends SimpleXMLElement
 </article>
 
 <article class="settings panel-in <?php echo($showSettings);?>">
-	<span>Nothing to Show....<br />for now...</span>
+	<span><?php echo($settingsContent);?></span>
 </article>
 
 </body>

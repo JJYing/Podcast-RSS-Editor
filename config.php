@@ -1,0 +1,3 @@
+<?php
+	$xmlFileName = 'rss.xml';
+?>
