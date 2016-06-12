@@ -447,6 +447,23 @@ input[type=submit]:hover,
 	-moz-appearance: none;
 	appearance: none;
 }
+/*~Notifications*/
+.notification{
+	background: #34c295;
+	color: #fff;
+	display: block;
+	padding: .5em 0;
+	font-weight: 700;
+	font-size: 2em;
+	width: 100%;
+	z-index: 99990;
+	text-align: center;
+	display: none;
+}
+.notification-show{
+	display: block;
+	-webkit-animation: notification-out 2s ease-out 0s 1 forwards;	
+}
 /*~Animations*/
 .right-in-1{
 	-webkit-animation: right-in .3s ease-out 0s 1 forwards;
@@ -514,6 +531,12 @@ input[type=submit]:hover,
 	70%{-webkit-transform: scale(0.9);opacity:0.7}
 	85%{-webkit-transform: scale(1.05);opacity:0.85}
 	100%{-webkit-transform: scale(1);opacity:1}
+}
+@-webkit-keyframes 'notification-out' {
+	0%{height: auto;}
+	80%{height: auto; padding: .5em 0; display: block;}
+	93%{height: auto; padding: 1em 0; display: block;}
+	100%{height: 0px; display: none; padding: 0}
 }
 /*~Decorations*/
 .item:before,

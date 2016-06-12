@@ -25,6 +25,15 @@ if ($_POST["newXMLFile"]) {
 
 $xmlDoc = simplexml_load_file($xmlFileName,'my_node');
 
+//Notifications
+if ($_GET['notf']) {
+	$showNotification = "notification-show";
+	switch ($_GET['notf']) {
+		case '1': $notificationContent = 'New XML file loaded'; break;
+		case '2': $notificationContent = 'Episode updated'; break;
+		case '3': $notificationContent = 'New episode created'; break;
+	}
+}
 //Process episodes
 $t = 0;
 $totalShownoteLinks = 0;
@@ -96,6 +105,7 @@ if ($ep >= 0) {
 	if ($_POST["yy"] =="yes") {	
 	
 		//Edit existing episodes
+		
 		$navHighlight1 = "highlight";
 		$NS = array( 
 		    'itunes' => 'http://www.itunes.com/dtds/podcast-1.0.dtd' 
@@ -112,9 +122,9 @@ if ($ep >= 0) {
 		$thisEdit->children('itunes', true)->image->attributes()->href = $_POST["newImage"];
 		$thisEdit->description = '';
 		$thisEdit->description->addCData($_POST["newDesc"]);		
-		$xmlDoc->asXML('rss.xml');
+		$xmlDoc->asXML($xmlFileName);
 		echo "<script>
-			location.href='".$_SERVER["HTTP_REFERER"]."#ep-$ep"."';
+			location.href='".$_SERVER["HTTP_REFERER"]."&notf=2#ep-$ep"."';
 		</script>";
 	}
 }
@@ -122,7 +132,7 @@ elseif ($ep == -2) {
 
 	//Show Dashboard
 	
-	$fileSize = 	number_format((filesize('rss.xml') / 1024),1);
+	$fileSize = 	number_format((filesize($xmlFileName) / 1024),1);
 	$showDashboard = "panel-show";
 	$fullDuration = strtotime($thisDate[0]) - strtotime($thisDate[($t-1)]);
 	$averageCycle = number_format(($fullDuration / $t / 86400),1);
@@ -187,7 +197,7 @@ elseif ($ep == -3) {
 	$showSettings = "panel-show";
 	$navHighlight3 = "highlight";
 	$settingsContent = "
-		<form method='post' action='index.php?ep=-1'>
+		<form method='post' action='index.php?ep=-1&notf=1'>
 			<label for='newXMLFile'>Select the file to edit</label>
 			<select id='content' name='newXMLFile' class='right-in-1'>
 	";
@@ -220,6 +230,7 @@ else {
 	if ($_POST["yy"] =="yes") { 	
 		
 		//Add new episode
+		
 		$newDuration = $_POST["newHH"] * 3600 + $_POST["newMM"] * 60 + $_POST["newSS"];
 		$newDate = gmdate(DATE_RFC2822, gmmktime($_POST["newHour"], $_POST["newMinute"], $_POST["newSecond"], $_POST["newMonth"], $_POST["newDay"], $_POST["newYear"]));
 		$NS = array( 
@@ -242,8 +253,8 @@ else {
 		$newItem->enclosure->addAttribute('type', 'audio/mpeg');
 		$newItem->enclosure->addAttribute('url', $_POST["newFile"]);
 		$newItem->addChild('duration',  $newDuration, $NS['itunes']);
-		$xmlDoc->asXML('rss.xml');			
-		echo "<script>location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+		$xmlDoc->asXML($xmlFileName);			
+		echo "<script>location.href='".$_SERVER["HTTP_REFERER"]."&notf=3';</script>";
 	}	
 }
 
@@ -266,7 +277,7 @@ class my_node extends SimpleXMLElement
     }
 }
 ?>
-
+<section class="notification <?php echo($showNotification);?>"><?php echo($notificationContent);?></section>
 <nav>
 	<a href="?ep=-1" class="logo"><strong>Podcast</strong> RSS Editor</a>
 		<ul>
@@ -278,7 +289,7 @@ class my_node extends SimpleXMLElement
 			</svg>Dashboard</a></li>
 			<li><a href="?ep=-3" class="<?php echo($navHighlight3);?>"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
 			    <path id="settings-2" data-name="settings" class="cls-1" d="M351.331,53h-2.662a3,3,0,0,1-2.952-2.463l-0.385-2.123a18.784,18.784,0,0,1-5.044-2.1l-1.781,1.233a3.06,3.06,0,0,1-3.829-.346L332.8,45.322a3,3,0,0,1-.345-3.829l1.233-1.78a18.808,18.808,0,0,1-2.1-5.045l-2.123-.385A3,3,0,0,1,327,31.331V28.669a3,3,0,0,1,2.463-2.951l2.123-.386a18.808,18.808,0,0,1,2.1-5.045l-1.233-1.78a3,3,0,0,1,.345-3.829l1.883-1.882a3.059,3.059,0,0,1,3.828-.346l1.782,1.233a18.794,18.794,0,0,1,5.044-2.1l0.385-2.122A3,3,0,0,1,348.669,7h2.662a3,3,0,0,1,2.952,2.463l0.385,2.123a18.794,18.794,0,0,1,5.044,2.1l1.781-1.233a3.06,3.06,0,0,1,3.829.346l1.883,1.882a3,3,0,0,1,.345,3.829l-1.233,1.78a18.808,18.808,0,0,1,2.1,5.045l2.123,0.385A3,3,0,0,1,373,28.669v2.662a3,3,0,0,1-2.463,2.951l-2.123.386a18.808,18.808,0,0,1-2.1,5.045l1.233,1.78a3,3,0,0,1-.345,3.829L365.322,47.2a2.981,2.981,0,0,1-2.122.879h0a2.986,2.986,0,0,1-1.706-.533l-1.782-1.233a18.784,18.784,0,0,1-5.044,2.1l-0.385,2.122A3,3,0,0,1,351.331,53Zm-11.073-8.879a0.993,0.993,0,0,1,.542.16,16.856,16.856,0,0,0,5.609,2.331,1,1,0,0,1,.773.8l0.5,2.767a1,1,0,0,0,.984.821h2.662a1,1,0,0,0,.984-0.822l0.5-2.767a1,1,0,0,1,.773-0.8,16.856,16.856,0,0,0,5.609-2.331,1,1,0,0,1,1.112.017l2.32,1.606a1.02,1.02,0,0,0,1.276-.115l1.883-1.882a1,1,0,0,0,.114-1.276l-1.606-2.32a1,1,0,0,1-.018-1.111,16.859,16.859,0,0,0,2.331-5.608,1,1,0,0,1,.8-0.774l2.768-.5A1,1,0,0,0,371,31.331V28.669a1,1,0,0,0-.821-0.984l-2.768-.5a1,1,0,0,1-.8-0.774,16.858,16.858,0,0,0-2.331-5.608,1,1,0,0,1,.018-1.111l1.606-2.32a1,1,0,0,0-.114-1.276l-1.883-1.882a1.02,1.02,0,0,0-1.277-.115L360.312,15.7a1,1,0,0,1-1.112.018,16.862,16.862,0,0,0-5.609-2.331,1,1,0,0,1-.773-0.8l-0.5-2.768A1,1,0,0,0,351.331,9h-2.662a1,1,0,0,0-.984.822l-0.5,2.767a1,1,0,0,1-.773.8,16.862,16.862,0,0,0-5.609,2.331,1,1,0,0,1-1.112-.018l-2.32-1.606a1.02,1.02,0,0,0-1.276.115l-1.883,1.882a1,1,0,0,0-.114,1.276l1.606,2.32a1,1,0,0,1,.018,1.111,16.858,16.858,0,0,0-2.331,5.608,1,1,0,0,1-.8.774l-2.768.5a1,1,0,0,0-.821.983v2.662a1,1,0,0,0,.821.984l2.768,0.5a1,1,0,0,1,.8.774,16.859,16.859,0,0,0,2.331,5.608,1,1,0,0,1-.018,1.111l-1.606,2.32a1,1,0,0,0,.114,1.276l1.883,1.882a1.023,1.023,0,0,0,1.277.115l2.319-1.606A1,1,0,0,1,340.258,44.121ZM350,39a9,9,0,1,1,9-9A9.01,9.01,0,0,1,350,39Zm0-16a7,7,0,1,0,7,7A7.008,7.008,0,0,0,350,23Z" transform="translate(-320)"/>
-			</svg>Channel Settings</a></li>
+			</svg>Settings</a></li>
 		</ul>
 	<section class="nav-dashboard"><?php echo($navDashboard);?></section>
 </nav>

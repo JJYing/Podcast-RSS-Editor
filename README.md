@@ -14,8 +14,8 @@ After hosting a design podcast, I started manually updating the RSS feed for eve
 - Add more options
 - ~~Seperate dashboard page with more data~~
 - Make the publish time input as a data picker
-- Add an option to select XML file in settings section
-- Add message notifications
+- ~~Add an option to select XML file in settings section~~
+- ~~Add message notifications~~
 
 # Alternatives
 - [Itunes podcast XML generator](http://codepen.io/jon-walstedt/pen/jsIup) by Jon Wålstedt
