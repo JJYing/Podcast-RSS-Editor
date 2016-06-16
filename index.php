@@ -168,25 +168,25 @@ elseif ($ep == -2) {
 	}
 	$weekDay = "
 		<ul>
-			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[0]'>
+			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[0] bar-in-1'>
 			<rect class='chart-bar-1' x='0' y='$weekBarY[0]' width='$w1' height='$weekNoHeight[0]'/></svg><label>Sun</label></li>
 			
-			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[1]'>
+			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[1] bar-in-2'>
 			<rect class='chart-bar-1' x='0' y='$weekBarY[1]' width='$w1' height='$weekNoHeight[1]'/></svg><label>Mon</label></li>
 			
-			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[2]'>
+			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[2] bar-in-3'>
 			<rect class='chart-bar-1' x='0' y='$weekBarY[2]' width='$w1' height='$weekNoHeight[2]'/></svg><label>Tue</label></li>
 			
-			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[3]'>
+			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[3] bar-in-4'>
 			<rect class='chart-bar-1' x='0' y='$weekBarY[3]' width='$w1' height='$weekNoHeight[3]'/></svg><label>Wed</label></li>
 			
-			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[4]'>
+			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[4] bar-in-5'>
 			<rect class='chart-bar-1' x='0' y='$weekBarY[4]' width='$w1' height='$weekNoHeight[4]'/></svg><label>Thu</label></li>
 			
-			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[5]'>
+			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[5] bar-in-6'>
 			<rect class='chart-bar-1' x='0' y='$weekBarY[5]' width='$w1' height='$weekNoHeight[5]'/></svg><label>Fri</label></li>
 			
-			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[6]'>
+			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[6] bar-in-7'>
 			<rect class='chart-bar-1' x='0' y='$weekBarY[6]' width='$w1' height='$weekNoHeight[6]'/></svg><label>Sat</label></li>
 		</ul>
 	";
@@ -199,7 +199,7 @@ elseif ($ep == -3) {
 	$settingsContent = "
 		<form method='post' action='index.php?ep=-1&notf=1'>
 			<label for='newXMLFile'>Select the file to edit</label>
-			<select id='content' name='newXMLFile' class='right-in-1'>
+			<select id='content' name='newXMLFile' class='right-in-8'>
 	";
 	foreach (glob('*.{rss,xml}', GLOB_BRACE) as $filename) {
 		if ($xmlFileName == $filename) {
@@ -327,21 +327,19 @@ class my_node extends SimpleXMLElement
 		</footer>
 	</form>
 </article>
-<aside>
-	<a href='?ep=-1' class="item add-new-item"><h1>Add New Episode</h1></a>
-	<?php echo($itemList);?>
-</aside>
+
+
 
 <article class="dashboard panel-in <?php echo($showDashboard);?>">
-	<section class="last-udpate"><strong class="scale-in-1"><?php echo($sinceLastUpdate);?></strong><br />Days Since Last Ep.</section>
-	<section><strong class="scale-in-2"><?php echo($t);?></strong><br />Total Episodes</section>
-	<section class="total-hours"><strong class="scale-in-3"><?php echo($totalHours);?></strong><br />Total Hours</section>
-	<section class="d-total-links"><strong class="scale-in-4"><?php echo($totalShownoteLinks);?></strong><br />Links in Shownotes</section>
-	<section class="d-file-size"><strong class="scale-in-5"><?php echo($fileSize);?></strong><br />KB for RSS file</section>
+	<section class="last-udpate"><strong class="scale-in-1"><?php echo($sinceLastUpdate);?></strong>Days<br /><i>since last episode</i></section>
+	<section><strong class="scale-in-2"><?php echo($t);?></strong>Episodes<br /><i>in total</i></section>
+	<section class="total-hours"><strong class="scale-in-3"><?php echo($totalHours);?></strong>Hours<br /><i>broadcasted, which is <?php echo(number_format(($totalHours / 7.88),1));?> 'The Hobbit' trilogy combined.</i></section>
+	<section class="d-total-links"><strong class="scale-in-4"><?php echo($totalShownoteLinks);?></strong>Links<br /><i>added in shownotes</i></section>
+	<section class="d-file-size"><strong class="scale-in-5"><?php echo($fileSize);?></strong>KB<br /><i>for RSS file</i></section>
 	
-	<section class="d-average-cycle"><strong class="scale-in-2"><?php echo($averageCycle);?></strong><br />Average Update Cycle</section>
-	<section><strong class="scale-in-3"><?php echo($totalYears);?></strong><br />Years after first Episode</section>
-	<section class="d-total-links"><strong class="scale-in-5"><?php echo($totalShownoteLinks);?></strong><br />Links in Shownotes</section>
+	<section class="d-average-cycle"><strong class="scale-in-2"><?php echo($averageCycle);?></strong>Days<br /><i>for average update cycle</i></section>
+	<section><strong class="scale-in-3"><?php echo($totalYears);?></strong>Years<br /><i>after first episode</i></section>
+
 	<section class="d-weekday"><div class="scale-in-4"><?php echo($weekDay);?></div></section>
 
 </article>
@@ -349,6 +347,11 @@ class my_node extends SimpleXMLElement
 <article class="settings panel-in <?php echo($showSettings);?>">
 	<span><?php echo($settingsContent);?></span>
 </article>
+
+<aside>
+	<a href='?ep=-1' class="item add-new-item"><h1>Add New Episode</h1></a>
+	<?php echo($itemList);?>
+</aside>
 
 </body>
 </html>
