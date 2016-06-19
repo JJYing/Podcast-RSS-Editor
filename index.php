@@ -13,7 +13,7 @@
 <body>
 <?php
 include("config.php"); 
-//Load the XML file
+//~Load the XML file
 
 if ($_POST["newXMLFile"]) {
 	$oldXMLFileName = $xmlFileName;
@@ -25,7 +25,7 @@ if ($_POST["newXMLFile"]) {
 
 $xmlDoc = simplexml_load_file($xmlFileName,'my_node');
 
-//Notifications
+//~Notifications
 if ($_GET['notf']) {
 	$showNotification = "notification-show";
 	switch ($_GET['notf']) {
@@ -34,9 +34,10 @@ if ($_GET['notf']) {
 		case '3': $notificationContent = 'New episode created'; break;
 	}
 }
-//Process episodes
+//~Process episodes
 $t = 0;
 $totalShownoteLinks = 0;
+$totalHostsArray = array();
 foreach($xmlDoc->channel->item as $thisItem){
 	$thisDuration = $thisItem->children('itunes', true)->duration;
 	if (substr($thisDuration,-3,1) == ':') {
@@ -56,7 +57,9 @@ foreach($xmlDoc->channel->item as $thisItem){
 	$thisImage[$t] = $thisItem->children('itunes', true)->image->attributes()->href;
 	$thisShownoteLinks[$t] = substr_count($thisItem->description,"</a>");
 	$totalShownoteLinks += $thisShownoteLinks[$t];
-	if ($t >= 10) {$jumpto = "#ep-$t";}else {$jumpto = "";} //Set jump to in item list
+	$thisHostsArray[$t] = explode(",", $thisAuthor[$t]);
+	$totalHostsArray = array_merge($totalHostsArray, $thisHostsArray[$t]);
+	if ($t >= 10) {$jumpto = "#ep-$t";}else {$jumpto = "";} //~Set jump to in item list
 	if ( (int) $_GET['ep'] == $t) {$highLightItem = "highlight";}
 	else {$highLightItem = "";}
 	$thisContent = "<a href='?ep=$t$jumpto' class='item $highLightItem' name='ep-$t'><h1>$thisTitle[$t]</h1><span class='item-date'>$thisDate2[$t]</span></a>";
@@ -64,11 +67,12 @@ foreach($xmlDoc->channel->item as $thisItem){
 	$t+=1;
 }
 
-//Process summaries
+//~Process summaries
 $currentTimezone =  substr($thisDate[0],-5,5);
 $totalHours = number_format(($totalSeconds / 3600),1);
 $averageMinutes = number_format(($totalSeconds / 60 / $t),1);
 $sinceLastUpdate = ceil((strtotime(now)-strtotime($thisDate[0]))/86400);
+$totalHostsNo = count(array_unique($totalHostsArray));
 $navDashboard = "
 	<ul>
 		<li><strong>$sinceLastUpdate</strong><br />Days Since Last Ep.</li>
@@ -76,6 +80,7 @@ $navDashboard = "
 	</ul>";
 
 
+//~Initiate
 $ep = (int) $_GET['ep']; 
 if ($ep >= 0) {
 	$ep2 = $t  -$ep;
@@ -104,7 +109,7 @@ if ($ep >= 0) {
 	$navHighlight1 = "highlight";
 	if ($_POST["yy"] =="yes") {	
 	
-		//Edit existing episodes
+		//~Edit existing episodes
 		
 		$navHighlight1 = "highlight";
 		$NS = array( 
@@ -130,7 +135,7 @@ if ($ep >= 0) {
 }
 elseif ($ep == -2) {
 
-	//Show Dashboard
+	//~Show Dashboard
 	
 	$fileSize = 	number_format((filesize($xmlFileName) / 1024),1);
 	$showDashboard = "panel-show";
@@ -195,7 +200,7 @@ elseif ($ep == -2) {
 	$navHighlight2 = "highlight";
 }
 elseif ($ep == -3) {
-	//Show Settings
+	//~Show Settings
 	$showSettings = "panel-show";
 	$navHighlight3 = "highlight";
 	$settingsContent = "
@@ -231,7 +236,7 @@ else {
 	$navHighlight1 = "highlight";
 	if ($_POST["yy"] =="yes") { 	
 		
-		//Add new episode
+		//~Add new episode
 		
 		$newDuration = $_POST["newHH"] * 3600 + $_POST["newMM"] * 60 + $_POST["newSS"];
 		$newDate = gmdate(DATE_RFC2822, gmmktime($_POST["newHour"], $_POST["newMinute"], $_POST["newSecond"], $_POST["newMonth"], $_POST["newDay"], $_POST["newYear"]));
@@ -260,7 +265,7 @@ else {
 	}	
 }
 
-//Extras
+//~Extras
 class my_node extends SimpleXMLElement
 {
 	public function addCData($cdata_text) {
@@ -333,11 +338,11 @@ class my_node extends SimpleXMLElement
 
 
 <article class="dashboard panel-in <?php echo($showDashboard);?>">
-	<section class="last-udpate"><strong class="scale-in-1"><?php echo($sinceLastUpdate);?></strong>Days<br /><i>since last episode, your average update cycle is <span><?php echo($averageCycle);?></span> days</i></section>
+	<section class="last-udpate"><strong class="scale-in-1"><?php echo($sinceLastUpdate);?></strong>Days<br /><i>since last episode, your average update cycle is <span><?php echo($averageCycle);?></span> days.</i></section>
 	<section><strong class="scale-in-2"><?php echo($t);?></strong>Episodes<br /><i>in total after your first show <br /><span><?php echo($totalYears);?></span> years ago.</i></section>
 	<section class="total-hours"><strong class="scale-in-3"><?php echo($totalHours);?></strong>Hours<br /><i>podcasted, which is <span><?php echo(number_format(($totalHours / 7.88),1));?></span> 'The Hobbit' trilogy combined.</i></section>
-	<section class="d-total-links"><strong class="scale-in-4"><?php echo($totalShownoteLinks);?></strong>Links<br /><i>added in shownotes</i></section>
-	<section class="d-file-size"><strong class="scale-in-5"><?php echo($fileSize);?></strong>KB<br /><i>for RSS file</i></section>
+	<section class="d-file-size"><strong class="scale-in-4"><?php echo($fileSize);?></strong>KB<br /><i>for RSS file size, including <span><?php echo($totalShownoteLinks);?></span> links <br />in shownotes.</i></section>
+	<section class="d-file-size"><strong class="scale-in-5"><?php echo($totalHostsNo);?></strong>People<br /><i>showed in the aurthor list.</i></section>
 
 	<section class="d-weekday"><div class="scale-in-4"><?php echo($weekDay);?></div></section>
 
