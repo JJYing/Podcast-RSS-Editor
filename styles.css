@@ -169,7 +169,7 @@ aside{
 .add-new-item h1:before{
 	content: "+";
 	font-weight: 900;
-	color: #34c295;
+	color: #ff2d77;
 	margin: 0 .3em 0 0;
 }
 h1{
@@ -392,9 +392,10 @@ input[type=submit]:hover,
 	font-size: 8em;
 	font-weight: 100;
 	color: #ff2d77;
-	font-family: 'Alegreya Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
-	letter-spacing: -.03em;
+	font-family: 'Tall Films', 'Alegreya Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+	/*letter-spacing: -.03em;*/
 	display: block;
+	text-shadow: 0px 13px 12px rgba(0,10,20,0.95);
 }
 .dashboard i{
 	font-weight: 400;
@@ -404,6 +405,7 @@ input[type=submit]:hover,
 	margin: .5em 1.5em;
 	text-align: center;
 	display: block;
+	text-shadow: 0px 5px 4px rgba(0,10,20,0.35);
 }
 .dashboard i:before{
 	content: "";
@@ -412,6 +414,10 @@ input[type=submit]:hover,
 	background: rgba(217, 227, 239, .15);
 	display: block;
 	height: 1px;
+}
+.dashboard i span{
+	font-weight: 700;
+	font-style: italic;
 }
 .dashboard .d-weekday{
 	width: 40%;

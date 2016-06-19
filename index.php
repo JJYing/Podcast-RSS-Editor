@@ -8,7 +8,7 @@
 	<title>Podcast RSS Editor</title>
 	<link rel="stylesheet" rev="stylesheet" href="styles.css" type="text/css" media="all" />
 	<link rel="shortcut icon" href="assets/favicon.png" />
-	<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Tulpen+One|Alegreya+Sans:400,100,300,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <?php
@@ -169,7 +169,9 @@ elseif ($ep == -2) {
 	$weekDay = "
 		<ul>
 			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[0] bar-in-1'>
-			<rect class='chart-bar-1' x='0' y='$weekBarY[0]' width='$w1' height='$weekNoHeight[0]'/></svg><label>Sun</label></li>
+		
+			
+			<rect  class='chart-bar-1' x='0' y='$weekBarY[0]' width='$w1' height='$weekNoHeight[0]'/></svg><label>Sun</label></li>
 			
 			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[1] bar-in-2'>
 			<rect class='chart-bar-1' x='0' y='$weekBarY[1]' width='$w1' height='$weekNoHeight[1]'/></svg><label>Mon</label></li>
@@ -331,14 +333,11 @@ class my_node extends SimpleXMLElement
 
 
 <article class="dashboard panel-in <?php echo($showDashboard);?>">
-	<section class="last-udpate"><strong class="scale-in-1"><?php echo($sinceLastUpdate);?></strong>Days<br /><i>since last episode</i></section>
-	<section><strong class="scale-in-2"><?php echo($t);?></strong>Episodes<br /><i>in total</i></section>
-	<section class="total-hours"><strong class="scale-in-3"><?php echo($totalHours);?></strong>Hours<br /><i>broadcasted, which is <?php echo(number_format(($totalHours / 7.88),1));?> 'The Hobbit' trilogy combined.</i></section>
+	<section class="last-udpate"><strong class="scale-in-1"><?php echo($sinceLastUpdate);?></strong>Days<br /><i>since last episode, your average update cycle is <span><?php echo($averageCycle);?></span> days</i></section>
+	<section><strong class="scale-in-2"><?php echo($t);?></strong>Episodes<br /><i>in total after your first show <br /><span><?php echo($totalYears);?></span> years ago.</i></section>
+	<section class="total-hours"><strong class="scale-in-3"><?php echo($totalHours);?></strong>Hours<br /><i>podcasted, which is <span><?php echo(number_format(($totalHours / 7.88),1));?></span> 'The Hobbit' trilogy combined.</i></section>
 	<section class="d-total-links"><strong class="scale-in-4"><?php echo($totalShownoteLinks);?></strong>Links<br /><i>added in shownotes</i></section>
 	<section class="d-file-size"><strong class="scale-in-5"><?php echo($fileSize);?></strong>KB<br /><i>for RSS file</i></section>
-	
-	<section class="d-average-cycle"><strong class="scale-in-2"><?php echo($averageCycle);?></strong>Days<br /><i>for average update cycle</i></section>
-	<section><strong class="scale-in-3"><?php echo($totalYears);?></strong>Years<br /><i>after first episode</i></section>
 
 	<section class="d-weekday"><div class="scale-in-4"><?php echo($weekDay);?></div></section>
 
