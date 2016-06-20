@@ -70,7 +70,7 @@ nav>ul li .highlight path{
 nav>ul li a{
 	color: 	rgba(255, 255, 255, .65);
 	display: block;
-	padding: 1.5em 2em;
+	padding: 1.5em .2em;
 	/*border-bottom: 1px solid rgba(0, 0, 0, .15);*/
 	text-align: center;
 	transition: color .1s ease-out;
@@ -381,7 +381,7 @@ input[type=submit]:hover,
 	width: 20%;
 	float: left;
 	height: 50%;
-	padding-top: 8em;
+	padding-top: 7%;
 	font-size: 1.4em;
 	text-align: center;
 	font-weight: 700;
@@ -448,6 +448,10 @@ input[type=submit]:hover,
 }
 .dashboard .d-weekday .highest rect{
 	fill: #789;
+}
+.dashboard-icons path{
+	fill: #789;
+	opacity: .35;
 }
 /*~Settings*/
 .settings{

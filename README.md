@@ -26,3 +26,6 @@ After hosting a design podcast, I started manually updating the RSS feed for eve
 - After editing an episode, the page jumped to still shows the old data.
 - Timezone issue for 'today'
 - Some people use different tag names in RSS file, like 'itunes:author' vs. 'autor'
+
+# Credits
+- Some icons used are from the set [Squid Ink Line Icons](http://thesquid.ink/line-icons/)
