@@ -41,11 +41,12 @@ $totalHostsArray = array();
 foreach($xmlDoc->channel->item as $thisItem){
 	$thisDuration = $thisItem->children('itunes', true)->duration;
 	if (substr($thisDuration,-3,1) == ':') {
-		$thisSeconds[$t] = substr($thisDuration,0,2) * 3600 + substr($thisDuration,3,2) * 60 + substr($thisDuration,6,2);
+		$thisSeconds[$t] = intval(substr($thisDuration,0,2) * 3600 + substr($thisDuration,3,2) * 60 + substr($thisDuration,6,2));
 	}
 	else {
-		$thisSeconds[$t] = $thisDuration;
+		$thisSeconds[$t] = intval($thisDuration);
 	}
+	$thisMinutes[$t] = number_format(($thisSeconds[$t] / 60), 1);
 	$totalSeconds += $thisSeconds[$t];
 	$thisTitle[$t] = $thisItem->title;
 	$thisLink[$t] = $thisItem->link;
@@ -175,7 +176,6 @@ elseif ($ep == -2) {
 		<ul>
 			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[0] bar-in-1'>
 		
-			
 			<rect  class='chart-bar-1' x='0' y='$weekBarY[0]' width='$w1' height='$weekNoHeight[0]'/></svg><label>Sun</label></li>
 			
 			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[1] bar-in-2'>
@@ -197,6 +197,15 @@ elseif ($ep == -2) {
 			<rect class='chart-bar-1' x='0' y='$weekBarY[6]' width='$w1' height='$weekNoHeight[6]'/></svg><label>Sat</label></li>
 		</ul>
 	";
+	$recentDurations = array_slice($thisSeconds, 0, 10);
+	$recentLongest = max($recentDurations);
+	$averageLineH = $barHeight -10 - ( $barHeight - 16 ) * $averageMinutes / $recentLongest * 60;
+	for ($z = 0; $z < 10; $z++) {
+		$durationChartH[$z] = $barHeight -10 - ( $barHeight - 16 ) * $recentDurations[$z] / $recentLongest;
+		if ($recentDurations[$z] == $recentLongest) {
+			$highestPoint[$z] = "highest-point";
+		}
+	}
 	$navHighlight2 = "highlight";
 }
 elseif ($ep == -3) {
@@ -347,7 +356,7 @@ class my_node extends SimpleXMLElement
 		<i>since last episode, your average update cycle is <span><?php echo($averageCycle);?></span> days.</i>
 	</section>
 	
-	<section>
+	<section class="d-total-episodes">
 		<svg class="dashboard-icons" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 60 60">
 		   <path d="M1168.5,32.8V15a3.006,3.006,0,0,0-3-3h-7V11a3,3,0,1,0-6,0v1h-10V11a3,3,0,1,0-6,0v1h-5a3.006,3.006,0,0,0-3,3V50a3.006,3.006,0,0,0,3,3h28a0.972,0.972,0,0,0,.31-0.062A11.487,11.487,0,0,0,1168.5,32.8Zm-14-21.8a1,1,0,1,1,2,0v4.9a1,1,0,1,1-2,0V11Zm-16,0a1,1,0,1,1,2,0v4.9a1,1,0,1,1-2,0V11Zm-7,40a1,1,0,0,1-1-1V15a1,1,0,0,1,1-1h5v1.9a3,3,0,1,0,6,0V14h10v1.9a3,3,0,1,0,6,0V14h7a1,1,0,0,1,1,1V31.4a11.483,11.483,0,0,0-16.89,8.6h-3.11a1,1,0,0,0-1,1v4a1,1,0,0,0,2,0V42h2.03a11.493,11.493,0,0,0,5,9H1131.5Zm29.5,0a9.5,9.5,0,1,1,9.5-9.5A9.51,9.51,0,0,1,1161,51Zm0.5-9.48V37a1,1,0,0,0-2,0v5a1,1,0,0,0,.38.781l5,4a0.974,0.974,0,0,0,.62.219,1.006,1.006,0,0,0,.78-0.375,0.989,0.989,0,0,0-.16-1.406ZM1141.5,21h-4a1,1,0,0,0-1,1v4a1,1,0,0,0,2,0V23h3A1,1,0,0,0,1141.5,21Zm5,6a1,1,0,0,0,1-1V23h3a1,1,0,0,0,0-2h-4a1,1,0,0,0-1,1v4A1,1,0,0,0,1146.5,27Zm9,0a1,1,0,0,0,1-1V23h3a1,1,0,0,0,0-2h-4a1,1,0,0,0-1,1v4A1,1,0,0,0,1155.5,27Zm-14,3h-4a1,1,0,0,0-1,1v4a1,1,0,0,0,2,0V32h3A1,1,0,0,0,1141.5,30Zm5,6a1,1,0,0,0,1-1V32h3a1,1,0,0,0,0-2h-4a1,1,0,0,0-1,1v4A1,1,0,0,0,1146.5,36Zm-5,4h-4a1,1,0,0,0-1,1v4a1,1,0,0,0,2,0V42h3A1,1,0,0,0,1141.5,40Z" transform="translate(-1120)"/>
 		</svg>
@@ -375,11 +384,68 @@ class my_node extends SimpleXMLElement
 		<svg class="dashboard-icons" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 60 60">
 		   <path class="cls-1" d="M509.7,35.262c-4,0-6.4-4.775-6.92-6.209a1.9,1.9,0,0,1-.66-0.7,4.14,4.14,0,0,1-.544-3.366,2.493,2.493,0,0,1,.676-1.015,12.96,12.96,0,0,1,.377-3.1,7.624,7.624,0,0,1,14.141,0,12.916,12.916,0,0,1,.378,3.063,2.264,2.264,0,0,1,.621.852,4.234,4.234,0,0,1-.5,3.563,1.947,1.947,0,0,1-.662.743C516.045,30.609,513.657,35.262,509.7,35.262Zm-6.061-9.856a0.571,0.571,0,0,0-.19.284,2.356,2.356,0,0,0,.43,1.709,1.519,1.519,0,0,1,.713.772c0.014,0.034.026,0.069,0.037,0.106,0.3,1.056,2.344,4.985,5.071,4.985s4.768-3.93,5.072-4.985a1.363,1.363,0,0,1,.655-0.81c0.687-1.259.557-1.772,0.5-1.9a0.95,0.95,0,0,0-.077-0.129,1,1,0,0,1-.712-1.012,11.409,11.409,0,0,0-.3-3.044c-0.036-.123-0.985-3.286-5.138-3.286-4.2,0-5.13,3.258-5.139,3.291a11.39,11.39,0,0,0-.3,3.039,1,1,0,0,1-.622.98h0Zm19.676,22.926H496.71a1,1,0,0,1-1-.989c-0.055-4.976.7-10.368,6.706-12.642a10.331,10.331,0,0,0,3.362-1.985l1.419,1.409a12.1,12.1,0,0,1-4.073,2.447c-3.7,1.4-5.3,4.257-5.41,9.76h24.6c-0.1-5.619-1.7-8.626-5.263-9.974a14.6,14.6,0,0,1-4.107-2.288l1.31-1.512-0.655.756,0.652-.758a12.915,12.915,0,0,0,3.508,1.931c5.99,2.266,6.61,8.423,6.557,12.856A1,1,0,0,1,523.319,48.332Zm-26.319-6h-7a1,1,0,0,1-1-1.011l0-.517c0.034-4.006.072-8.546,5.436-10.575a22.557,22.557,0,0,0,3.2-1.546,13.99,13.99,0,0,1-2.83-4.029,2.005,2.005,0,0,1-.659-0.71,4.154,4.154,0,0,1-.546-3.367,2.521,2.521,0,0,1,.677-1.024,12.963,12.963,0,0,1,.377-3.107,7.027,7.027,0,0,1,7.071-4.777,6.844,6.844,0,0,1,6.937,5.165l-1.955.42a4.86,4.86,0,0,0-4.982-3.585c-4.152,0-5.1,3.165-5.14,3.3a11.318,11.318,0,0,0-.3,3.037,1,1,0,0,1-.616.978,0.563,0.563,0,0,0-.194.293,2.377,2.377,0,0,0,.43,1.714,1.672,1.672,0,0,1,.713.792,0.956,0.956,0,0,1,.037.107,10.973,10.973,0,0,0,3.231,4.051,1,1,0,0,1,.039,1.68,25.843,25.843,0,0,1-4.779,2.48c-3.909,1.479-4.1,4.59-4.139,8.232H497v2Zm33,0h-7v-2h5.984c-0.1-4.038-.662-6.815-4.409-8.232a23.028,23.028,0,0,1-4.81-2.611,1,1,0,0,1,.176-1.718c1.469-.668,2.951-3.275,3.125-3.882a0.956,0.956,0,0,1,.037-0.107,1.665,1.665,0,0,1,.662-0.766,2.34,2.34,0,0,0,.481-1.74,0.522,0.522,0,0,0-.23-0.309,1.082,1.082,0,0,1-.58-0.962,11.461,11.461,0,0,0-.3-3.049c-0.035-.124-0.985-3.289-5.138-3.289a4.641,4.641,0,0,0-4.839,3.562l-1.966-.367a6.615,6.615,0,0,1,6.805-5.194,7.027,7.027,0,0,1,7.071,4.773,12.961,12.961,0,0,1,.378,3.11,2.521,2.521,0,0,1,.677,1.024,4.152,4.152,0,0,1-.545,3.365,1.97,1.97,0,0,1-.659.711,12.066,12.066,0,0,1-2.774,4.005,19.538,19.538,0,0,0,3.141,1.571c5.633,2.132,5.68,7.1,5.717,11.093A1,1,0,0,1,530,42.332Z" transform="translate(-480)"/>
 		</svg>
+		
 		<strong class="scale-in-5"><?php echo($totalHostsNo);?></strong>People<br />
 		<i>showed in the aurthor list.</i>
 	</section>
 
-	<section class="d-weekday"><div class="scale-in-4"><?php echo($weekDay);?></div></section>
+	<section class="d-weekday">
+		<div class="scale-in-1"><?php echo($weekDay);?></div>
+	</section>
+	
+	<section class="d-duration">
+		<div class="scale-in-5">
+			<svg xmlns="http://www.w3.org/2000/svg" width="500" height="150" viewBox="-10 -10 490 140" class="">
+				<defs>
+				    <filter id="f3" x="0" y="0" width="200%" height="200%">
+				      <feOffset result="offOut" in="SourceAlpha" dx="0" dy="20" />
+				            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="9" />
+				            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+				    </filter>
+				  </defs>
+				  <path class="average-line" d="M 0 <?php echo($averageLineH);?> l 500 0" stroke-width="1" fill="none" />
+					<path filter="url(#f3)" class="duration-chart" stroke="#ff2d77" stroke-width="3" fill="none" d="
+						M10 <?php echo($durationChartH[0]);?>
+						C30 <?php echo($durationChartH[0]);?> 40 <?php echo($durationChartH[1]);?> 60 <?php echo($durationChartH[1]);?>
+						C80 <?php echo($durationChartH[1]);?> 90 <?php echo($durationChartH[2]);?> 110 <?php echo($durationChartH[2]);?>
+						C130 <?php echo($durationChartH[2]);?> 140 <?php echo($durationChartH[3]);?> 160 <?php echo($durationChartH[3]);?>
+						C180 <?php echo($durationChartH[3]);?> 190 <?php echo($durationChartH[4]);?> 210 <?php echo($durationChartH[4]);?>
+						C230 <?php echo($durationChartH[4]);?> 240 <?php echo($durationChartH[5]);?> 260 <?php echo($durationChartH[5]);?>
+						C280 <?php echo($durationChartH[5]);?> 290 <?php echo($durationChartH[6]);?> 310 <?php echo($durationChartH[6]);?>
+						C330 <?php echo($durationChartH[6]);?> 340 <?php echo($durationChartH[7]);?> 360 <?php echo($durationChartH[7]);?>
+						C380 <?php echo($durationChartH[7]);?> 390 <?php echo($durationChartH[8]);?> 410 <?php echo($durationChartH[8]);?>
+						C430 <?php echo($durationChartH[8]);?> 440 <?php echo($durationChartH[9]);?> 460 <?php echo($durationChartH[9]);?>
+					" />
+					<g stroke="#ff2d77" stroke-width="3" fill="#232733">
+					    <circle class="point-1 <?php echo($highestPoint[0]);?>" cx="10" cy="<?php echo($durationChartH[0]);?>" r="4" />
+					    <circle class="point-2 <?php echo($highestPoint[1]);?>" cx="60" cy="<?php echo($durationChartH[1]);?>" r="4" />
+					    <circle class="point-3 <?php echo($highestPoint[2]);?>" cx="110" cy="<?php echo($durationChartH[2]);?>" r="4" />
+					    <circle class="point-4 <?php echo($highestPoint[3]);?>" cx="160" cy="<?php echo($durationChartH[3]);?>" r="4" />
+					    <circle class="point-5 <?php echo($highestPoint[4]);?>" cx="210" cy="<?php echo($durationChartH[4]);?>" r="4" />
+					    <circle class="point-6 <?php echo($highestPoint[5]);?>" cx="260" cy="<?php echo($durationChartH[5]);?>" r="4" />
+					    <circle class="point-7 <?php echo($highestPoint[6]);?>" cx="310" cy="<?php echo($durationChartH[6]);?>" r="4" />
+					    <circle class="point-8 <?php echo($highestPoint[7]);?>" cx="360" cy="<?php echo($durationChartH[7]);?>" r="4" />
+					    <circle class="point-9 <?php echo($highestPoint[8]);?>" cx="410" cy="<?php echo($durationChartH[8]);?>" r="4" />
+					    <circle class="point-10 <?php echo($highestPoint[9]);?>" cx="460" cy="<?php echo($durationChartH[9]);?>" r="4" />
+					  </g>
+					  <g>
+					  	<text x="0" y="<?php echo($durationChartH[0] + 20);?>" class="duration-chart-text"><?php echo($thisMinutes[0]);?></text>
+					  	<text x="50" y="<?php echo($durationChartH[1] + 20);?>" class="duration-chart-text"><?php echo($thisMinutes[1]);?></text>
+					  	<text x="100" y="<?php echo($durationChartH[2] + 20);?>" class="duration-chart-text"><?php echo($thisMinutes[2]);?></text>
+					  	<text x="150" y="<?php echo($durationChartH[3] + 20);?>" class="duration-chart-text"><?php echo($thisMinutes[3]);?></text>
+					  	<text x="200" y="<?php echo($durationChartH[4] + 20);?>" class="duration-chart-text"><?php echo($thisMinutes[4]);?></text>
+					  	<text x="250" y="<?php echo($durationChartH[5] + 20);?>" class="duration-chart-text"><?php echo($thisMinutes[5]);?></text>
+					  	<text x="300" y="<?php echo($durationChartH[6] + 20);?>" class="duration-chart-text"><?php echo($thisMinutes[6]);?></text>
+							<text x="350" y="<?php echo($durationChartH[7] + 20);?>" class="duration-chart-text"><?php echo($thisMinutes[7]);?></text>
+					  	<text x="400" y="<?php echo($durationChartH[8] + 20);?>" class="duration-chart-text"><?php echo($thisMinutes[8]);?></text>
+					  	<text x="450" y="<?php echo($durationChartH[9] + 20);?>" class="duration-chart-text"><?php echo($thisMinutes[9]);?></text>	  	
+					  </g>
+			</svg>
+			<br />
+			<label>The last 10 episode duration vs. average duration (<span><?php echo($averageMinutes);?> </span>minutes) in all time.</label>
+			
+		</div>
+	</section>
 
 </article>
 
