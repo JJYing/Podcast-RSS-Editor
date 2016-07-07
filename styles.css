@@ -142,22 +142,6 @@ aside{
 	transition: all .1s ease-in;
 	position: relative;
 }
-.item.highlight{
-	background: #789;
-	/*border-right: 5px solid #445566;*/
-	border-bottom: 1px solid rgba(10, 20, 30, .8);	
-	box-shadow: inset -4px 13px 29px rgba(44, 55, 66, 0.2);
-}
-.item:hover{
-	background: rgba(10, 0, 20, .15);
-	/*border-right: 5px solid rgba(0, 20, 60, .05);*/
-	box-shadow: none;
-}
-.item.highlight:hover{
-	background: #789;
-	color: #fff;
-	box-shadow: inset -4px 13px 29px rgba(44, 55, 66, 0.2);	
-}
 .add-new-item{
 	text-align: center;
 	border-right: 5px solid #1f222c;
@@ -172,9 +156,23 @@ aside{
 	color: #ff2d77;
 	margin: 0 .3em 0 0;
 }
+.item.highlight{
+	background: #789;
+	border-bottom: 1px solid rgba(10, 20, 30, .8);	
+	box-shadow: inset -4px 13px 29px rgba(44, 55, 66, 0.2);
+}
+.item:hover{
+	background: rgba(10, 0, 20, .15);
+	box-shadow: none;
+}
+.item.highlight:hover{
+	background: #789;
+	color: #fff;
+	box-shadow: inset -4px 13px 29px rgba(44, 55, 66, 0.2);	
+}
 h1{
 	font-size: 1.25em;
-	color: #94999f;
+	color: #90959e;
 	font-weight: 400;
 	transition: all .1s ease-in;
 }
@@ -397,7 +395,7 @@ input[type=submit]:hover,
 	font-weight: 100;
 	color: #ff2d77;
 	font-family: 'Avenir Next Condensed', 'Alegreya Sans', sans-serif;
-	letter-spacing: -.03em;
+	letter-spacing: -.07em;
 	display: block;
 	text-shadow: 0px 13px 12px rgba(0,10,20,0.95);
 }
@@ -491,7 +489,7 @@ input[type=submit]:hover,
 }
 .settings span{
 	position: relative;
-	top: 65%;
+	top: 25%;
 	transform: translateY(-50%);
 	font-size: 4em;
 	display: block;
@@ -506,12 +504,30 @@ input[type=submit]:hover,
 	appearance: none;
 }
 .settings .settings-icon{
-	position: absolute;
-	left: 50%;
-	top: 25%;
 	display: block;
-	transform: translate(-50%, -50%);
+	position: relative;
+	width: 50%;
+	height: 300px;
+	margin: 0 auto;
 	text-align: center;
+}
+.gear-icon-1{
+	position: absolute;
+	left: 47%;
+	top: 55%;
+}
+.gear-icon-2{
+	position: absolute;
+	left: 30%;
+	top: 20%;
+}
+.gear-icon-1 path{
+	-webkit-animation: rotate-1 1.8s ease-out 0s 1 forwards;
+	transform-origin: 50% 50%;	
+}
+.gear-icon-2 path{
+	-webkit-animation: rotate-2 1.8s ease-out 0s 1 forwards;
+	transform-origin: 50% 50%;
 }
 /*~Notifications*/
 .notification{
@@ -599,7 +615,14 @@ input[type=submit]:hover,
 	85%{transform: scaleY(1.05)}
 	100%{transform: scaleY(1)}
 }
-	
+@-webkit-keyframes 'rotate-1' {
+	0%{transform: rotate(0deg); opacity: 0;}
+	100%{transform: rotate(270deg); opacity: 0.5;}
+}
+@-webkit-keyframes 'rotate-2' {
+	0%{transform: rotate(0deg); opacity: 0;}
+	100%{transform: rotate(-160deg); opacity: 0.7;}
+}
 /*~Decorations*/
 .item:before,
 .nav-dashboard li:before,

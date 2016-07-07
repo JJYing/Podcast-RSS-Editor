@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+
+<channel>
+    <title>Anyway.FM × 设计杂谈</title>
+    <itunes:subtitle>让你的听觉更懂视觉</itunes:subtitle>        
+    <link>http://Anyway.FM</link>
+    <atom:link href="http://Anyway.FM/rss.xml" rel="self" type="application/rss+xml"/>    
+    <description>由 UI 设计师 JJ Ying 和 Leon Gao 主播的设计杂谈类 Podcast</description>
+    <language>zh-CN</language>
+    <itunes:category text="Arts">
+      <itunes:category text="Design"/>
+      <itunes:category text="Visual Arts"/>
+    </itunes:category>
+    <itunes:category text="Technology">
+      <itunes:category text="Tech News"/>
+    </itunes:category>
+    <itunes:image href="http://anyway-web.b0.upaiyun.com/images/cover.png"/>
+    <itunes:keywords>设计,UI,JJ Ying,Leon Gao,视觉,界面,anyway</itunes:keywords>
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:author>JJ Ying &amp; Leon Gao</itunes:author>
+    <itunes:owner>
+        <itunes:name>JJ Ying &amp; Leon Gao</itunes:name>
+        <itunes:email>hello@anyway.fm</itunes:email>
+    </itunes:owner>
+    <item>
+            <title>#18: Post-retina Era</title>
+            <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.]]></description>
+            <link>http://anyway.fm/retina-display/#title</link>
+            <itunes:explicit>no</itunes:explicit>
+            <guid isPermaLink="true">http://anyway.fm/retina-display/#title</guid>
+            <author>JJ Ying,Leon Gao</author>
+            <itunes:image href="http://anyway-web.b0.upaiyun.com/images/poster-18.jpg"/>
+            <pubDate>Mon, 30 May 2016 16:41:10 +0000</pubDate>
+            <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/anyway-18.mp3"/>
+            <itunes:duration>2518</itunes:duration>
+    </item>
+    <item>
+            <title>#17: 'I Wanna Play Basket Ball'</title>
+            <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.]]></description>
+            <link>http://anyway.fm/dribbble-sins/#title</link>
+            <itunes:explicit>no</itunes:explicit>
+            <guid isPermaLink="true">http://anyway.fm/dribbble-sins/#title</guid>
+            <author>JJ Ying,Leon Gao</author>
+            <itunes:image href="http://anyway-web.b0.upaiyun.com/images/poster-17.jpg"/>
+            <pubDate>Wed, 11 May 2016 13:50:10 +0000</pubDate>
+            <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/anyway-17.mp3"/>
+            <itunes:duration>2769</itunes:duration>
+    </item>
+    <item>
+            <title>#16: Big or Small</title>
+            <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.]]></description>
+            <link>http://anyway.fm/big-or-small/#title</link>
+            <itunes:explicit>no</itunes:explicit>
+            <guid isPermaLink="true">http://anyway.fm/big-or-small/#title</guid>
+            <author>JJ Ying,Leon Gao</author>
+            <itunes:image href="http://anyway-web.b0.upaiyun.com/images/poster-16.jpg"/>
+            <pubDate>Tue, 26 Apr 2016 16:10:10 +0000</pubDate>
+            <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/anyway-16.mp3"/>
+            <itunes:duration>3179</itunes:duration>
+    </item>
+    <item>
+    	<title>#15: Finding Your Own Style as A Designer</title>
+    	<description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.]]></description>
+    	<link>http://anyway.fm/finding-your-own-style-as-a-designer/#title</link>
+    	<itunes:explicit>no</itunes:explicit>
+    	<guid isPermaLink="true">http://anyway.fm/finding-your-own-style-as-a-designer/#title</guid>
+    	<author>JJ Ying,Leon Gao</author>
+    	<itunes:image href="http://anyway-web.b0.upaiyun.com/images/poster-15.jpg"/>
+    	<pubDate>Mon, 11 Apr 2016 17:07:02 +0000</pubDate>
+    	<enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/anyway-15.mp3"/>
+    	<itunes:duration>2553</itunes:duration>
+    </item>
+	<item>
+	        <title>#14: 180°  • feat. H++ Land</title>
+	        <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.]]></description>
+	        <link>http://anyway.fm/180-degree-hxxland/#title</link>
+	        <itunes:explicit>no</itunes:explicit>
+	        <guid isPermaLink="true">http://anyway.fm/180-degree-hxxland/#title</guid>
+	        <author>JJ Ying,Leon Gao,火山大陆滕磊</author>
+	        <itunes:image href="http://anyway-web.b0.upaiyun.com/images/poster-14.jpg"/>
+	        <pubDate>Mon, 28 Mar 2016 16:00:10 +0000</pubDate>
+	        <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/anyway-14-final.mp3"/>
+	        <itunes:duration>3774</itunes:duration>
+	</item>
+	<item>
+	        <title>#13: Physicality &amp; Realism in UI Design</title>
+	        <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.]]></description>
+	        <link>http://anyway.fm/physicality-and-realism/#title</link>
+	        <itunes:explicit>no</itunes:explicit>
+	        <guid isPermaLink="true">http://anyway.fm/physicality-and-realism/#title</guid>
+	        <author>JJ Ying,Leon Gao</author>
+	        <itunes:image href="http://anyway-web.b0.upaiyun.com/images/poster-13.jpg"/>
+	        <pubDate>Tue, 08 Mar 2016 16:01:40 +0000</pubDate>
+	        <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/anyway-13-final.mp3"/>
+	        <itunes:duration>2131</itunes:duration>
+	</item>
+	<item>
+	        <title>#12: Audience Feedback</title>
+	        <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.]]></description>
+	        <link>http://anyway.fm/audience-feedback-2016-2/#title</link>
+	        <itunes:explicit>no</itunes:explicit>
+	        <guid isPermaLink="true">http://anyway.fm/audience-feedback-2016-2/#title</guid>
+	        <author>JJ Ying,Leon Gao</author>
+	        <itunes:image href="http://anyway-web.b0.upaiyun.com/images/poster-12.jpg"/>
+	        <pubDate>Sun, 21 Feb 2016 19:22:40 +0000</pubDate>
+	        <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/anyway-12-final.mp3"/>
+	        <itunes:duration>2489</itunes:duration>
+	</item>
+	
+	<item>
+	        <title>#11: Untitled</title>
+	        <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.]]></description>
+	        <link>http://anyway.fm/complain-in-chinese-year-end/#title</link>
+	        <itunes:explicit>no</itunes:explicit>
+	        <guid isPermaLink="true">http://anyway.fm/complain-in-chinese-year-end/#title</guid>
+	        <author>JJ Ying,Leon Gao</author>
+	        <itunes:image href="http://anyway-web.b0.upaiyun.com/images/poster-11.jpg"/>
+	        <pubDate>Mon, 01 Feb 2016 16:38:40 +0000</pubDate>
+	        <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/anyway-11-final.mp3"/>
+	        <itunes:duration>2113</itunes:duration>
+	</item>
+
+	<item>
+	        <title>#10: 180°  • feat. Kee Lee</title>
+	        <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.]]></description>
+	        <link>http://anyway.fm/180-degree-kee-lee-from-smartisan/#title</link>
+	        <itunes:explicit>no</itunes:explicit>
+	        <guid isPermaLink="true">http://anyway.fm/180-degree-kee-lee-from-smartisan/#title</guid>
+	        <author>JJ Ying,Leon Gao,Kee Lee</author>
+	        <itunes:image href="http://anyway-web.b0.upaiyun.com/images/poster-10.jpg"/>
+	        <pubDate>Tue, 26 Jan 2016 16:03:40 +0000</pubDate>
+	        <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/anyway-10-final.mp3"/>
+	        <itunes:duration>3138</itunes:duration>
+	</item>
+	
+	<item>
+	        <title>#9: Freelancing</title>
+	        <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.]]></description>
+	        <link>http://anyway.fm/freelancing-works/#title</link>
+	        <itunes:explicit>no</itunes:explicit>
+	        <guid isPermaLink="true">http://anyway.fm/freelancing-works/#title</guid>
+	        <author>JJ Ying,Leon Gao</author>
+	        <itunes:image href="http://anyway-web.b0.upaiyun.com/images/poster-9.jpg"/>
+	        <pubDate>Sun, 17 Jan 2016 15:10:40 +0000</pubDate>
+	        <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/anyway-9-final.mp3"/>
+	        <itunes:duration>2526</itunes:duration>
+	</item>
+
+	<item>
+	        <title>#8: Is 'Design Driven' A Myth?</title>
+	        <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.]]></description>
+	        <link>http://anyway.fm/is-design-driven-a-myth/#title</link>
+	        <itunes:explicit>no</itunes:explicit>
+	        <guid isPermaLink="true">http://anyway.fm/is-design-driven-a-myth/#title</guid>
+	        <author>JJ Ying,Leon Gao</author>
+	        <itunes:image href="http://anyway-web.b0.upaiyun.com/images/poster-8.jpg"/>
+	        <pubDate>Sun, 03 Jan 2016 15:30:40 +0000</pubDate>
+	        <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/anyway-8-final.mp3"/>
+	        <itunes:duration>2530</itunes:duration>
+	</item>
+	
+	<item>
+	        <title>#7: Inside Apple</title>
+	        <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.]]></description>
+	        <link>http://anyway.fm/inside-apple/#title</link>
+	        <itunes:explicit>no</itunes:explicit>
+	        <guid isPermaLink="true">http://anyway.fm/inside-apple/#title</guid>
+	        <author>JJ Ying,Leon Gao</author>
+	        <itunes:image href="http://anyway-web.b0.upaiyun.com/images/poster-7.jpg"/>
+	        <pubDate>Thu, 24 Dec 2015 18:39:40 +0000</pubDate>
+	        <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/anyway-7-final.mp3"/>
+	        <itunes:duration>2628</itunes:duration>
+	</item>
+	
+	<item>
+	        <title>#6: Photoshop CC 2015.1</title>
+	        <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.]]></description>
+	        <link>http://anyway.fm/adobe-photoshop-cc-2015-1/#title</link>
+	        <itunes:explicit>no</itunes:explicit>
+	        <guid isPermaLink="true">http://anyway.fm/adobe-photoshop-cc-2015-1/#title</guid>
+	        <author>JJ Ying,Leon Gao</author>
+	        <itunes:image href="http://anyway-web.b0.upaiyun.com/images/poster-6.jpg"/>
+	        <pubDate>Tue, 15 Dec 2015 15:36:40 +0000</pubDate>
+	        <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/anyway-6-final.mp3"/>
+	        <itunes:duration>2811</itunes:duration>
+	</item>
+	
+	<item>
+	        <title>#5: UI Designer Growth (3)</title>
+	        <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.]]></description>
+	        <link>http://anyway.fm/ui-designer-growth-3-habbits/#title</link>
+	        <itunes:explicit>no</itunes:explicit>
+	        <guid isPermaLink="true">http://anyway.fm/ui-designer-growth-3-habbits/#title</guid>
+	        <author>JJ Ying,Leon Gao</author>
+	        <itunes:image href="http://anyway-web.b0.upaiyun.com/images/poster-5.jpg"/>
+	        <pubDate>Tue, 08 Dec 2015 16:06:40 +0000</pubDate>
+	        <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/anyway-5-final.mp3"/>
+	        <itunes:duration>2610</itunes:duration>
+	</item>
+
+	<item>
+	        <title>#4: UI Designer Growth (2)</title>
+	        <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.]]></description>
+	        <link>http://anyway.fm/ui-designer-growth-2-jobs/#title</link>
+	        <itunes:explicit>no</itunes:explicit>
+	        <guid isPermaLink="true">http://anyway.fm/ui-designer-growth-2-jobs/#title</guid>
+	        <author>JJ Ying,Leon Gao</author>
+	        <itunes:image href="http://anyway-web.b0.upaiyun.com/images/poster-4.jpg"/>
+	        <pubDate>Thu, 26 Nov 2015 03:10:40 +0000</pubDate>
+	        <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/anyway-4-final.mp3"/>
+	        <itunes:duration>2945</itunes:duration>
+	</item>
+
+    <item>
+            <title>#3: UI Designer Growth (1)</title>
+            <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.]]></description>
+            <link>http://anyway.fm/ui-designer-growth/#title</link>
+            <itunes:explicit>no</itunes:explicit>
+            <guid isPermaLink="true">http://anyway.fm/ui-designer-growth/#title</guid>
+            <author>JJ Ying,Leon Gao</author>
+            <itunes:image href="http://anyway-web.b0.upaiyun.com/images/poster-3.jpg"/>
+            <pubDate>Mon, 16 Nov 2015 03:10:40 +0000</pubDate>
+            <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/anyway-3-final.mp3"/>
+            <itunes:duration>2396</itunes:duration>
+    </item>
+    
+    <item>
+            <title>#2: Famous Icon Designers</title>
+            <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.]]></description>
+            <link>http://anyway.fm/famous-icon-designers/#title</link>
+            <itunes:explicit>no</itunes:explicit>
+            <guid isPermaLink="true">http://anyway.fm/famous-icon-designers/#title</guid>
+            <author>JJ Ying,Leon Gao</author>
+            <itunes:image href="http://anyway-web.b0.upaiyun.com/images/poster-2.jpg"/>
+            <pubDate>Tue, 03 Nov 2015 06:50:40 +0000</pubDate>
+            <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/anyway-2-final.mp3"/>
+            <itunes:duration>2669</itunes:duration>
+	</item>
+    
+    <item>
+        <title>#1: Japan Street Visual Elements</title>
+        <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.]]></description>
+        <link>http://anyway.fm/japan-street-visual-elements/#title</link>
+        <itunes:explicit>no</itunes:explicit>
+        <guid isPermaLink="true">http://anyway.fm/japan-street-visual-elements/#title</guid>
+        <author>JJ Ying,Leon Gao</author>
+        <itunes:image href="http://anyway-web.b0.upaiyun.com/images/poster-1.png"/>
+        <pubDate>Thu, 29 Oct 2015 04:58:40 +0000</pubDate>
+        <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/anyway-1-final.mp3"/>
+        <itunes:duration>2594</itunes:duration>
+    </item>
+    
+    <item>
+        <title>#0: Audition</title>
+        <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.]]></description>
+        <link>http://anyway.fm/anyway-fm-released/#title</link>
+        <itunes:explicit>no</itunes:explicit>
+        <guid isPermaLink="true">http://anyway.fm/anyway-fm-released/#title</guid>
+        <author>JJ Ying,Leon Gao</author>
+        <itunes:image href="http://anyway-web.b0.upaiyun.com/images/poster-0.png"/>
+        <pubDate>Thu, 29 Oct 2015 03:58:40 +0000</pubDate>
+        <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/ng-1.mp3"/>
+        <itunes:duration>41</itunes:duration>
+    </item>
+        
+</channel>
+</rss>

@@ -24,6 +24,7 @@ After hosting a design podcast, I started manually updating the RSS feed for eve
 
 # Known Issues
 - After editing an episode, the page jumped to still shows the old data.
+- When the duration is XX:XX, it failed to calculate the correct nubmer
 - Timezone issue for 'today'
 - Some people use different tag names in RSS file, like 'itunes:author' vs. 'autor'
 

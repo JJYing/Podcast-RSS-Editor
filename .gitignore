@@ -4,4 +4,5 @@ Source
 it.xml
 type.xml
 type.rss
+*.rss
 Podcast-RSS-Editor.esproj

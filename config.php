@@ -1,3 +1,3 @@
 <?php
-	$xmlFileName = 'rss.xml';
+	$xmlFileName = 'example.xml';
 ?>
