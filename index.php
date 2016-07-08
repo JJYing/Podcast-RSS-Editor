@@ -170,30 +170,32 @@ elseif ($ep == -2) {
 		if ($value == $maxWeekdayNo) {
 			$highestBar[$j] = "highest";
 		}
+		if ($value == 0) {
+			$highestBar[$j] .= "empty";
+		}
 		$j ++;
 	}
 	$weekDay = "
 		<ul>
-			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[0] bar-in-1'>
-		
+			<li class='$highestBar[0]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-1'>
 			<rect  class='chart-bar-1' x='0' y='$weekBarY[0]' width='$w1' height='$weekNoHeight[0]'/></svg><label>Sun</label></li>
 			
-			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[1] bar-in-2'>
+			<li class='$highestBar[1]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-2'>
 			<rect class='chart-bar-1' x='0' y='$weekBarY[1]' width='$w1' height='$weekNoHeight[1]'/></svg><label>Mon</label></li>
 			
-			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[2] bar-in-3'>
+			<li class='$highestBar[2]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-3'>
 			<rect class='chart-bar-1' x='0' y='$weekBarY[2]' width='$w1' height='$weekNoHeight[2]'/></svg><label>Tue</label></li>
 			
-			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[3] bar-in-4'>
+			<li class='$highestBar[3]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-4'>
 			<rect class='chart-bar-1' x='0' y='$weekBarY[3]' width='$w1' height='$weekNoHeight[3]'/></svg><label>Wed</label></li>
 			
-			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[4] bar-in-5'>
+			<li class='$highestBar[4]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-5'>
 			<rect class='chart-bar-1' x='0' y='$weekBarY[4]' width='$w1' height='$weekNoHeight[4]'/></svg><label>Thu</label></li>
 			
-			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[5] bar-in-6'>
+			<li class='$highestBar[5]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-6'>
 			<rect class='chart-bar-1' x='0' y='$weekBarY[5]' width='$w1' height='$weekNoHeight[5]'/></svg><label>Fri</label></li>
 			
-			<li><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='$highestBar[6] bar-in-7'>
+			<li class='$highestBar[6]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-7'>
 			<rect class='chart-bar-1' x='0' y='$weekBarY[6]' width='$w1' height='$weekNoHeight[6]'/></svg><label>Sat</label></li>
 		</ul>
 	";
@@ -442,7 +444,7 @@ class my_node extends SimpleXMLElement
 					  </g>
 			</svg>
 			<br />
-			<label>The last 10 episode duration vs. average duration (<span><?php echo($averageMinutes);?> </span>minutes) in all time.</label>
+			<label>The durations of last 10 episodes vs. average duration (<span><?php echo($averageMinutes);?> </span>minutes) in all time.</label>
 			
 		</div>
 	</section>

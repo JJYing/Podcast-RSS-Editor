@@ -114,7 +114,7 @@ nav>ul li a:hover path{
 	font-weight: 200;
 	font-size: 3em;
 	color: #fff;
-	font-family: 'Alegreya Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+	font-family: 'Avenir Next Condensed', 'Alegreya Sans', sans-serif;
 }
 /*~Item List*/
 aside{
@@ -434,7 +434,22 @@ input[type=submit]:hover,
 .dashboard .d-weekday li{
 	list-style: none;
 	float: left;
-	width: 14.2857%;
+	width: 14.2857%;	
+	position: relative;
+}
+.dashboard .d-weekday li:before{
+	content: "";
+	width: 60%;
+	height: 2px;
+	left: 20%;
+	position: absolute;
+	top: 138px;
+	display: block;
+	box-shadow: 0px 7px 13px rgba(0,0,0,1);
+	animation: fade-in 1.3s ease-in 0s;
+}
+.dashboard .d-weekday .empty:before{
+	display: none;
 }
 .dashboard label{
 	font-size: .8rem;
@@ -445,7 +460,7 @@ input[type=submit]:hover,
 	font-weight: 400;
 }
 .dashboard rect{
-	fill: #ff2d77;	
+	fill: #ff2d77;
 }
 .dashboard .d-weekday .highest rect{
 	fill: #789;
@@ -522,11 +537,11 @@ input[type=submit]:hover,
 	top: 20%;
 }
 .gear-icon-1 path{
-	-webkit-animation: rotate-1 1.8s ease-out 0s 1 forwards;
+	-webkit-animation: rotate-1 1.1s ease-out 0s 1 forwards;
 	transform-origin: 50% 50%;	
 }
 .gear-icon-2 path{
-	-webkit-animation: rotate-2 1.8s ease-out 0s 1 forwards;
+	-webkit-animation: rotate-2 1.1s ease-out 0s 1 forwards;
 	transform-origin: 50% 50%;
 }
 /*~Notifications*/
