@@ -4,7 +4,7 @@ After hosting a design podcast, I started manually updating the RSS feed for eve
 ![](https://raw.githubusercontent.com/JJYing/Podcast-RSS-Editor/master/screenshot.jpg)
 
 # Usage
-- Put the XML/RSS file you wanna edit in the root and select it in the 'Settings' panel and then you can edit / add episodes.
+- Put the XML file you wanna edit in the root and select it in the 'Settings' panel and then you can edit / add episodes.
 - There isn't any authentication or security check so please don't put it on the sever in case shit happens.
 
 # To-do
