@@ -235,7 +235,7 @@ h2{
 	line-height: 1.5em;
 	margin: 0 0 .5em;
 	border-bottom: 2px solid #f4f7fa;
-	-webkit-animation: right-in .25s ease-out 0.1s 1 forwards;
+	animation: right-in .25s ease-out 0.1s 1 forwards;
 	opacity: 0;
 }
 h2:before{
@@ -537,11 +537,11 @@ input[type=submit]:hover,
 	top: 20%;
 }
 .gear-icon-1 path{
-	-webkit-animation: rotate-1 1.1s ease-out 0s 1 forwards;
+	animation: rotate-1 1.1s ease-out 0s 1 forwards;
 	transform-origin: 50% 50%;	
 }
 .gear-icon-2 path{
-	-webkit-animation: rotate-2 1.1s ease-out 0s 1 forwards;
+	animation: rotate-2 1.1s ease-out 0s 1 forwards;
 	transform-origin: 50% 50%;
 }
 /*~Notifications*/
@@ -559,82 +559,83 @@ input[type=submit]:hover,
 }
 .notification-show{
 	display: block;
-	-webkit-animation: notification-out 2s ease-out 0s 1 forwards;	
+	animation: notification-out 2s ease-out 0s 1 forwards;	
 }
 /*~Animations*/
-.right-in-1{-webkit-animation: right-in .3s ease-out 0s 1 forwards;}
-.right-in-2{-webkit-animation: right-in .3s ease-out 0.03s 1 forwards;}
-.right-in-3{-webkit-animation: right-in .3s ease-out 0.06s 1 forwards;}
-.right-in-4{-webkit-animation: right-in .3s ease-out 0.09s 1 forwards;}
-.right-in-5{-webkit-animation: right-in .3s ease-out 0.12s 1 forwards;}
-.right-in-6{-webkit-animation: right-in .3s ease-out 0.15s 1 forwards;}
-.right-in-7{-webkit-animation: right-in .3s ease-out 0.18s 1 forwards;}
-.right-in-8{-webkit-animation: right-in .3s ease-out 0.21s 1 forwards;}
-.right-in-9{-webkit-animation: right-in .3s ease-out 0.27s 1 forwards;}
-.right-in-10{-webkit-animation: right-in .3s ease-out 0.3s 1 forwards;}
+.right-in-1{animation: right-in .3s ease-out 0s 1 forwards;}
+.right-in-2{animation: right-in .3s ease-out 0.03s 1 forwards;}
+.right-in-3{animation: right-in .3s ease-out 0.06s 1 forwards;}
+.right-in-4{animation: right-in .3s ease-out 0.09s 1 forwards;}
+.right-in-5{animation: right-in .3s ease-out 0.12s 1 forwards;}
+.right-in-6{animation: right-in .3s ease-out 0.15s 1 forwards;}
+.right-in-7{animation: right-in .3s ease-out 0.18s 1 forwards;}
+.right-in-8{animation: right-in .3s ease-out 0.21s 1 forwards;}
+.right-in-9{animation: right-in .3s ease-out 0.27s 1 forwards;}
+.right-in-10{animation: right-in .3s ease-out 0.3s 1 forwards;}
 
-.fade-in{-webkit-animation: fade-in .3s ease-out 0s 1 forwards;}
+.fade-in{animation: fade-in .3s ease-out 0s 1 forwards;}
 .panel-in{
-	-webkit-animation: panel-in .3s ease-out 0s 1 forwards;
+	animation: panel-in .3s ease-out 0s 1 forwards;
 }
-.scale-in{-webkit-animation: scale-in .4s ease-out 0s 1 forwards;opacity: 0;}
-.scale-in-1{-webkit-animation: scale-in .4s ease-out 0s 1 forwards;opacity: 0;}
-.scale-in-2{-webkit-animation: scale-in .4s ease-out 0.1s 1 forwards;opacity: 0;}
-.scale-in-3{-webkit-animation: scale-in .4s ease-out 0.2s 1 forwards;opacity: 0;}
-.scale-in-4{-webkit-animation: scale-in .4s ease-out 0.3s 1 forwards;opacity: 0;}
-.scale-in-5{-webkit-animation: scale-in .4s ease-out 0.4s 1 forwards;opacity: 0;}
+.scale-in{animation: scale-in .4s ease-out 0s 1 forwards;opacity: 0;}
+.scale-in-1{animation: scale-in .4s ease-out 0s 1 forwards;opacity: 0;}
+.scale-in-2{animation: scale-in .4s ease-out 0.1s 1 forwards;opacity: 0;}
+.scale-in-3{animation: scale-in .4s ease-out 0.2s 1 forwards;opacity: 0;}
+.scale-in-4{animation: scale-in .4s ease-out 0.3s 1 forwards;opacity: 0;}
+.scale-in-5{animation: scale-in .4s ease-out 0.4s 1 forwards;opacity: 0;}
+.scale-in-6{animation: scale-in .4s ease-out 0.7s 1 forwards;opacity: 0;}
 
-.bar-in-1{-webkit-animation: bar-in .5s ease-out 0.4s 1 forwards; transform-origin:50% 100%;transform: scaleY(0)}
-.bar-in-2{-webkit-animation: bar-in .5s ease-out 0.5s 1 forwards; transform-origin:50% 100%;transform: scaleY(0)}
-.bar-in-3{-webkit-animation: bar-in .5s ease-out 0.6s 1 forwards; transform-origin:50% 100%;transform: scaleY(0)}
-.bar-in-4{-webkit-animation: bar-in .5s ease-out 0.7s 1 forwards; transform-origin:50% 100%;transform: scaleY(0)}
-.bar-in-5{-webkit-animation: bar-in .5s ease-out 0.8s 1 forwards; transform-origin:50% 100%;transform: scaleY(0)}
-.bar-in-6{-webkit-animation: bar-in .5s ease-out 0.9s 1 forwards; transform-origin:50% 100%;transform: scaleY(0)}
-.bar-in-7{-webkit-animation: bar-in .5s ease-out 1s 1 forwards; transform-origin:50% 100%;transform: scaleY(0)}
+.bar-in-1{animation: bar-in .5s ease-out 0.4s 1 forwards; transform-origin:50% 100%;transform: scaleY(0)}
+.bar-in-2{animation: bar-in .5s ease-out 0.5s 1 forwards; transform-origin:50% 100%;transform: scaleY(0)}
+.bar-in-3{animation: bar-in .5s ease-out 0.6s 1 forwards; transform-origin:50% 100%;transform: scaleY(0)}
+.bar-in-4{animation: bar-in .5s ease-out 0.7s 1 forwards; transform-origin:50% 100%;transform: scaleY(0)}
+.bar-in-5{animation: bar-in .5s ease-out 0.8s 1 forwards; transform-origin:50% 100%;transform: scaleY(0)}
+.bar-in-6{animation: bar-in .5s ease-out 0.9s 1 forwards; transform-origin:50% 100%;transform: scaleY(0)}
+.bar-in-7{animation: bar-in .5s ease-out 1s 1 forwards; transform-origin:50% 100%;transform: scaleY(0)}
 
-@-webkit-keyframes 'right-in' {
+@keyframes right-in {
 	0%{transform: translate(80px, 0);opacity:0}
 	50%{transform: translate(-15px, 0);opacity:0.5}
 	70%{transform: translate(10px, 0);opacity:0.7}
 	85%{transform: translate(-5px, 0);opacity:0.85}
 	100%{transform: translate(0, 0);opacity:1}
 }
-@-webkit-keyframes 'panel-in' {
+@keyframes panel-in {
 	0%{transform: translate(780px, 0);opacity:0}
 	50%{transform: translate(-15px, 0);opacity:0.5}
 	70%{transform: translate(10px, 0);opacity:0.7}
 	85%{transform: translate(-5px, 0);opacity:0.85}
 	100%{transform: translate(0, 0);opacity:1}
 }
-@-webkit-keyframes 'fade-in' {
+@keyframes fade-in {
 	0%{opacity:0}
 	100%{opacity:1}
 }
-@-webkit-keyframes 'scale-in' {
+@keyframes scale-in {
 	0%{transform: scale(0);opacity:0}
 	50%{transform: scale(1.1);opacity:0.5}
 	70%{transform: scale(0.9);opacity:0.7}
 	85%{transform: scale(1.05);opacity:0.85}
 	100%{transform: scale(1);opacity:1}
 }
-@-webkit-keyframes 'notification-out' {
+@keyframes notification-out {
 	0%{height: auto;}
 	80%{height: auto; padding: .5em 0; display: block;}
 	93%{height: auto; padding: 1em 0; display: block;}
 	100%{height: 0px; display: none; padding: 0}
 }
-@-webkit-keyframes 'bar-in'{
+@keyframes bar-in{
 	0%{transform: scaleY(0)}
 	50%{transform: scaleY(1.1)}
 	70%{transform: scaleY(0.9)}
 	85%{transform: scaleY(1.05)}
 	100%{transform: scaleY(1)}
 }
-@-webkit-keyframes 'rotate-1' {
+@keyframes rotate-1 {
 	0%{transform: rotate(0deg); opacity: 0;}
 	100%{transform: rotate(270deg); opacity: 0.5;}
 }
-@-webkit-keyframes 'rotate-2' {
+@keyframes rotate-2 {
 	0%{transform: rotate(0deg); opacity: 0;}
 	100%{transform: rotate(-160deg); opacity: 0.7;}
 }
