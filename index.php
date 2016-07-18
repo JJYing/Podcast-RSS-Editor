@@ -396,7 +396,7 @@ class my_node extends SimpleXMLElement
 	</section>
 	
 	<section class="d-duration">
-		<div class="scale-in-5">
+		<div class="scale-in-6">
 			<svg xmlns="http://www.w3.org/2000/svg" width="500" height="150" viewBox="-10 -10 490 140" class="">
 				<defs>
 				    <filter id="f3" x="-30%" y="-30%" width="300%" height="300%">
