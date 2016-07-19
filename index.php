@@ -12,7 +12,9 @@
 </head>
 <body>
 <?php
-include("config.php"); 
+include("config.php");
+include($language);
+
 //~Load the XML file
 
 if ($_POST["newXMLFile"]) {
@@ -23,15 +25,23 @@ if ($_POST["newXMLFile"]) {
 	file_put_contents('config.php',$content);
 }
 
+if ($_POST["newLanguage"]) {
+	$oldLanguage= $language;
+	$language = $_POST["newLanguage"];
+	$content = file_get_contents('config.php');
+	$content = str_replace($oldLanguage, $_POST["newLanguage"],$content);
+	file_put_contents('config.php',$content);
+}
+
 $xmlDoc = simplexml_load_file($xmlFileName,'my_node');
 
 //~Notifications
 if ($_GET['notf']) {
 	$showNotification = "notification-show";
 	switch ($_GET['notf']) {
-		case '1': $notificationContent = 'New XML file loaded'; break;
-		case '2': $notificationContent = 'Episode updated'; break;
-		case '3': $notificationContent = 'New episode created'; break;
+		case '1': $notificationContent = $lang[51]; break;
+		case '2': $notificationContent = $lang[52]; break;
+		case '3': $notificationContent = $lang[53]; break;
 	}
 }
 //~Process episodes
@@ -76,8 +86,8 @@ $sinceLastUpdate = ceil((strtotime(now)-strtotime($thisDate[0]))/86400);
 $totalHostsNo = count(array_unique($totalHostsArray));
 $navDashboard = "
 	<ul>
-		<li><strong>$sinceLastUpdate</strong><br />Days Since Last Ep.</li>
-		<li><strong>$t</strong><br />Total Episodes</li>
+		<li><strong>$sinceLastUpdate</strong><br />$lang[4]</li>
+		<li><strong>$t</strong><br />$lang[5]</li>
 	</ul>";
 
 
@@ -85,7 +95,7 @@ $navDashboard = "
 $ep = (int) $_GET['ep']; 
 if ($ep >= 0) {
 	$ep2 = $t  -$ep;
-	$panelTitle = "Edit Episode #$ep2";
+	$panelTitle = "$lang[43]$ep2$lang[44]";
 	$currentTitle = "$thisTitle[$ep]";
 	$currentDuration = "$thisSeconds[$ep]";
 	$currentHH = floor($thisSeconds[$ep] / 3600);
@@ -178,25 +188,25 @@ elseif ($ep == -2) {
 	$weekDay = "
 		<ul>
 			<li class='$highestBar[0]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-1'>
-			<rect  class='chart-bar-1' x='0' y='$weekBarY[0]' width='$w1' height='$weekNoHeight[0]'/></svg><label>Sun</label></li>
+			<rect  class='chart-bar-1' x='0' y='$weekBarY[0]' width='$w1' height='$weekNoHeight[0]'/></svg><label>$lang[30]</label></li>
 			
 			<li class='$highestBar[1]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-2'>
-			<rect class='chart-bar-1' x='0' y='$weekBarY[1]' width='$w1' height='$weekNoHeight[1]'/></svg><label>Mon</label></li>
+			<rect class='chart-bar-1' x='0' y='$weekBarY[1]' width='$w1' height='$weekNoHeight[1]'/></svg><label>$lang[31]</label></li>
 			
 			<li class='$highestBar[2]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-3'>
-			<rect class='chart-bar-1' x='0' y='$weekBarY[2]' width='$w1' height='$weekNoHeight[2]'/></svg><label>Tue</label></li>
+			<rect class='chart-bar-1' x='0' y='$weekBarY[2]' width='$w1' height='$weekNoHeight[2]'/></svg><label>$lang[32]</label></li>
 			
 			<li class='$highestBar[3]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-4'>
-			<rect class='chart-bar-1' x='0' y='$weekBarY[3]' width='$w1' height='$weekNoHeight[3]'/></svg><label>Wed</label></li>
+			<rect class='chart-bar-1' x='0' y='$weekBarY[3]' width='$w1' height='$weekNoHeight[3]'/></svg><label>$lang[33]</label></li>
 			
 			<li class='$highestBar[4]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-5'>
-			<rect class='chart-bar-1' x='0' y='$weekBarY[4]' width='$w1' height='$weekNoHeight[4]'/></svg><label>Thu</label></li>
+			<rect class='chart-bar-1' x='0' y='$weekBarY[4]' width='$w1' height='$weekNoHeight[4]'/></svg><label>$lang[34]</label></li>
 			
 			<li class='$highestBar[5]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-6'>
-			<rect class='chart-bar-1' x='0' y='$weekBarY[5]' width='$w1' height='$weekNoHeight[5]'/></svg><label>Fri</label></li>
+			<rect class='chart-bar-1' x='0' y='$weekBarY[5]' width='$w1' height='$weekNoHeight[5]'/></svg><label>$lang[35]</label></li>
 			
 			<li class='$highestBar[6]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-7'>
-			<rect class='chart-bar-1' x='0' y='$weekBarY[6]' width='$w1' height='$weekNoHeight[6]'/></svg><label>Sat</label></li>
+			<rect class='chart-bar-1' x='0' y='$weekBarY[6]' width='$w1' height='$weekNoHeight[6]'/></svg><label>$lang[36]</label></li>
 		</ul>
 	";
 	$recentDurations = array_slice($thisSeconds, 0, 10);
@@ -215,10 +225,9 @@ elseif ($ep == -3) {
 	$showSettings = "panel-show";
 	$navHighlight3 = "highlight";
 	$settingsContent = "
-	
 		<form method='post' action='index.php?ep=-1&notf=1'>
-			<label for='newXMLFile'>Select the file to edit</label>
-			<select id='content' name='newXMLFile' class='right-in-8'>
+			<label for='newXMLFile'>$lang[39]</label>
+			<select id='content' name='newXMLFile' class='right-in-3'>
 	";
 	foreach (glob('*.{rss,xml}', GLOB_BRACE) as $filename) {
 		if ($xmlFileName == $filename) {
@@ -230,14 +239,29 @@ elseif ($ep == -3) {
 	}
 	$settingsContent .= "
 			</select>
-			<label><br />
-			And...there is nothing else to set....<br />for now...</label>
-			<input type='submit' value='Save' class='right-in-10'>
+			<br />
+			<label for='newXMLFile'>$lang[40]</label>
+			<select id='language' name='newLanguage' class='right-in-6'>
+
+	";
+	foreach (glob('language/*.php', GLOB_BRACE) as $languageFile) {
+		ereg("([^\/]*)$", $languageFile, $languageName);
+		if ($language == $languageFile) {
+			$settingsContent .= "<option selected='selected' value='$languageFile'>$languageName[0]</option>";
+		}
+		else {
+			$settingsContent .= "<option value='$languageFile'>$languageName[0]</option>";	
+		}
+	}
+	$settingsContent .= "
+			</select>
+			<br />
+			<input type='submit' value=$lang[41] class='right-in-10'>
 		</form>
 	";
 }
 else {
-	$panelTitle = "Add New Episode";
+	$panelTitle = "$lang[42]";
 	$currentAuthor = "$thisAuthor[0]";
 	$currentDay = date('d',time());
 	$currentMonth = date('m',time());
@@ -298,17 +322,17 @@ class my_node extends SimpleXMLElement
 ?>
 <section class="notification <?php echo($showNotification);?>"><?php echo($notificationContent);?></section>
 <nav>
-	<a href="?ep=-1" class="logo"><strong>Podcast</strong> RSS Editor</a>
+	<a href="?ep=-1" class="logo"><?php echo($lang[0]);?></a>
 		<ul>
 			<li><a href="?ep=-1" class="<?php echo($navHighlight1);?>"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
 			    <path id="Path" class="cls-1" d="M30,43A11.013,11.013,0,0,1,19,32V17a11,11,0,0,1,22,0V32A11.012,11.012,0,0,1,30,43ZM30,8a9.011,9.011,0,0,0-9,9V32a9,9,0,0,0,18,0V17A9.011,9.011,0,0,0,30,8Zm0,39A15.017,15.017,0,0,1,15,32V25a1,1,0,0,1,2,0v7a13,13,0,0,0,26,0V25a1,1,0,0,1,2,0v7A15.017,15.017,0,0,1,30,47Zm3,8H27a1,1,0,0,1,0-2h6A1,1,0,0,1,33,55Zm-3,0a1,1,0,0,1-1-1V46a1,1,0,0,1,2,0v8A1,1,0,0,1,30,55Zm6-31a1,1,0,1,1,1,1A1,1,0,0,1,36,24Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,33,24Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,30,24Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,27,24Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,24,24Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,21,24Zm14-3a1,1,0,1,1,1,1A1,1,0,0,1,35,21Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,32,21Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,29,21Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,26,21Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,23,21Zm13-3a1,1,0,1,1,1,1A1,1,0,0,1,36,18Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,33,18Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,30,18Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,27,18Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,24,18Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,21,18Zm14-3a1,1,0,1,1,1,1A1,1,0,0,1,35,15Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,32,15Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,29,15Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,26,15Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,23,15Zm13-3a1,1,0,1,1,1,1A1,1,0,0,1,36,12Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,33,12Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,30,12Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,27,12Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,24,12Zm-3,0a1,1,0,1,1,1,1A1,1,0,0,1,21,12ZM32,9a1,1,0,1,1,1,1A1,1,0,0,1,32,9ZM29,9a1,1,0,1,1,1,1A1,1,0,0,1,29,9ZM26,9a1,1,0,1,1,1,1A1,1,0,0,1,26,9ZM40,28H20a1,1,0,1,1,0-2H40A1,1,0,0,1,40,28Z"/>
-			</svg>Episodes</a></li>
+			</svg><?php echo($lang[1]);?></a></li>
 			<li><a href="?ep=-2" class="<?php echo($navHighlight2);?>"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
 			    <path id="Dashboard-2" data-name="Dashboard" class="cls-1" d="M190,54a1,1,0,0,1-1-1V44a1,1,0,0,1,2,0v9A1,1,0,0,1,190,54Zm-8,0a1,1,0,0,1-.914-1.406l4-9a1,1,0,0,1,1.828.813l-4,9A1,1,0,0,1,182,54Zm16,0a1,1,0,0,1-.915-0.594l-4-9a1,1,0,0,1,1.828-.812l4,9A1,1,0,0,1,198,54Zm14-12H168a1,1,0,0,1-1-1V11a1,1,0,0,1,1-1h17a1,1,0,0,1,0,2H169V40h42V12H195a1,1,0,0,1,0-2h17a1,1,0,0,1,1,1V41A1,1,0,0,1,212,42ZM195,16H185a1,1,0,0,1-1-1V7a1,1,0,0,1,1-1h10a1,1,0,0,1,1,1v8A1,1,0,0,1,195,16Zm-9-2h8V8h-8v6Z" transform="translate(-160)"/>
-			</svg>Dashboard</a></li>
+			</svg><?php echo($lang[2]);?></a></li>
 			<li><a href="?ep=-3" class="<?php echo($navHighlight3);?>"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
 			    <path id="settings-2" data-name="settings" class="cls-1" d="M351.331,53h-2.662a3,3,0,0,1-2.952-2.463l-0.385-2.123a18.784,18.784,0,0,1-5.044-2.1l-1.781,1.233a3.06,3.06,0,0,1-3.829-.346L332.8,45.322a3,3,0,0,1-.345-3.829l1.233-1.78a18.808,18.808,0,0,1-2.1-5.045l-2.123-.385A3,3,0,0,1,327,31.331V28.669a3,3,0,0,1,2.463-2.951l2.123-.386a18.808,18.808,0,0,1,2.1-5.045l-1.233-1.78a3,3,0,0,1,.345-3.829l1.883-1.882a3.059,3.059,0,0,1,3.828-.346l1.782,1.233a18.794,18.794,0,0,1,5.044-2.1l0.385-2.122A3,3,0,0,1,348.669,7h2.662a3,3,0,0,1,2.952,2.463l0.385,2.123a18.794,18.794,0,0,1,5.044,2.1l1.781-1.233a3.06,3.06,0,0,1,3.829.346l1.883,1.882a3,3,0,0,1,.345,3.829l-1.233,1.78a18.808,18.808,0,0,1,2.1,5.045l2.123,0.385A3,3,0,0,1,373,28.669v2.662a3,3,0,0,1-2.463,2.951l-2.123.386a18.808,18.808,0,0,1-2.1,5.045l1.233,1.78a3,3,0,0,1-.345,3.829L365.322,47.2a2.981,2.981,0,0,1-2.122.879h0a2.986,2.986,0,0,1-1.706-.533l-1.782-1.233a18.784,18.784,0,0,1-5.044,2.1l-0.385,2.122A3,3,0,0,1,351.331,53Zm-11.073-8.879a0.993,0.993,0,0,1,.542.16,16.856,16.856,0,0,0,5.609,2.331,1,1,0,0,1,.773.8l0.5,2.767a1,1,0,0,0,.984.821h2.662a1,1,0,0,0,.984-0.822l0.5-2.767a1,1,0,0,1,.773-0.8,16.856,16.856,0,0,0,5.609-2.331,1,1,0,0,1,1.112.017l2.32,1.606a1.02,1.02,0,0,0,1.276-.115l1.883-1.882a1,1,0,0,0,.114-1.276l-1.606-2.32a1,1,0,0,1-.018-1.111,16.859,16.859,0,0,0,2.331-5.608,1,1,0,0,1,.8-0.774l2.768-.5A1,1,0,0,0,371,31.331V28.669a1,1,0,0,0-.821-0.984l-2.768-.5a1,1,0,0,1-.8-0.774,16.858,16.858,0,0,0-2.331-5.608,1,1,0,0,1,.018-1.111l1.606-2.32a1,1,0,0,0-.114-1.276l-1.883-1.882a1.02,1.02,0,0,0-1.277-.115L360.312,15.7a1,1,0,0,1-1.112.018,16.862,16.862,0,0,0-5.609-2.331,1,1,0,0,1-.773-0.8l-0.5-2.768A1,1,0,0,0,351.331,9h-2.662a1,1,0,0,0-.984.822l-0.5,2.767a1,1,0,0,1-.773.8,16.862,16.862,0,0,0-5.609,2.331,1,1,0,0,1-1.112-.018l-2.32-1.606a1.02,1.02,0,0,0-1.276.115l-1.883,1.882a1,1,0,0,0-.114,1.276l1.606,2.32a1,1,0,0,1,.018,1.111,16.858,16.858,0,0,0-2.331,5.608,1,1,0,0,1-.8.774l-2.768.5a1,1,0,0,0-.821.983v2.662a1,1,0,0,0,.821.984l2.768,0.5a1,1,0,0,1,.8.774,16.859,16.859,0,0,0,2.331,5.608,1,1,0,0,1-.018,1.111l-1.606,2.32a1,1,0,0,0,.114,1.276l1.883,1.882a1.023,1.023,0,0,0,1.277.115l2.319-1.606A1,1,0,0,1,340.258,44.121ZM350,39a9,9,0,1,1,9-9A9.01,9.01,0,0,1,350,39Zm0-16a7,7,0,1,0,7,7A7.008,7.008,0,0,0,350,23Z" transform="translate(-320)"/>
-			</svg>Settings</a></li>
+			</svg><?php echo($lang[3]);?></a></li>
 		</ul>
 	<section class="nav-dashboard"><?php echo($navDashboard);?></section>
 </nav>
@@ -316,32 +340,32 @@ class my_node extends SimpleXMLElement
 <article class="panel edit-panel">	
 	<h2 class="panel-title right-in-1"><?php echo $panelTitle ?></h2>
 	<form action="index.php?ep=<?php echo $ep?>" method="post">
-		<section class="edit-title right-in-2"><h3>Title: </h3><span><input type="text" name="newTitle" value="<?php echo $currentTitle ?>" /></span></section>
+		<section class="edit-title right-in-2"><h3><?php echo $lang[7]?> </h3><span><input type="text" name="newTitle" value="<?php echo $currentTitle ?>" /></span></section>
 		<section class="edit-date right-in-3">
-			<h3>Publish Time: </h3>
+			<h3><?php echo $lang[8]?> </h3>
 			<span>
-				<input type="text" name="newMonth" value="<?php echo $currentMonth ?>" /><label for="newMonth">Month</label>
-				<input type="text" name="newDay" value="<?php echo $currentDay ?>" /><label for="newDay">Day</label>
-				<input type="text" name="newYear" value="<?php echo $currentYear ?>" /><label for="newYear">Year</label>
-				<input type="text" name="newHour" value="<?php echo $currentHour ?>" /><label for="newHour">Hour</label>
-				<input type="text" name="newMinute" value="<?php echo $currentMinute ?>" /><label for="newMinute">Minute</label>
-				<input type="text" name="newSecond" value="<?php echo $currentSecond ?>" /><label for="newSecond">Second</label>
+				<input type="text" name="newMonth" value="<?php echo $currentMonth ?>" /><label for="newMonth"><?php echo $lang[45]?></label>
+				<input type="text" name="newDay" value="<?php echo $currentDay ?>" /><label for="newDay"><?php echo $lang[46]?></label>
+				<input type="text" name="newYear" value="<?php echo $currentYear ?>" /><label for="newYear"><?php echo $lang[47]?></label>
+				<input type="text" name="newHour" value="<?php echo $currentHour ?>" /><label for="newHour"><?php echo $lang[48]?></label>
+				<input type="text" name="newMinute" value="<?php echo $currentMinute ?>" /><label for="newMinute"><?php echo $lang[49]?></label>
+				<input type="text" name="newSecond" value="<?php echo $currentSecond ?>" /><label for="newSecond"><?php echo $lang[50]?></label>
 			</span></section>
 		<section class="edit-duration right-in-4">
-			<h3>Duration: </h3>
+			<h3><?php echo $lang[9]?> </h3>
 			<span>
-				<input type="text" name="newHH" value="<?php echo $currentHH ?>" /><label for="newHH">HH</label>
-				<input type="text" name="newMM" value="<?php echo $currentMM ?>" /><label for="newMM">MM</label>
-				<input type="text" name="newSS" value="<?php echo $currentSS ?>" /><label for="newSS">SS</label>
+				<input type="text" name="newHH" value="<?php echo $currentHH ?>" /><label for="newHH"><?php echo $lang[51]?></label>
+				<input type="text" name="newMM" value="<?php echo $currentMM ?>" /><label for="newMM"><?php echo $lang[52]?></label>
+				<input type="text" name="newSS" value="<?php echo $currentSS ?>" /><label for="newSS"><?php echo $lang[53]?></label>
 			</span>
 		</section>
-		<section class="edit-link right-in-5"><h3>Link: </h3><span><input type="text" name="newLink" value="<?php echo $currentLink ?>" /></span></section>
-		<section class="edit-author right-in-6"><h3>Authors: </h3><span><input type="text" name="newAuthor" value="<?php echo $currentAuthor ?>" /></span></section>
-		<section class="edit-image right-in-7"><h3>Cover Image: </h3><span><input type="text" name="newImage" value="<?php echo $currentImage ?>" /></span></section>
-		<section class="edit-audio right-in-8"><h3>Audio File: </h3><span><input type="text" name="newFile" value="<?php echo $currentFile ?>" /></span></section>
-		<section class="edit-desc right-in-9"><h3>Description: </h3><span><textarea name="newDesc"  /><?php echo $currentDesc ?></textarea></span></section>
+		<section class="edit-link right-in-5"><h3><?php echo $lang[10]?> </h3><span><input type="text" name="newLink" value="<?php echo $currentLink ?>" /></span></section>
+		<section class="edit-author right-in-6"><h3><?php echo $lang[11]?> </h3><span><input type="text" name="newAuthor" value="<?php echo $currentAuthor ?>" /></span></section>
+		<section class="edit-image right-in-7"><h3><?php echo $lang[12]?> </h3><span><input type="text" name="newImage" value="<?php echo $currentImage ?>" /></span></section>
+		<section class="edit-audio right-in-8"><h3><?php echo $lang[13]?> </h3><span><input type="text" name="newFile" value="<?php echo $currentFile ?>" /></span></section>
+		<section class="edit-desc right-in-9"><h3><?php echo $lang[14]?> </h3><span><textarea name="newDesc"  /><?php echo $currentDesc ?></textarea></span></section>
 		<footer>
-			<input type="submit" value="Save" class="right-in-10">
+			<input type="submit" value="<?php echo($lang[41]);?>" class="right-in-10">
 			<input type="checkbox" checked name="yy" value="yes" class="hide"/>	
 		</footer>
 	</form>
@@ -354,32 +378,32 @@ class my_node extends SimpleXMLElement
 		<svg class="dashboard-icons" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 60 60">
 		    <path id="Path" class="cls-1" d="M990.5,51a20,20,0,1,1,20-20A20.022,20.022,0,0,1,990.5,51Zm0-38a18,18,0,1,0,18,18A18.021,18.021,0,0,0,990.5,13Zm8,27a1,1,0,0,1-.707-0.293l-8-8A1,1,0,0,1,989.5,31V21a1,1,0,0,1,2,0v9.586l7.707,7.707A1,1,0,0,1,998.5,40Zm10.72-13.282a1,1,0,0,1-.71-1.707,8.5,8.5,0,1,0-12.021-12.021,1,1,0,0,1-1.414-1.414,10.5,10.5,0,1,1,14.845,14.85A0.982,0.982,0,0,1,1009.22,26.718Zm-37.438,0a1,1,0,0,1-.707-0.293,10.5,10.5,0,0,1,14.85-14.85,1,1,0,0,1-1.414,1.414,8.5,8.5,0,0,0-12.022,12.022A1,1,0,0,1,971.782,26.718ZM970.5,52a1,1,0,0,1-.707-1.707l6-6a1,1,0,1,1,1.414,1.414l-6,6A1,1,0,0,1,970.5,52Zm40,0a1,1,0,0,1-.71-0.293l-6-6a1,1,0,1,1,1.42-1.414l6,6A1,1,0,0,1,1010.5,52Zm-20-35a1,1,0,0,1-.71-1.71,1.047,1.047,0,0,1,1.42,0A1,1,0,0,1,990.5,17Zm0,30a0.99,0.99,0,1,1,.71-0.29A1.051,1.051,0,0,1,990.5,47Zm15-15a0.99,0.99,0,0,1-1-1,1.031,1.031,0,0,1,.29-0.71,1.047,1.047,0,0,1,1.42,0,1.031,1.031,0,0,1,.29.71A0.99,0.99,0,0,1,1005.5,32Zm-30,0a1.03,1.03,0,0,1-.71-0.29A1.048,1.048,0,0,1,974.5,31a1.026,1.026,0,0,1,.29-0.71,1.047,1.047,0,0,1,1.42,0,1.031,1.031,0,0,1,.29.71A0.99,0.99,0,0,1,975.5,32Z" transform="translate(-960)"/>
 		</svg>
-		<strong class="scale-in-1"><?php echo($sinceLastUpdate);?></strong>Days<br />
-		<i>since last episode, and average update cycle is <span><?php echo($averageCycle);?></span> days.</i>
+		<strong class="scale-in-1"><?php echo($sinceLastUpdate);?></strong><?php echo($lang[15]);?><br />
+		<i><?php echo($lang[16]);?><span><?php echo($averageCycle);?></span><?php echo($lang[17]);?></i>
 	</section>
 	
 	<section class="d-total-episodes">
 		<svg class="dashboard-icons" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 60 60">
 		   <path d="M1168.5,32.8V15a3.006,3.006,0,0,0-3-3h-7V11a3,3,0,1,0-6,0v1h-10V11a3,3,0,1,0-6,0v1h-5a3.006,3.006,0,0,0-3,3V50a3.006,3.006,0,0,0,3,3h28a0.972,0.972,0,0,0,.31-0.062A11.487,11.487,0,0,0,1168.5,32.8Zm-14-21.8a1,1,0,1,1,2,0v4.9a1,1,0,1,1-2,0V11Zm-16,0a1,1,0,1,1,2,0v4.9a1,1,0,1,1-2,0V11Zm-7,40a1,1,0,0,1-1-1V15a1,1,0,0,1,1-1h5v1.9a3,3,0,1,0,6,0V14h10v1.9a3,3,0,1,0,6,0V14h7a1,1,0,0,1,1,1V31.4a11.483,11.483,0,0,0-16.89,8.6h-3.11a1,1,0,0,0-1,1v4a1,1,0,0,0,2,0V42h2.03a11.493,11.493,0,0,0,5,9H1131.5Zm29.5,0a9.5,9.5,0,1,1,9.5-9.5A9.51,9.51,0,0,1,1161,51Zm0.5-9.48V37a1,1,0,0,0-2,0v5a1,1,0,0,0,.38.781l5,4a0.974,0.974,0,0,0,.62.219,1.006,1.006,0,0,0,.78-0.375,0.989,0.989,0,0,0-.16-1.406ZM1141.5,21h-4a1,1,0,0,0-1,1v4a1,1,0,0,0,2,0V23h3A1,1,0,0,0,1141.5,21Zm5,6a1,1,0,0,0,1-1V23h3a1,1,0,0,0,0-2h-4a1,1,0,0,0-1,1v4A1,1,0,0,0,1146.5,27Zm9,0a1,1,0,0,0,1-1V23h3a1,1,0,0,0,0-2h-4a1,1,0,0,0-1,1v4A1,1,0,0,0,1155.5,27Zm-14,3h-4a1,1,0,0,0-1,1v4a1,1,0,0,0,2,0V32h3A1,1,0,0,0,1141.5,30Zm5,6a1,1,0,0,0,1-1V32h3a1,1,0,0,0,0-2h-4a1,1,0,0,0-1,1v4A1,1,0,0,0,1146.5,36Zm-5,4h-4a1,1,0,0,0-1,1v4a1,1,0,0,0,2,0V42h3A1,1,0,0,0,1141.5,40Z" transform="translate(-1120)"/>
 		</svg>
-		<strong class="scale-in-2"><?php echo($t);?></strong>Episodes<br />
-		<i>in total after your first show <br /><span><?php echo($totalYears);?></span> years ago.</i>
+		<strong class="scale-in-2"><?php echo($t);?></strong><?php echo($lang[18]);?><br />
+		<i><?php echo($lang[19]);?><span><?php echo($totalYears);?></span><?php echo($lang[20]);?></i>
 	</section>
 	
 	<section class="total-hours">
 		<svg class="dashboard-icons" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 60 60">
 		   <path id="Path" class="cls-1" d="M830.5,15a1,1,0,0,1-1-1V9a1,1,0,0,1,2,0v5A1,1,0,0,1,830.5,15Zm0,37a1,1,0,0,1-1-1V46a1,1,0,1,1,2,0v5A1,1,0,0,1,830.5,52Zm0-19.586-6.707-6.707a1,1,0,1,1,1.414-1.414l5.293,5.293,9.293-9.293a1,1,0,1,1,1.414,1.414Zm0,20.086A22.5,22.5,0,1,1,853,30,22.525,22.525,0,0,1,830.5,52.5Zm0-43A20.5,20.5,0,1,0,851,30,20.523,20.523,0,0,0,830.5,9.5Zm21,21.5h-5a1,1,0,0,1,0-2h5A1,1,0,0,1,851.5,31Zm-37,0h-5a1,1,0,0,1,0-2h5A1,1,0,0,1,814.5,31Z" transform="translate(-800)"/>
 		</svg>
-		<strong class="scale-in-3"><?php echo($totalHours);?></strong>Hours<br />
-		<i>podcasted, which is <span><?php echo(number_format(($totalHours / 7.88),1));?></span> 'The Hobbit' trilogy combined.</i>
+		<strong class="scale-in-3"><?php echo($totalHours);?></strong><?php echo($lang[21]);?><br />
+		<i><?php echo($lang[22]);?><span><?php echo(number_format(($totalHours / 7.88),1));?></span><?php echo($lang[23]);?></i>
 	</section>
 	
 	<section class="d-file-size">
 		<svg class="dashboard-icons" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 60 60">
 		   <path id="Path" class="cls-1" d="M670,20.389c-8.945,0-18-2.128-18-6.194S661.055,8,670,8s18,2.128,18,6.194S678.945,20.389,670,20.389ZM670,10c-9.767,0-16,2.484-16,4.194s6.233,4.194,16,4.194,16-2.484,16-4.194S679.767,10,670,10Zm0,18.389c-8.945,0-18-2.128-18-6.194a1,1,0,0,1,2,0c0,1.71,6.233,4.194,16,4.194s16-2.484,16-4.194a1,1,0,0,1,2,0C688,26.261,678.945,28.389,670,28.389Zm0,8c-8.945,0-18-2.128-18-6.194a1,1,0,0,1,2,0c0,1.71,6.233,4.194,16,4.194s16-2.484,16-4.194a1,1,0,0,1,2,0C688,34.261,678.945,36.389,670,36.389Zm0,8c-8.945,0-18-2.128-18-6.194a1,1,0,0,1,2,0c0,1.71,6.233,4.194,16,4.194s16-2.484,16-4.194a1,1,0,0,1,2,0C688,42.261,678.945,44.389,670,44.389Zm0,8c-8.945,0-18-2.128-18-6.194a1,1,0,0,1,2,0c0,1.71,6.233,4.194,16,4.194s16-2.484,16-4.194a1,1,0,0,1,2,0C688,50.261,678.945,52.389,670,52.389ZM653,48a1,1,0,0,1-1-1V14a1,1,0,0,1,2,0V47A1,1,0,0,1,653,48Zm34,0a1,1,0,0,1-1-1V14a1,1,0,0,1,2,0V47A1,1,0,0,1,687,48Z" transform="translate(-640)"/>
 		</svg>
-		<strong class="scale-in-4"><?php echo($fileSize);?></strong>KB<br />
-		<i>for RSS file size, including <span><?php echo($totalShownoteLinks);?></span> links <br />in shownotes.</i>
+		<strong class="scale-in-4"><?php echo($fileSize);?></strong><?php echo($lang[24]);?><br />
+		<i><?php echo($lang[25]);?><span><?php echo($totalShownoteLinks);?></span><?php echo($lang[26]);?></i>
 	</section>
 	
 	<section class="d-file-size">
@@ -387,8 +411,8 @@ class my_node extends SimpleXMLElement
 		   <path class="cls-1" d="M509.7,35.262c-4,0-6.4-4.775-6.92-6.209a1.9,1.9,0,0,1-.66-0.7,4.14,4.14,0,0,1-.544-3.366,2.493,2.493,0,0,1,.676-1.015,12.96,12.96,0,0,1,.377-3.1,7.624,7.624,0,0,1,14.141,0,12.916,12.916,0,0,1,.378,3.063,2.264,2.264,0,0,1,.621.852,4.234,4.234,0,0,1-.5,3.563,1.947,1.947,0,0,1-.662.743C516.045,30.609,513.657,35.262,509.7,35.262Zm-6.061-9.856a0.571,0.571,0,0,0-.19.284,2.356,2.356,0,0,0,.43,1.709,1.519,1.519,0,0,1,.713.772c0.014,0.034.026,0.069,0.037,0.106,0.3,1.056,2.344,4.985,5.071,4.985s4.768-3.93,5.072-4.985a1.363,1.363,0,0,1,.655-0.81c0.687-1.259.557-1.772,0.5-1.9a0.95,0.95,0,0,0-.077-0.129,1,1,0,0,1-.712-1.012,11.409,11.409,0,0,0-.3-3.044c-0.036-.123-0.985-3.286-5.138-3.286-4.2,0-5.13,3.258-5.139,3.291a11.39,11.39,0,0,0-.3,3.039,1,1,0,0,1-.622.98h0Zm19.676,22.926H496.71a1,1,0,0,1-1-.989c-0.055-4.976.7-10.368,6.706-12.642a10.331,10.331,0,0,0,3.362-1.985l1.419,1.409a12.1,12.1,0,0,1-4.073,2.447c-3.7,1.4-5.3,4.257-5.41,9.76h24.6c-0.1-5.619-1.7-8.626-5.263-9.974a14.6,14.6,0,0,1-4.107-2.288l1.31-1.512-0.655.756,0.652-.758a12.915,12.915,0,0,0,3.508,1.931c5.99,2.266,6.61,8.423,6.557,12.856A1,1,0,0,1,523.319,48.332Zm-26.319-6h-7a1,1,0,0,1-1-1.011l0-.517c0.034-4.006.072-8.546,5.436-10.575a22.557,22.557,0,0,0,3.2-1.546,13.99,13.99,0,0,1-2.83-4.029,2.005,2.005,0,0,1-.659-0.71,4.154,4.154,0,0,1-.546-3.367,2.521,2.521,0,0,1,.677-1.024,12.963,12.963,0,0,1,.377-3.107,7.027,7.027,0,0,1,7.071-4.777,6.844,6.844,0,0,1,6.937,5.165l-1.955.42a4.86,4.86,0,0,0-4.982-3.585c-4.152,0-5.1,3.165-5.14,3.3a11.318,11.318,0,0,0-.3,3.037,1,1,0,0,1-.616.978,0.563,0.563,0,0,0-.194.293,2.377,2.377,0,0,0,.43,1.714,1.672,1.672,0,0,1,.713.792,0.956,0.956,0,0,1,.037.107,10.973,10.973,0,0,0,3.231,4.051,1,1,0,0,1,.039,1.68,25.843,25.843,0,0,1-4.779,2.48c-3.909,1.479-4.1,4.59-4.139,8.232H497v2Zm33,0h-7v-2h5.984c-0.1-4.038-.662-6.815-4.409-8.232a23.028,23.028,0,0,1-4.81-2.611,1,1,0,0,1,.176-1.718c1.469-.668,2.951-3.275,3.125-3.882a0.956,0.956,0,0,1,.037-0.107,1.665,1.665,0,0,1,.662-0.766,2.34,2.34,0,0,0,.481-1.74,0.522,0.522,0,0,0-.23-0.309,1.082,1.082,0,0,1-.58-0.962,11.461,11.461,0,0,0-.3-3.049c-0.035-.124-0.985-3.289-5.138-3.289a4.641,4.641,0,0,0-4.839,3.562l-1.966-.367a6.615,6.615,0,0,1,6.805-5.194,7.027,7.027,0,0,1,7.071,4.773,12.961,12.961,0,0,1,.378,3.11,2.521,2.521,0,0,1,.677,1.024,4.152,4.152,0,0,1-.545,3.365,1.97,1.97,0,0,1-.659.711,12.066,12.066,0,0,1-2.774,4.005,19.538,19.538,0,0,0,3.141,1.571c5.633,2.132,5.68,7.1,5.717,11.093A1,1,0,0,1,530,42.332Z" transform="translate(-480)"/>
 		</svg>
 		
-		<strong class="scale-in-5"><?php echo($totalHostsNo);?></strong>People<br />
-		<i>showed in the aurthor list.</i>
+		<strong class="scale-in-5"><?php echo($totalHostsNo);?></strong><?php echo($lang[27]);?><br />
+		<i><?php echo($lang[28]);?></i>
 	</section>
 
 	<section class="d-weekday">
@@ -444,7 +468,7 @@ class my_node extends SimpleXMLElement
 					  </g>
 			</svg>
 			<br />
-			<label>The durations of last 10 episodes vs. average duration (<span><?php echo($averageMinutes);?> </span>minutes) in all time.</label>
+			<label><?php echo($lang[37]);?><span><?php echo($averageMinutes);?> </span><?php echo($lang[38]);?></label>
 			
 		</div>
 	</section>
@@ -464,7 +488,7 @@ class my_node extends SimpleXMLElement
 </article>
 
 <aside>
-	<a href='?ep=-1' class="item add-new-item"><h1>Add New Episode</h1></a>
+	<a href='?ep=-1' class="item add-new-item"><h1><?php echo($lang[6]);?></h1></a>
 	<?php echo($itemList);?>
 </aside>
 
