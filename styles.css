@@ -264,7 +264,8 @@ h3{
 	vertical-align: middle;
 	transition: all .1s ease-in;
 }
-h3:before{
+h3:before,
+.settings label:before{
 	content: "#";
 	padding: 0 .3em 0 0;
 	color: #ff2d77;
@@ -331,8 +332,7 @@ input[name=newYear]{
 	right: 0;
 	z-index: 99999;
 }
-input[type=submit],
-.settings select{
+input[type=submit]{
 	width: 100px;
 	height: 32px;
 	display: block;
@@ -351,12 +351,7 @@ input[type=submit],
 	box-shadow: 0px 9px 25px rgba(255,45,119,0.35);
 	opacity: 0;
 }
-.settings select{
-	background: #789;
-	box-shadow: 0px 9px 25px rgba(119,136,153,0.35);	
-}
-input[type=submit]:hover,
-.settings select:hover{
+input[type=submit]:hover{
 	background: #ff55aa;
 	box-shadow: 0px 9px 25px rgba(255,85,170,0.35);
 }
@@ -507,9 +502,10 @@ input[type=submit]:hover,
 	position: relative;
 	top: 25%;
 	transform: translateY(-50%);
-	font-size: 4em;
+	font-size: 2.5em;
 	display: block;
 	line-height: 1.3;
+	text-align: left;
 }
 .settings select{
 	width: auto;
@@ -544,6 +540,27 @@ input[type=submit]:hover,
 .gear-icon-2 path{
 	animation: rotate-2 1.1s ease-out 0s 1 forwards;
 	transform-origin: 50% 50%;
+}
+.settings label{
+	width: 40%;
+	text-align: right;
+	display: inline-block;
+	margin: 0 1% 0 10%;
+}
+.settings-select{
+	text-transform: none;
+	font-size: 1em;
+	font-family: 'Alegreya Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+	background: #789;
+	border-radius: .2em;
+	color: #fff;
+	padding: 0 .5em;
+	box-shadow: 0px 9px 25px rgba(119,136,153,0.35);
+	cursor: pointer;
+}
+.settings-select:hover{
+	box-shadow: 0px 9px 25px rgba(255,45,119,0.35);
+	background: #ff2d77
 }
 /*~Notifications*/
 .notification{

@@ -226,8 +226,9 @@ elseif ($ep == -3) {
 	$navHighlight3 = "highlight";
 	$settingsContent = "
 		<form method='post' action='index.php?ep=-1&notf=1'>
-			<label for='newXMLFile'>$lang[39]</label>
-			<select id='content' name='newXMLFile' class='right-in-3'>
+			<section>
+				<label for='newXMLFile'>$lang[39]</label>
+				<select id='content' name='newXMLFile' class='settings-select right-in-3'>
 	";
 	foreach (glob('*.{rss,xml}', GLOB_BRACE) as $filename) {
 		if ($xmlFileName == $filename) {
@@ -238,15 +239,17 @@ elseif ($ep == -3) {
 		}
 	}
 	$settingsContent .= "
-			</select>
+				</select>
+			</section>
 			<br />
-			<label for='newXMLFile'>$lang[40]</label>
-			<select id='language' name='newLanguage' class='right-in-6'>
+			<section>
+				<label for='newLanguage'>$lang[40]</label>
+				<select id='language' name='newLanguage' class='settings-select right-in-6'>
 
 	";
 	foreach (glob('language/*.php', GLOB_BRACE) as $languageFile) {
-		$path_parts = pathinfo($languageFile);
-		$languageName = $path_parts['filename'];
+		$pathParts = pathinfo($languageFile);
+		$languageName = $pathParts['filename'];
 		if ($language == $languageFile) {
 			$settingsContent .= "<option selected='selected' value='$languageFile'>$languageName</option>";
 		}
@@ -255,7 +258,8 @@ elseif ($ep == -3) {
 		}
 	}
 	$settingsContent .= "
-			</select>
+				</select>
+			</section>
 			<br />
 			<input type='submit' value=$lang[41] class='right-in-10'>
 		</form>
