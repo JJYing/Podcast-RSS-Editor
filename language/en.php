@@ -53,7 +53,7 @@
 	$lang[51]='HH';
 	$lang[52]='MM';
 	$lang[53]='SS';
-	$lang[51]='Settings saved';
-	$lang[52]='Episode updated';
-	$lang[53]='New episode created';	
+	$lang[54]='Settings saved';
+	$lang[55]='Episode updated';
+	$lang[56]='New episode created';	
 ?>

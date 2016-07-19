@@ -462,7 +462,7 @@ class my_node extends SimpleXMLElement
 					  	<text x="200" y="<?php echo($durationChartH[4] + 20);?>" class="duration-chart-text"><?php echo($thisMinutes[4]);?></text>
 					  	<text x="250" y="<?php echo($durationChartH[5] + 20);?>" class="duration-chart-text"><?php echo($thisMinutes[5]);?></text>
 					  	<text x="300" y="<?php echo($durationChartH[6] + 20);?>" class="duration-chart-text"><?php echo($thisMinutes[6]);?></text>
-							<text x="350" y="<?php echo($durationChartH[7] + 20);?>" class="duration-chart-text"><?php echo($thisMinutes[7]);?></text>
+						<text x="350" y="<?php echo($durationChartH[7] + 20);?>" class="duration-chart-text"><?php echo($thisMinutes[7]);?></text>
 					  	<text x="400" y="<?php echo($durationChartH[8] + 20);?>" class="duration-chart-text"><?php echo($thisMinutes[8]);?></text>
 					  	<text x="450" y="<?php echo($durationChartH[9] + 20);?>" class="duration-chart-text"><?php echo($thisMinutes[9]);?></text>	  	
 					  </g>
