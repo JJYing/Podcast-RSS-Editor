@@ -1,4 +1,4 @@
 <?php
 	$xmlFileName = 'example.xml';
-	$language = 'language/en.php';
+	$language = 'language/English.php';
 ?>

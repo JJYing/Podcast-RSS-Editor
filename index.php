@@ -245,12 +245,13 @@ elseif ($ep == -3) {
 
 	";
 	foreach (glob('language/*.php', GLOB_BRACE) as $languageFile) {
-		ereg("([^\/]*)$", $languageFile, $languageName);
+		$path_parts = pathinfo($languageFile);
+		$languageName = $path_parts['filename'];
 		if ($language == $languageFile) {
-			$settingsContent .= "<option selected='selected' value='$languageFile'>$languageName[0]</option>";
+			$settingsContent .= "<option selected='selected' value='$languageFile'>$languageName</option>";
 		}
 		else {
-			$settingsContent .= "<option value='$languageFile'>$languageName[0]</option>";	
+			$settingsContent .= "<option value='$languageFile'>$languageName</option>";	
 		}
 	}
 	$settingsContent .= "
