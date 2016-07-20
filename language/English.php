@@ -27,8 +27,8 @@
 	$lang[25]='for RSS file size, including ';
 	$lang[26]=' links <br />in shownotes.';
 	$lang[27]='People';
-	$lang[28]='showed in the aurthor list.';
-	$lang[29]='';
+	$lang[28]='showed in the aurthor list.<br /> ';
+	$lang[29]=' is the hottest one.';
 	$lang[30]='Sun';
 	$lang[31]='Mon';
 	$lang[32]='Tue';
