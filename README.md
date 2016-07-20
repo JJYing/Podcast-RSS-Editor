@@ -7,6 +7,9 @@ After hosting a design podcast, I started manually updating the RSS feed for eve
 - Put the XML file you wanna edit in the root and select it in the 'Settings' panel and then you can edit / add episodes.
 - There isn't any authentication or security check so please don't put it on the sever in case shit happens.
 
+# Change Log
+- [Jul 20, 2016] Added multi-language support: Simplified Chinese, Traditional Chinese, English
+
 # To-do
 - ~~'Add new item' function~~
 - 'Remove item' function
