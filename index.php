@@ -39,9 +39,9 @@ $xmlDoc = simplexml_load_file($xmlFileName,'my_node');
 if ($_GET['notf']) {
 	$showNotification = "notification-show";
 	switch ($_GET['notf']) {
-		case '1': $notificationContent = $lang[51]; break;
-		case '2': $notificationContent = $lang[52]; break;
-		case '3': $notificationContent = $lang[53]; break;
+		case '1': $notificationContent = $lang[54]; break;
+		case '2': $notificationContent = $lang[55]; break;
+		case '3': $notificationContent = $lang[56]; break;
 	}
 }
 //~Process episodes
