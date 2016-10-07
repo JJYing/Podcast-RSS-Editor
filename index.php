@@ -83,6 +83,7 @@ $currentTimezone =  substr($thisDate[0],-5,5);
 $totalHours = number_format(($totalSeconds / 3600),1);
 $averageMinutes = number_format(($totalSeconds / 60 / ($t-1)),1);
 $sinceLastUpdate = ceil((strtotime(now)-strtotime($thisDate[0]))/86400);
+if ($sinceLastUpdate <= 0) {$sinceLastUpdate = '0';}
 $totalHostsNo = count(array_unique($totalHostsArray));
 $c = array_count_values($totalHostsArray); 
 $mostHost = array_search(max($c), $c);
@@ -227,7 +228,7 @@ elseif ($ep == -3) {
 	$showSettings = "panel-show";
 	$navHighlight3 = "highlight";
 	$settingsContent = "
-		<form method='post' action='index.php?ep=-1&notf=1'>
+		<form method='post' autocomplete='on' action='index.php?ep=-1&notf=1'>
 			<section>
 				<label for='newXMLFile'>$lang[39]</label>
 				<select id='content' name='newXMLFile' class='settings-select right-in-3'>
