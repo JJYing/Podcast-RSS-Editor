@@ -63,4 +63,12 @@
 	$lang[61]='Delete this episode';
 	$lang[62]='Successfully Duplicated';
 	$lang[63]='Episodes';
+	$lang[64]='Complete hosts list: ';	
+	$lang[65]=' years ago';
+	$lang[66]=' months ago';
+	$lang[67]=' weeks ago';
+	$lang[68]=' day ago';
+	$lang[69]=' hours ago';
+	$lang[70]='Just Published';
+	$lang[70]='Yesterday';	
 ?>

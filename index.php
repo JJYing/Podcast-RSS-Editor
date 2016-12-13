@@ -80,6 +80,28 @@ foreach($xmlDoc->channel->item as $thisItem){
 	$thisShownoteLinks[$t] = substr_count($thisItem->description,"</a>");
 	$totalShownoteLinks += $thisShownoteLinks[$t];
 	$thisHostsArray[$t] = explode(",", $thisAuthor[$t]);
+	$thisTillNow[$t] = strtotime("now") - strtotime($thisDate[$t]);
+	if ($thisTillNow[$t] > 31536000) {  // more than 1 year
+		$thisRelativeTime[$t] = number_format(($thisTillNow[$t] / 31536000),0).$lang[65];
+	}
+	elseif ($thisTillNow[$t] > 2628000) { // 1 month - 12 months
+		$thisRelativeTime[$t] = number_format(($thisTillNow[$t] / 2628000),0).$lang[66];
+	}
+	elseif ($thisTillNow[$t] > 1209600) { // 2 weeks - 1 month
+		$thisRelativeTime[$t] = number_format(($thisTillNow[$t] / 604800),0).$lang[67];
+	}
+	elseif ($thisTillNow[$t] > 172800) { // 2 days to 2 weeks
+		$thisRelativeTime[$t] = number_format(($thisTillNow[$t] / 86400),0).$lang[68];
+	}
+	elseif ($thisTillNow[$t] > 86400) { // yesterday
+		$thisRelativeTime[$t] = $lang[70];
+	}
+	elseif ($thisTillNow[$t] > 3600) { // 1 hour to 1 day
+		$thisRelativeTime[$t] = number_format(($thisTillNow[$t] / 3600),0).$lang[69];
+	}
+	else {
+		$thisRelativeTime[$t] = $lang[70];
+	}
 	$totalHostsArray = array_merge($totalHostsArray, $thisHostsArray[$t]);
 	if ($t >= 10) {$jumpto = "#ep-$t";}else {$jumpto = "";} //~Set jump to in item list
 	if ( (int) $_GET['ep'] == $t) {$highLightItem = "highlight";}
@@ -88,7 +110,7 @@ foreach($xmlDoc->channel->item as $thisItem){
 	<div class='item $highLightItem'>
 		<a class='item-link' href='?ep=$t$jumpto' name='ep-$t'>
 			<h1>$thisTitle[$t]</h1>
-			<span class='item-date'>$thisDate2[$t]</span>
+			<span data-balloon='$thisRelativeTime[$t]' data-balloon-pos='right'><span class='item-date'>$thisDate2[$t]</span></span>
 		</a>
 		<div class='item-btns'>
 			<a class='item-duplicate' href='?dupl=d$t' data-balloon='$lang[60]' data-balloon-pos='left'>
@@ -105,7 +127,6 @@ foreach($xmlDoc->channel->item as $thisItem){
 	</div>";
 	$itemList.=$thisContent;
 	$t+=1;
-	$t2+=1;
 }
 
 //~Process summaries
@@ -116,6 +137,7 @@ $sinceLastUpdate = ceil((strtotime(now)-strtotime($thisDate[0]))/86400);
 if ($sinceLastUpdate <= 0) {$sinceLastUpdate = '0';}
 $totalHostsNo = count(array_unique($totalHostsArray));
 $c = array_count_values($totalHostsArray); 
+$hostsList = implode(',  ', array_unique($totalHostsArray));
 $mostHost = array_search(max($c), $c);
 $navDashboard = "
 	<ul>
@@ -479,7 +501,7 @@ class my_node extends SimpleXMLElement
 		</svg>
 		
 		<strong class="scale-in-5"><?php echo($totalHostsNo);?></strong><?php echo($lang[27]);?><br />
-		<i><?php echo($lang[28]);?><span><?php echo($mostHost);?></span><?php echo($lang[29]);?></i>
+		<i><?php echo($lang[28]);?><span  data-balloon="<?php echo($lang[64]);?> <?php echo($hostsList);?>" data-balloon-pos="left" data-balloon-length="medium"><?php echo($mostHost);?></span><?php echo($lang[29]);?></i>
 	</section>
 
 	<section class="d-weekday">
