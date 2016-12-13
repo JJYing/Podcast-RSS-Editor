@@ -8,11 +8,12 @@ After hosting a design podcast, I started manually updating the RSS feed for eve
 - There isn't any authentication or security check so please don't put it on the sever in case shit happens.
 
 # Change Log
+- [Dec 13, 2016] Added ‘duplicate’ and ‘delete’ functions
 - [Jul 20, 2016] Added multi-language support: Simplified Chinese, Traditional Chinese, English.
 
 # To-do
 - ~~'Add new item' function~~
-- 'Remove item' function
+- ~~'Remove item' function~~
 - ~~Cover image field~~
 - ~~Edit in CDATA for item description~~
 - Cover image preview
@@ -26,9 +27,6 @@ After hosting a design podcast, I started manually updating the RSS feed for eve
 - Add default episode template in settings
 
 # Known Issues
-- After editing an episode, the page jumped to still shows the old data.
-- When the duration is XX:XX, it failed to calculate the correct nubmer
-- Timezone issue for 'today'
 - Some people use different tag names in RSS file, like 'itunes:author' vs. 'autor'
 
 # Alternatives
