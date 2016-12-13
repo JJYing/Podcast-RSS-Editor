@@ -35,6 +35,9 @@ input, select, textarea{
 	color: #fff;
 	text-shadow: none;
 }
+.hidden-stuff{
+	display: none;
+}
 /*~Nav*/
 nav{
 	background: linear-gradient(180deg, #f03, #f5a);
@@ -136,14 +139,19 @@ aside{
 	font-weight: 700;
 	line-height: 1.25;
 	display: block;
-	padding: 1em 1.3em;
 	border-bottom: 1px solid rgba(10, 20, 30, .4);
 	cursor: pointer;	
 	transition: all .1s ease-in;
 	position: relative;
 }
+.item .item-link{
+	padding: 1em 1.3em;
+	display: block;
+	width: 94%;
+}
 .add-new-item{
 	text-align: center;
+	padding: 1em 1.3em;
 	border-right: 5px solid #1f222c;
 	text-transform: uppercase;
 }
@@ -210,6 +218,33 @@ h1{
 .item:hover .item-date{
 	color: #fff;
 }
+.item-btns{
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 6%;
+	padding: 8px 0;
+	opacity: 0;
+	transition: all .15s ease-in;
+}
+.item.highlight .item-btns,
+.item:hover .item-btns{
+	opacity: 1;
+}
+.item-btns a{
+	display: block;
+	padding: 2px 0 2px;
+	margin: 3px 0;
+}
+.item-btns svg{
+	fill: #ff2d77;
+	transition: all .15s ease-in;
+}
+.item-btns a:hover svg,
+.item.highlight .item-btns svg{
+	fill:  #fff;
+}
 /* Edit Panel */
 .panel{
 	font-size: 2em;
@@ -227,7 +262,8 @@ h1{
 	line-height: 2;
 }
 .edit-panel form{
-	overflow: scroll;
+	overflow-y: scroll;
+	overflow-x: hidden;
 	height: 100%;
 }
 h2{
@@ -275,12 +311,11 @@ h3:before,
 .edit-panel section:hover h3,
 .edit-panel section:hover h3:before{
 	color: #ff2d77;
-/*	text-indent: .4em;*/
 	font-weight: 400;
 }
 .edit-panel .edit-desc textarea{
-	height: 300px;
-	margin-bottom: 90px;
+	height: 240px;
+	margin-bottom: 70px;
 }
 .edit-panel section span{
 	width: 78%;
@@ -566,17 +601,18 @@ input[type=submit]:hover{
 .notification{
 	background: #ff2d77;
 	color: #fff;
-	display: block;
+	position: fixed;
 	padding: .5em 0;
 	font-weight: 700;
 	font-size: 2em;
 	width: 100%;
 	z-index: 99990;
 	text-align: center;
-	display: none;
+	top: -2rem;
+	/*display: none;*/
 }
 .notification-show{
-	display: block;
+	display: fixed;
 	animation: notification-out 2s ease-out 0s 1 forwards;	
 }
 /*~Animations*/
@@ -637,10 +673,10 @@ input[type=submit]:hover{
 	100%{transform: scale(1);opacity:1}
 }
 @keyframes notification-out {
-	0%{height: auto;}
-	80%{height: auto; padding: .5em 0; display: block;}
-	93%{height: auto; padding: 1em 0; display: block;}
-	100%{height: 0px; display: none; padding: 0}
+	0%{top: 0rem;}
+	70%{top: 0rem;padding: .5em 0;}
+	85%{top: 0rem;padding: 1em 0;}
+	100%{top: -6rem;}
 }
 @keyframes bar-in{
 	0%{transform: scaleY(0)}
@@ -678,6 +714,7 @@ input[type=submit]:hover{
 .nav-dashboard li:before{
 	border-color: rgba(255, 255, 255, .45);
 }
-.item:hover:before{
-	border-color: #fff;
+.item:hover:before,
+.item.highlight:before{
+	opacity: 0;
 }

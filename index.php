@@ -6,9 +6,10 @@
 	<meta name="author" content="JJ Ying" />
 	<meta name="description" content="Podcast RSS Editor" />
 	<title>Podcast RSS Editor</title>
-	<link rel="stylesheet" rev="stylesheet" href="styles.css" type="text/css" media="all" />
+	<link rel="stylesheet" rev="stylesheet" href="assets/styles.css" type="text/css" media="all" />
+	<link rel="stylesheet" rev="stylesheet" href="assets/balloon.min.css" type="text/css" media="all" />	
 	<link rel="shortcut icon" href="assets/favicon.png" />
-	<link href='https://fonts.googleapis.com/css?family=Tulpen+One|Alegreya+Sans:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,100,300,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <?php
@@ -35,6 +36,14 @@ if ($_POST["newLanguage"]) {
 
 $xmlDoc = simplexml_load_file($xmlFileName,'my_node');
 
+
+//~Delete Episode
+if ($_GET["del"]) {
+	$toDelete = (int) $_GET["del"];
+	unset($xmlDoc->channel->item[$toDelete]);
+	$xmlDoc -> asXML($xmlFileName);
+}
+
 //~Notifications
 if ($_GET['notf']) {
 	$showNotification = "notification-show";
@@ -42,6 +51,8 @@ if ($_GET['notf']) {
 		case '1': $notificationContent = $lang[54]; break;
 		case '2': $notificationContent = $lang[55]; break;
 		case '3': $notificationContent = $lang[56]; break;
+		case '4': $notificationContent = $lang[62]; break;
+		case '5': $notificationContent = $lang[59]; break;
 	}
 }
 //~Process episodes
@@ -73,13 +84,31 @@ foreach($xmlDoc->channel->item as $thisItem){
 	if ($t >= 10) {$jumpto = "#ep-$t";}else {$jumpto = "";} //~Set jump to in item list
 	if ( (int) $_GET['ep'] == $t) {$highLightItem = "highlight";}
 	else {$highLightItem = "";}
-	$thisContent = "<a href='?ep=$t$jumpto' class='item $highLightItem' name='ep-$t'><h1>$thisTitle[$t]</h1><span class='item-date'>$thisDate2[$t]</span></a>";
+	$thisContent = "
+	<div class='item $highLightItem'>
+		<a class='item-link' href='?ep=$t$jumpto' name='ep-$t'>
+			<h1>$thisTitle[$t]</h1>
+			<span class='item-date'>$thisDate2[$t]</span>
+		</a>
+		<div class='item-btns'>
+			<a class='item-duplicate' href='?dupl=$t' data-balloon='$lang[60]' data-balloon-pos='left'>
+				<svg width='16' height='16' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+					<use x='0' y='0' width='16' height='16' xlink:href='#icon-duplicate'/>
+				</svg>
+			</a>
+			<a class='item-delete' href='' onclick='return deleteEpisode(\"$t\",\"$thisTitle[$t]\")' data-balloon='$lang[61]' data-balloon-pos='left'>
+				<svg width='16' height='16' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+					<use x='0' y='0' width='16' height='16' xlink:href='#icon-delete'/>
+				</svg>
+			</a>
+		</div>
+	</div>";
 	$itemList.=$thisContent;
 	$t+=1;
 }
 
 //~Process summaries
-$currentTimezone =  substr($thisDate[0],-5,5);
+$currentTimezone = substr($thisDate[0],-5,5);
 $totalHours = number_format(($totalSeconds / 3600),1);
 $averageMinutes = number_format(($totalSeconds / 60 / ($t-1)),1);
 $sinceLastUpdate = ceil((strtotime(now)-strtotime($thisDate[0]))/86400);
@@ -94,10 +123,38 @@ $navDashboard = "
 	</ul>";
 
 
+//~Duplicate Episode
+if ($_GET["dupl"]) {
+	$dupl = (int) $_GET['dupl']; 
+	$newDuplicatedItem = $xmlDoc->channel->addNewItem();
+	$NS = array( 
+	    'itunes' => 'http://www.itunes.com/dtds/podcast-1.0.dtd' 
+	);
+	$xmlDoc->registerXPathNamespace('itunes', $NS['itunes']);
+	$newDuplicatedItem->addChild('title', $thisTitle[$dupl]);
+	$newDuplicatedItem->addChild('description','');
+	$newDuplicatedItem->description->addCData($thisDesc[$dupl]);
+	$newDuplicatedItem->addChild('link', $thisLink[$dupl]);
+	$newDuplicatedItem->addChild('explicit', 'no',$NS['itunes']);
+	$newDuplicatedItem->addChild('guid', $thisLink[$dupl]);
+	$newDuplicatedItem->guid->addAttribute('isPermaLink', 'true');
+	$newDuplicatedItem->addChild('author', $thisAuthor[$dupl]);
+	$newDuplicatedItem->addChild('image', "",$NS['itunes']);
+	$newDuplicatedItem->children('itunes', true)->image->addAttribute('href', $thisImage[$dupl]);
+	$newDuplicatedItem->addChild('pubDate', $thisDate2[$dupl]);
+	$newDuplicatedItem->addChild('enclosure');
+	$newDuplicatedItem->enclosure->addAttribute('type', 'audio/mpeg');
+	$newDuplicatedItem->enclosure->addAttribute('url', $thisFile[$dulp]);
+	$newDuplicatedItem->addChild('duration',  $thisSeconds[$dupl], $NS['itunes']);
+	
+	$xmlDoc -> asXML($xmlFileName);
+	echo "<script>location.href='?ep=0&notf=4';</script>";
+}
+
 //~Initiate
 $ep = (int) $_GET['ep']; 
 if ($ep >= 0) {
-	$ep2 = $t  -$ep;
+	$ep2 = $t  - $ep;
 	$panelTitle = "$lang[43]$ep2$lang[44]";
 	$currentTitle = "$thisTitle[$ep]";
 	$currentDuration = "$thisSeconds[$ep]";
@@ -124,7 +181,6 @@ if ($ep >= 0) {
 	if ($_POST["yy"] =="yes") {	
 	
 		//~Edit existing episodes
-		
 		$navHighlight1 = "highlight";
 		$NS = array( 
 		    'itunes' => 'http://www.itunes.com/dtds/podcast-1.0.dtd' 
@@ -151,7 +207,7 @@ elseif ($ep == -2) {
 
 	//~Show Dashboard
 	
-	$fileSize = 	number_format((filesize($xmlFileName) / 1024),1);
+	$fileSize = number_format((filesize($xmlFileName) / 1024),1);
 	$showDashboard = "panel-show";
 	$fullDuration = strtotime($thisDate[0]) - strtotime($thisDate[($t-1)]);
 	$averageCycle = number_format(($fullDuration / $t / 86400),1);
@@ -190,26 +246,26 @@ elseif ($ep == -2) {
 	}
 	$weekDay = "
 		<ul>
-			<li class='$highestBar[0]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-1'>
-			<rect  class='chart-bar-1' x='0' y='$weekBarY[0]' width='$w1' height='$weekNoHeight[0]'/></svg><label>$lang[30]</label></li>
+			<li class='$highestBar[0]'><div  data-balloon='$totalSunNo $lang[63]' data-balloon-pos='down'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar bar-in-1'>
+			<rect  class='chart-bar-1' x='0' y='$weekBarY[0]' width='$w1' height='$weekNoHeight[0]'/></svg><label>$lang[30]</label></div></li>
 			
-			<li class='$highestBar[1]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-2'>
-			<rect class='chart-bar-1' x='0' y='$weekBarY[1]' width='$w1' height='$weekNoHeight[1]'/></svg><label>$lang[31]</label></li>
+			<li class='$highestBar[1]'><div  data-balloon='$totalMonNo $lang[63]' data-balloon-pos='down'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-2'>
+			<rect class='chart-bar-1' x='0' y='$weekBarY[1]' width='$w1' height='$weekNoHeight[1]'/></svg><label>$lang[31]</label></div></li>
 			
-			<li class='$highestBar[2]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-3'>
-			<rect class='chart-bar-1' x='0' y='$weekBarY[2]' width='$w1' height='$weekNoHeight[2]'/></svg><label>$lang[32]</label></li>
+			<li class='$highestBar[2]'><div  data-balloon='$totalTueNo $lang[63]' data-balloon-pos='down'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-3'>
+			<rect class='chart-bar-1' x='0' y='$weekBarY[2]' width='$w1' height='$weekNoHeight[2]'/></svg><label>$lang[32]</label></div></li>
 			
-			<li class='$highestBar[3]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-4'>
-			<rect class='chart-bar-1' x='0' y='$weekBarY[3]' width='$w1' height='$weekNoHeight[3]'/></svg><label>$lang[33]</label></li>
+			<li class='$highestBar[3]'><div  data-balloon='$totalWedNo $lang[63]' data-balloon-pos='down'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-4'>
+			<rect class='chart-bar-1' x='0' y='$weekBarY[3]' width='$w1' height='$weekNoHeight[3]'/></svg><label>$lang[33]</label></div></li>
 			
-			<li class='$highestBar[4]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-5'>
-			<rect class='chart-bar-1' x='0' y='$weekBarY[4]' width='$w1' height='$weekNoHeight[4]'/></svg><label>$lang[34]</label></li>
+			<li class='$highestBar[4]'><div  data-balloon='$totalThuNo $lang[63]' data-balloon-pos='down'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-5'>
+			<rect class='chart-bar-1' x='0' y='$weekBarY[4]' width='$w1' height='$weekNoHeight[4]'/></svg><label>$lang[34]</label></div></li>
 			
-			<li class='$highestBar[5]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-6'>
-			<rect class='chart-bar-1' x='0' y='$weekBarY[5]' width='$w1' height='$weekNoHeight[5]'/></svg><label>$lang[35]</label></li>
+			<li class='$highestBar[5]'><div  data-balloon='$totalFriNo $lang[63]' data-balloon-pos='down'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-6'>
+			<rect class='chart-bar-1' x='0' y='$weekBarY[5]' width='$w1' height='$weekNoHeight[5]'/></svg><label>$lang[35]</label></div></li>
 			
-			<li class='$highestBar[6]'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-7'>
-			<rect class='chart-bar-1' x='0' y='$weekBarY[6]' width='$w1' height='$weekNoHeight[6]'/></svg><label>$lang[36]</label></li>
+			<li class='$highestBar[6]'><div  data-balloon='$totalSatNo $lang[63]' data-balloon-pos='down'><svg xmlns='http://www.w3.org/2000/svg' width='$w1' height='$barHeight' viewBox='0 0 $w1 $barHeight' class='bar-in-7'>
+			<rect class='chart-bar-1' x='0' y='$weekBarY[6]' width='$w1' height='$weekNoHeight[6]'/></svg><label>$lang[36]</label></div></li>
 		</ul>
 	";
 	$recentDurations = array_slice($thisSeconds, 0, 10);
@@ -308,6 +364,8 @@ else {
 		echo "<script>location.href='".$_SERVER["HTTP_REFERER"]."&notf=3';</script>";
 	}	
 }
+
+
 
 //~Extras
 class my_node extends SimpleXMLElement
@@ -437,7 +495,7 @@ class my_node extends SimpleXMLElement
 				            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
 				    </filter>
 				  </defs>
-				  <path class="average-line" d="M 0 <?php echo($averageLineH);?> l 500 0" stroke-width="1" fill="none" />
+				  <path class="average-line" d="M 0 <?php echo($averageLineH);?>l 500 0" stroke-width="1" fill="none" />
 					<path filter="url(#f3)" class="duration-chart" stroke="#ff2d77" stroke-width="3" fill="none" d="
 						M10 <?php echo($durationChartH[0]);?>
 						C30 <?php echo($durationChartH[0]);?> 40 <?php echo($durationChartH[1]);?> 60 <?php echo($durationChartH[1]);?>
@@ -500,5 +558,34 @@ class my_node extends SimpleXMLElement
 	<?php echo($itemList);?>
 </aside>
 
+<section class="hidden-stuff">
+	<svg id="icon-delete" xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
+	  <path d="M744.5,754h-2V728h2v26Z" transform="translate(-722 -716)"/>
+	  <path d="M736.5,754.077l-2-26,1.994-.154,2,26Z" transform="translate(-722 -716)"/>
+	  <path d="M750.5,754.077l-1.994-.154,2-26,1.994,0.154Z" transform="translate(-722 -716)"/>
+	  <path d="M752.8,761H734.2a3.99,3.99,0,0,1-3.978-3.58L726.506,722.1l1.988-.209,3.717,35.315A2,2,0,0,0,734.2,759h18.6a2,2,0,0,0,1.99-1.791l3.717-35.314,1.988,0.209-3.717,35.315A3.991,3.991,0,0,1,752.8,761Z" transform="translate(-722 -716)"/>
+	  <path d="M761.5,723h-36v-2h36v2Z" transform="translate(-722 -716)"/>
+	  <path d="M752.5,721h-2v-2a1,1,0,0,0-1-1h-12a1,1,0,0,0-1,1v2h-2v-2a3,3,0,0,1,3-3h12a3,3,0,0,1,3,3v2Z" transform="translate(-722 -716)"/>
+	</svg>
+	
+	<svg id="icon-duplicate" xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 38 46">
+	  <path d="M280.5,477h-27a3,3,0,0,1-3-3V439a3,3,0,0,1,3-3h17a1,1,0,0,1,.707.293l12,12a1,1,0,0,1,.293.707v25A3,3,0,0,1,280.5,477Zm-27-39a1,1,0,0,0-1,1v35a1,1,0,0,0,1,1h27a1,1,0,0,0,1-1V449.414L270.086,438H253.5Z" transform="translate(-245.5 -436)"/>
+	  <path d="M282.5,450h-12a1,1,0,0,1-1-1V438h2v10h11v2Z" transform="translate(-245.5 -436)"/>
+	  <path d="M275.5,482h-27a3,3,0,0,1-3-3V444a3,3,0,0,1,3-3h3v2h-3a1,1,0,0,0-1,1v35a1,1,0,0,0,1,1h27a1,1,0,0,0,1-1v-3h2v3A3,3,0,0,1,275.5,482Z" transform="translate(-245.5 -436)"/>
+	</svg>
+</section>
+
+<!-- ~Process Episode Deleting -->
+<script type='text/javascript'>
+	function deleteEpisode(epNumber,epTitle){
+		if(confirm('<?php echo($lang[57]);?>'+epTitle+'<?php echo($lang[58]);?>')){   
+			window.location = '?notf=5&del='+epNumber;
+			return false;
+		}
+		else {
+			history.back();
+		}
+	}
+</script>
 </body>
 </html>
