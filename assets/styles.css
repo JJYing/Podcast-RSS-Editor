@@ -451,7 +451,6 @@ input[type=submit]:hover{
 .dashboard i span,
 .dashboard label span{
 	font-weight: 700;
-	font-style: italic;
 }
 .dashboard .d-weekday,
 .dashboard .d-duration{
