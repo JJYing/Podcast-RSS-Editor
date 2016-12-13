@@ -55,5 +55,12 @@
 	$lang[53]='SS';
 	$lang[54]='Settings saved';
 	$lang[55]='Episode updated';
-	$lang[56]='New episode created';	
+	$lang[56]='New episode created';
+	$lang[57]='Are you sure you want to delete “';
+	$lang[58]='”?';
+	$lang[59]='Say goodbay to that episode, it\'s gone forever.';
+	$lang[60]='Duplicate this episode';
+	$lang[61]='Delete this episode';
+	$lang[62]='Successfully Duplicated';
+	$lang[63]='Episodes';
 ?>
