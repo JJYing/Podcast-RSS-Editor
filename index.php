@@ -39,7 +39,7 @@ $xmlDoc = simplexml_load_file($xmlFileName,'my_node');
 
 //~Delete Episode
 if ($_GET["del"]) {
-	$toDelete = (int) $_GET["del"];
+	$toDelete = (int) substr($_GET["del"],1);
 	unset($xmlDoc->channel->item[$toDelete]);
 	$xmlDoc -> asXML($xmlFileName);
 }
@@ -91,7 +91,7 @@ foreach($xmlDoc->channel->item as $thisItem){
 			<span class='item-date'>$thisDate2[$t]</span>
 		</a>
 		<div class='item-btns'>
-			<a class='item-duplicate' href='?dupl=$t' data-balloon='$lang[60]' data-balloon-pos='left'>
+			<a class='item-duplicate' href='?dupl=d$t' data-balloon='$lang[60]' data-balloon-pos='left'>
 				<svg width='16' height='16' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
 					<use x='0' y='0' width='16' height='16' xlink:href='#icon-duplicate'/>
 				</svg>
@@ -105,6 +105,7 @@ foreach($xmlDoc->channel->item as $thisItem){
 	</div>";
 	$itemList.=$thisContent;
 	$t+=1;
+	$t2+=1;
 }
 
 //~Process summaries
@@ -125,7 +126,7 @@ $navDashboard = "
 
 //~Duplicate Episode
 if ($_GET["dupl"]) {
-	$dupl = (int) $_GET['dupl']; 
+	$dupl = (int) substr($_GET['dupl'],1);
 	$newDuplicatedItem = $xmlDoc->channel->addNewItem();
 	$NS = array( 
 	    'itunes' => 'http://www.itunes.com/dtds/podcast-1.0.dtd' 
@@ -579,7 +580,7 @@ class my_node extends SimpleXMLElement
 <script type='text/javascript'>
 	function deleteEpisode(epNumber,epTitle){
 		if(confirm('<?php echo($lang[57]);?>'+epTitle+'<?php echo($lang[58]);?>')){   
-			window.location = '?notf=5&del='+epNumber;
+			window.location = '?notf=5&del=d'+epNumber;
 			return false;
 		}
 		else {
