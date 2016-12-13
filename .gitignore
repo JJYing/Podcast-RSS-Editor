@@ -7,3 +7,4 @@ type.rss
 *.rss
 rss.xml
 Podcast-RSS-Editor.esproj
+test.php
