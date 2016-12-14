@@ -32,6 +32,7 @@ if ($_POST["newLanguage"]) {
 	$content = file_get_contents('config.php');
 	$content = str_replace($oldLanguage, $_POST["newLanguage"],$content);
 	file_put_contents('config.php',$content);
+	echo "<script>location.href='?ep=0&notf=1';</script>";
 }
 
 $xmlDoc = simplexml_load_file($xmlFileName,'my_node');
