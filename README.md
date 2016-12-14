@@ -1,7 +1,7 @@
 # Podcast RSS Editor
 After hosting a design podcast, I started manually updating the RSS feed for every episode and quickly got sick of the 'tags dancing', so tried a little bit building this simple Podcast RSS editor in PHP for myself.
 
-![](https://raw.githubusercontent.com/JJYing/Podcast-RSS-Editor/master/screenshot.jpg)
+![](https://raw.githubusercontent.com/JJYing/Podcast-RSS-Editor/master/assets/screenshot.jpg)
 
 # Usage
 - Put the XML file you wanna edit in the root and select it in the 'Settings' panel and then you can edit / add episodes.
