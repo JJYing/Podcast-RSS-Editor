@@ -54,6 +54,7 @@ if ($_GET['notf']) {
 		case '3': $notificationContent = $lang[56]; break;
 		case '4': $notificationContent = $lang[62]; break;
 		case '5': $notificationContent = $lang[59]; break;
+		default: $notificationContent = "";
 	}
 }
 //~Process episodes
@@ -202,6 +203,7 @@ if ($ep >= 0) {
 	$currentDate2 = "$thisDate2[$ep]";
 	$currentAuthor = "$thisAuthor[$ep]";
 	$navHighlight1 = "highlight";
+	
 	if ($_POST["yy"] =="yes") {	
 	
 		//~Edit existing episodes
@@ -222,6 +224,7 @@ if ($ep >= 0) {
 		$thisEdit->description = '';
 		$thisEdit->description->addCData($_POST["newDesc"]);		
 		$xmlDoc->asXML($xmlFileName);
+		saveTemplate();
 		echo "<script>
 			location.href='".$_SERVER["HTTP_REFERER"]."&notf=2#ep-$ep"."';
 		</script>";
@@ -384,7 +387,8 @@ else {
 		$newItem->enclosure->addAttribute('type', 'audio/mpeg');
 		$newItem->enclosure->addAttribute('url', $_POST["newFile"]);
 		$newItem->addChild('duration',  $newDuration, $NS['itunes']);
-		$xmlDoc->asXML($xmlFileName);			
+		$xmlDoc->asXML($xmlFileName);
+		saveTemplate();	
 		echo "<script>location.href='".$_SERVER["HTTP_REFERER"]."&notf=3';</script>";
 	}	
 }
@@ -409,6 +413,14 @@ class my_node extends SimpleXMLElement
         return simplexml_import_dom($new, get_class($this));
     }
 }
+//~Template
+function saveTemplate() {
+//	include("template.php");
+//	global $currentTitle, $currentLink, $currentDesc;
+//	$templateOutput = sprintf($templateContent, $currentTitle, $currentLink, $currentDesc);
+//	file_put_contents('template.md', $templateOutput);	
+}
+
 ?>
 <section class="notification <?php echo($showNotification);?>"><?php echo($notificationContent);?></section>
 <nav>
@@ -449,11 +461,29 @@ class my_node extends SimpleXMLElement
 				<input type="text" name="newSS" value="<?php echo $currentSS ?>" /><label for="newSS"><?php echo $lang[53]?></label>
 			</span>
 		</section>
-		<section class="edit-link right-in-5"><h3><?php echo $lang[10]?> </h3><span><input type="text" name="newLink" value="<?php echo $currentLink ?>" /></span></section>
+		<section class="edit-link right-in-5">
+			<h3>
+				<?php echo $lang[10]?> 
+				<?php if ($currentLink) {echo("<em><a target=\"_blank\" href=\"$currentLink\">$lang[72]</a> ⎋</em>");}?>
+			</h3>
+			<span><input type="text" name="newLink" value="<?php echo $currentLink ?>" /></span>
+		</section>
 		<section class="edit-author right-in-6"><h3><?php echo $lang[11]?> </h3><span><input type="text" name="newAuthor" value="<?php echo $currentAuthor ?>" /></span></section>
-		<section class="edit-image right-in-7"><h3><?php echo $lang[12]?> </h3><span><input type="text" name="newImage" value="<?php echo $currentImage ?>" /></span></section>
-		<section class="edit-audio right-in-8"><h3><?php echo $lang[13]?> </h3><span><input type="text" name="newFile" value="<?php echo $currentFile ?>" /></span></section>
+		<section class="edit-image right-in-7">
+			<h3>
+				<?php echo $lang[12]?> 
+				<?php if ($currentImage) {echo("<em><a target=\"_blank\" href=\"$currentImage\">$lang[72]</a> ⎋</em>");}?>
+			</h3>
+			<span><input type="text" name="newImage" value="<?php echo $currentImage ?>" /></span>
+		</section>
+		<section class="edit-audio right-in-8">
+			<h3><?php echo $lang[13]?> <?php if ($currentFile) {echo("<em><a target=\"_blank\" href=\"$currentFile\">$lang[72]</a> ⎋</em>");}?></h3>
+			<span><input type="text" name="newFile" value="<?php echo $currentFile ?>" /></span>
+		</section>
 		<section class="edit-desc right-in-9"><h3><?php echo $lang[14]?> </h3><span><textarea name="newDesc"  /><?php echo $currentDesc ?></textarea></span></section>
+		
+		
+		
 		<footer>
 			<input type="submit" value="<?php echo($lang[41]);?>" class="right-in-10">
 			<input type="checkbox" checked name="yy" value="yes" class="hide"/>	

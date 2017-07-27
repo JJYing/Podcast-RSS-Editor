@@ -70,5 +70,6 @@
 	$lang[68]=' day ago';
 	$lang[69]=' hours ago';
 	$lang[70]='Just Published';
-	$lang[70]='Yesterday';	
+	$lang[71]='Yesterday';	
+	$lang[72]='Open Preview';
 ?>

@@ -313,8 +313,36 @@ h3:before,
 	color: #ff2d77;
 	font-weight: 400;
 }
+h3 em{
+	position: absolute;
+	right: .5em;
+	top: .2em;
+	text-align: left;
+	font-style: normal;
+	transition: all .15s ease-in-out 0s;
+	color: #5a6779;
+}
+.edit-panel section:hover h3 em{
+	opacity: 1;
+	transform: translateX(0);
+}
+h3 em a{
+	font-weight: 400;
+	transform: translateX(-1em);
+	display: inline-block;
+	opacity: 0;
+	transition: all .15s ease-in-out 0s;
+	color: #5a6779;
+}
+h3 em:hover a{
+	color: #ff2d77;
+}
+.edit-panel section:hover h3 em a{
+	opacity: 1;
+	transform: translateX(-.3em);
+}
 .edit-panel .edit-desc textarea{
-	height: 240px;
+	height: 200px;
 	margin-bottom: 70px;
 }
 .edit-panel section span{
