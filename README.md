@@ -8,7 +8,8 @@ After hosting a design podcast, I started manually updating the RSS feed for eve
 - There isn't any authentication or security check so please don't put it on the sever in case shit happens.
 
 # Change Log
-- [Dec 13, 2016] Added ‘duplicate’ and ‘delete’ functions
+- [Jul 27, 2017] Added ‘Preview’ function for episode link, image file and audio file.
+- [Dec 13, 2016] Added ‘duplicate’ and ‘delete’ functions.
 - [Jul 20, 2016] Added multi-language support: Simplified Chinese, Traditional Chinese, English.
 
 # Alternatives
