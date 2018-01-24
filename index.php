@@ -186,12 +186,12 @@ if ($ep >= 0) {
 	$currentHH = floor($thisSeconds[$ep] / 3600);
 	$currentMM = floor($thisSeconds[$ep] / 60 - $currentHH * 60);
 	$currentSS = $thisSeconds[$ep] - $currentHH * 3600 - $currentMM * 60;
-	$currentMonth = gmdate('m',  strtotime($thisDate[$ep]));
-	$currentDay = gmdate('d',  strtotime($thisDate[$ep]));
-	$currentYear = gmdate('Y',  strtotime($thisDate[$ep]));
-	$currentHour = gmdate('H',  strtotime($thisDate[$ep]));
-	$currentMinute = gmdate('i',  strtotime($thisDate[$ep]));
-	$currentSecond = gmdate('s',  strtotime($thisDate[$ep]));
+	$currentMonth = date('m', strtotime($thisDate[$ep]));
+	$currentDay = date('d', strtotime($thisDate[$ep]));
+	$currentYear = date('Y', strtotime($thisDate[$ep]));
+	$currentHour = date('H', strtotime($thisDate[$ep]));
+	$currentMinute = date('i', strtotime($thisDate[$ep]));
+	$currentSecond = date('s', strtotime($thisDate[$ep]));
 	$currentLink = "$thisLink[$ep]";
 	$currentAuthor = "$thisAuthor[$ep]";
 	$currentImage = "$thisImage[$ep]";
@@ -214,7 +214,7 @@ if ($ep >= 0) {
 		$xmlDoc->registerXPathNamespace('itunes', $NS['itunes']);
 		$thisEdit = $xmlDoc->channel->item[$ep];
 		$thisEdit->title = $_POST["newTitle"];
-		$thisEdit->pubDate = gmdate(DATE_RFC2822, gmmktime($_POST["newHour"], $_POST["newMinute"], $_POST["newSecond"], $_POST["newMonth"], $_POST["newDay"], $_POST["newYear"]));
+		$thisEdit->pubDate = date(DATE_RFC2822, mktime($_POST["newHour"], $_POST["newMinute"], $_POST["newSecond"], $_POST["newMonth"], $_POST["newDay"], $_POST["newYear"]));
 		$thisEdit->children('itunes', true)->duration = $_POST["newHH"] * 3600 + $_POST["newMM"] * 60 + $_POST["newSS"];
 		$thisEdit->enclosure->attributes()->url=$_POST["newFile"];
 		$thisEdit->link =  $_POST["newLink"];
@@ -366,7 +366,7 @@ else {
 		//~Add new episode
 		
 		$newDuration = $_POST["newHH"] * 3600 + $_POST["newMM"] * 60 + $_POST["newSS"];
-		$newDate = gmdate(DATE_RFC2822, gmmktime($_POST["newHour"], $_POST["newMinute"], $_POST["newSecond"], $_POST["newMonth"], $_POST["newDay"], $_POST["newYear"]));
+		$newDate = date(DATE_RFC2822, mktime($_POST["newHour"], $_POST["newMinute"], $_POST["newSecond"], $_POST["newMonth"], $_POST["newDay"], $_POST["newYear"]));
 		$NS = array( 
 		    'itunes' => 'http://www.itunes.com/dtds/podcast-1.0.dtd' 
 		);
