@@ -1,5 +1,5 @@
 # Podcast RSS Editor
-After hosting a design podcast, I started manually updating the RSS feed for every episode and quickly got sick of the 'tags dancing', so tried a little bit building this simple Podcast RSS editor in PHP for myself.
+Started a [design podcast](https://anyway.fm/) couple of years ago, and in the first place, I manually updated the RSS feed for every episode and very soon, I got sick of the 'tags dancing', so tried a little bit building this tool, a very simple Podcast RSS editor in PHP for myself.
 
 ![](https://raw.githubusercontent.com/JJYing/Podcast-RSS-Editor/master/assets/screenshot.jpg)
 
