@@ -40,7 +40,7 @@ input, select, textarea{
 }
 /*~Nav*/
 nav{
-	background: linear-gradient(180deg, #f03, #f5a);
+	background: #ff2d77;
 	width: 8%;
 	height: 100%;
 	position: fixed;
