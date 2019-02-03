@@ -27,6 +27,7 @@ ul{
 }
 input, select, textarea{
 	transition: all .1s ease-in;
+	font-family: inherit;
 }
 .hide{
 	opacity: 0;
