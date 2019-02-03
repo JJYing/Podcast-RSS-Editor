@@ -1,3 +1,4 @@
+@charset "utf-8";
 /*Designed by JJ Ying
 http://jjying.com*/
 *{
@@ -11,7 +12,7 @@ http://jjying.com*/
 body{
 	text-rendering: optimizeLegibility;
 	font-size: 62.5%;
-	font-family: 'Alegreya Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+	font-family: 'Quattrocento Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
 	color: #5a6779;
 	line-height: 1;
 	background: #1f222c;
@@ -26,11 +27,12 @@ ul{
 }
 input, select, textarea{
 	transition: all .1s ease-in;
+	font-family: inherit;
 }
 .hide{
 	opacity: 0;
 }
-::selection{ 
+::selection{
 	background: #ff2d77;
 	color: #fff;
 	text-shadow: none;
@@ -40,8 +42,8 @@ input, select, textarea{
 }
 /*~Nav*/
 nav{
-	background: linear-gradient(180deg, #f03, #f5a);
-	width: 8%;
+	background: #ff2d77;
+	width: 120px;
 	height: 100%;
 	position: fixed;
 	left: 0;
@@ -99,7 +101,7 @@ nav>ul li a:hover path{
 	font-size: 1em;
 	line-height: 1.5;
 	color: rgba(255, 255, 255, .5);
-	width: 8%;
+	width: 120px;
 	position: fixed;
 	bottom: 0;
 }
@@ -121,26 +123,21 @@ nav>ul li a:hover path{
 }
 /*~Item List*/
 aside{
-	width: 30%;
-	display: fixed;
 	height: 100%;
-	position: fixed;
 	overflow: scroll;
 	overflow-x: auto;
-	left: 8%;
-	z-index: 9;
 	box-shadow: 0px 10px 25px rgba(41,54,105, .7);
 	background: #232733;
 }
 .item{
 	background: rgba(23, 30, 56, .05);
-	font-size: 1.5em;
+	font-size: .875rem;
 	display: block;
 	font-weight: 700;
 	line-height: 1.25;
 	display: block;
 	border-bottom: 1px solid rgba(10, 20, 30, .4);
-	cursor: pointer;	
+	cursor: pointer;
 	transition: all .1s ease-in;
 	position: relative;
 }
@@ -166,7 +163,7 @@ aside{
 }
 .item.highlight{
 	background: #789;
-	border-bottom: 1px solid rgba(10, 20, 30, .8);	
+	border-bottom: 1px solid rgba(10, 20, 30, .8);
 	box-shadow: inset -4px 13px 29px rgba(44, 55, 66, 0.2);
 }
 .item:hover{
@@ -176,7 +173,7 @@ aside{
 .item.highlight:hover{
 	background: #789;
 	color: #fff;
-	box-shadow: inset -4px 13px 29px rgba(44, 55, 66, 0.2);	
+	box-shadow: inset -4px 13px 29px rgba(44, 55, 66, 0.2);
 }
 h1{
 	font-size: 1.25em;
@@ -248,7 +245,7 @@ h1{
 /* Edit Panel */
 .panel{
 	font-size: 2em;
-	width: 62%;	
+	width: 60vw;
 	background: #fff;
 	position: fixed;
 	right: 0;
@@ -257,9 +254,17 @@ h1{
 	display: inline-block;
 }
 .edit-panel{
-	font-size: 2em;
-	padding: 1.5em 3.5em 1.5em 2.5em;
+	padding: 0 0 0 120px;
 	line-height: 2;
+	display: flex;
+	width: 100%;
+}
+.editor{
+	flex-basis: 66%;
+	padding: 2rem;
+}
+aside{
+	flex-basis: 34%;
 }
 .edit-panel form{
 	overflow-y: scroll;
@@ -273,12 +278,24 @@ h2{
 	border-bottom: 2px solid #f4f7fa;
 	animation: right-in .25s ease-out 0.1s 1 forwards;
 	opacity: 0;
+	position: sticky;
+	top: 0;
+	background: #fff;
+	display: flex;
+	justify-content: space-between;
+	z-index: 99999;
+	/* box-shadow: 0 1rem 1rem #fff; */
 }
-h2:before{
+.h2-title:before{
 	content: "*";
 	font-weight: 900;
 	color: #ff2d77;
 	margin: 0 .2em 0 0;
+}
+.edit-panel .action-btns{
+	display: block;
+	height: 50px;
+	padding: 0 2rem 0 0;
 }
 .edit-panel section{
 	width: 100%;
@@ -287,6 +304,9 @@ h2:before{
 	line-height: 50px;
 	vertical-align: middle;
 	opacity: 0;
+}
+.edit-panel .edit-desc{
+	height: auto;
 }
 h3{
 	display: inline-block;
@@ -343,7 +363,6 @@ h3 em:hover a{
 }
 .edit-panel .edit-desc textarea{
 	height: 200px;
-	margin-bottom: 70px;
 }
 .edit-panel section span{
 	width: 78%;
@@ -385,15 +404,8 @@ input[name=newYear]{
 	width: 30px;
 	display: inline-block;
 }
-.edit-panel footer{
-	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
-	display: block;
-	height: 80px;
-	width: 62%;
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	z-index: 99999;
+.edit-panel form{
+	position: relative;
 }
 input[type=submit]{
 	width: 100px;
@@ -410,7 +422,6 @@ input[type=submit]{
 	cursor: pointer;
 	text-transform: uppercase;
 	transition: all .1s ease-out;
-	margin: 25px auto 0;
 	box-shadow: 0px 9px 25px rgba(255,45,119,0.35);
 	opacity: 0;
 }
@@ -418,11 +429,15 @@ input[type=submit]:hover{
 	background: #ff55aa;
 	box-shadow: 0px 9px 25px rgba(255,85,170,0.35);
 }
+.settings input[type=submit]{
+	margin: 1rem auto 0;
+}
 /*~Dashboard*/
 .dashboard{
-	width: 92%;
+	width: 100%;
+	padding-left: 120px;
 	height: 100%;
-	background: #232733;	
+	background: #232733;
 	z-index: 99;
 	position: absolute;
 	top: 0;
@@ -492,7 +507,7 @@ input[type=submit]:hover{
 .dashboard .d-weekday li{
 	list-style: none;
 	float: left;
-	width: 14.2857%;	
+	width: 14.2857%;
 	position: relative;
 }
 .dashboard .d-weekday li:before{
@@ -544,7 +559,8 @@ input[type=submit]:hover{
 }
 /*~Settings*/
 .settings{
-	width: 92%;
+	width: 100%;
+	padding-left: 120px;
 	height: 100%;
 	background: linear-gradient(160deg, #fff, #e2e2e2);
 	z-index: 99;
@@ -597,7 +613,7 @@ input[type=submit]:hover{
 }
 .gear-icon-1 path{
 	animation: rotate-1 1.1s ease-out 0s 1 forwards;
-	transform-origin: 50% 50%;	
+	transform-origin: 50% 50%;
 }
 .gear-icon-2 path{
 	animation: rotate-2 1.1s ease-out 0s 1 forwards;
@@ -626,21 +642,26 @@ input[type=submit]:hover{
 }
 /*~Notifications*/
 .notification{
-	background: #ff2d77;
-	color: #fff;
 	position: fixed;
-	padding: .5em 0;
 	font-weight: 700;
 	font-size: 2em;
 	width: 100%;
 	z-index: 99990;
 	text-align: center;
-	top: -2rem;
-	/*display: none;*/
+	opacity: 0;
+	pointer-events: none;
 }
 .notification-show{
-	display: fixed;
-	animation: notification-out 2s ease-out 0s 1 forwards;	
+	animation: notification-out 2s ease-out 0s 1 forwards;
+	opacity: 1;
+}
+.notification > .inner{
+	background: #ff2d77;
+	color: #fff;
+	display: inline-block;
+	padding: .5em 2em;
+	border-radius: 3rem;
+	margin-top: 1rem;
 }
 /*~Animations*/
 .right-in-1{animation: right-in .3s ease-out 0s 1 forwards;}
@@ -700,10 +721,10 @@ input[type=submit]:hover{
 	100%{transform: scale(1);opacity:1}
 }
 @keyframes notification-out {
-	0%{top: 0rem;}
-	70%{top: 0rem;padding: .5em 0;}
-	85%{top: 0rem;padding: 1em 0;}
-	100%{top: -6rem;}
+	0%{transform: translateY(0);}
+	80%{transform: translateY(0);}
+	85%{transform: translateY(.5rem);}
+	100%{transform: translateY(-6rem);}
 }
 @keyframes bar-in{
 	0%{transform: scaleY(0)}
@@ -714,11 +735,11 @@ input[type=submit]:hover{
 }
 @keyframes rotate-1 {
 	0%{transform: rotate(0deg); opacity: 0;}
-	100%{transform: rotate(270deg); opacity: 0.5;}
+	100%{transform: rotate(270deg); opacity: .5;}
 }
 @keyframes rotate-2 {
 	0%{transform: rotate(0deg); opacity: 0;}
-	100%{transform: rotate(-160deg); opacity: 0.7;}
+	100%{transform: rotate(-160deg); opacity: .7;}
 }
 /*~Decorations*/
 .item:before,
