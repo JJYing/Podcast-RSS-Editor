@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta content="all" name="robots" />
@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="assets/styles.css"/>
 	<link rel="stylesheet" href="assets/balloon.min.css"/>
 	<link rel="shortcut icon" href="assets/favicon.png" />
-	<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i" rel="stylesheet">
 </head>
 <body>
 <?php
@@ -17,7 +17,6 @@ include("config.php");
 include($language);
 
 //~Load the XML file
-
 if ($_POST["newXMLFile"]) {
 	$oldXMLFileName = $xmlFileName;
 	$xmlFileName = $_POST["newXMLFile"];
@@ -305,6 +304,7 @@ elseif ($ep == -2) {
 	$recentDurations = array_slice($thisSeconds, 0, 10);
 	$recentLongest = max($recentDurations);
 	$averageLineH = $barHeight -10 - ( $barHeight - 16 ) * $averageMinutes / $recentLongest * 60;
+	$averageLineH = 30;
 	for ($z = 0; $z < 10; $z++) {
 		$durationChartH[$z] = $barHeight -10 - ( $barHeight - 16 ) * $recentDurations[$z] / $recentLongest;
 		if ($recentDurations[$z] == $recentLongest) {
@@ -422,7 +422,8 @@ class my_node extends SimpleXMLElement
 ?>
 
 <!--页面正文-->
-<section class="notification <?php echo($showNotification);?>"><?php echo($notificationContent);?></section>
+<section class="notification <?php echo($showNotification);?>"><div class="inner"><?php echo($notificationContent);?></div></section>
+
 <nav>
 	<a href="?ep=-1" class="logo"><?php echo($lang[0]);?></a>
 		<ul>
@@ -440,57 +441,64 @@ class my_node extends SimpleXMLElement
 </nav>
 
 <article class="panel edit-panel">
-	<h2 class="panel-title right-in-1"><?php echo $panelTitle ?></h2>
-	<form action="index.php?ep=<?php echo $ep?>" method="post">
-		<section class="edit-title right-in-2"><h3><?php echo $lang[7]?> </h3><span><input type="text" name="newTitle" value="<?php echo $currentTitle ?>" /></span></section>
-		<section class="edit-date right-in-3">
-			<h3><?php echo $lang[8]?> </h3>
-			<span>
-				<input type="text" name="newMonth" value="<?php echo $currentMonth ?>" /><label for="newMonth"><?php echo $lang[45]?></label>
-				<input type="text" name="newDay" value="<?php echo $currentDay ?>" /><label for="newDay"><?php echo $lang[46]?></label>
-				<input type="text" name="newYear" value="<?php echo $currentYear ?>" /><label for="newYear"><?php echo $lang[47]?></label>
-				<input type="text" name="newHour" value="<?php echo $currentHour ?>" /><label for="newHour"><?php echo $lang[48]?></label>
-				<input type="text" name="newMinute" value="<?php echo $currentMinute ?>" /><label for="newMinute"><?php echo $lang[49]?></label>
-				<input type="text" name="newSecond" value="<?php echo $currentSecond ?>" /><label for="newSecond"><?php echo $lang[50]?></label>
-			</span></section>
-		<section class="edit-duration right-in-4">
-			<h3><?php echo $lang[9]?> </h3>
-			<span>
-				<input type="text" name="newHH" value="<?php echo $currentHH ?>" /><label for="newHH"><?php echo $lang[51]?></label>
-				<input type="text" name="newMM" value="<?php echo $currentMM ?>" /><label for="newMM"><?php echo $lang[52]?></label>
-				<input type="text" name="newSS" value="<?php echo $currentSS ?>" /><label for="newSS"><?php echo $lang[53]?></label>
-			</span>
-		</section>
-		<section class="edit-link right-in-5">
-			<h3>
-				<?php echo $lang[10]?>
-				<?php if ($currentLink) {echo("<em><a target=\"_blank\" href=\"$currentLink\">$lang[72]</a> ⎋</em>");}?>
-			</h3>
-			<span><input type="text" name="newLink" value="<?php echo $currentLink ?>" /></span>
-		</section>
-		<section class="edit-author right-in-6"><h3><?php echo $lang[11]?> </h3><span><input type="text" name="newAuthor" value="<?php echo $currentAuthor ?>" /></span></section>
-		<section class="edit-image right-in-7">
-			<h3>
-				<?php echo $lang[12]?>
-				<?php if ($currentImage) {echo("<em><a target=\"_blank\" href=\"$currentImage\">$lang[72]</a> ⎋</em>");}?>
-			</h3>
-			<span><input type="text" name="newImage" value="<?php echo $currentImage ?>" /></span>
-		</section>
-		<section class="edit-audio right-in-8">
-			<h3><?php echo $lang[13]?> <?php if ($currentFile) {echo("<em><a target=\"_blank\" href=\"$currentFile\">$lang[72]</a> ⎋</em>");}?></h3>
-			<span><input type="text" name="newFile" value="<?php echo $currentFile ?>" /></span>
-		</section>
-		<section class="edit-desc right-in-9"><h3><?php echo $lang[14]?> </h3><span><textarea name="newDesc"  /><?php echo $currentDesc ?></textarea></span></section>
+	<aside>
+		<a href='?ep=-1' class="item add-new-item"><h1><?php echo($lang[6]);?></h1></a>
+		<?php echo($itemList);?>
+	</aside>
+	<div class="editor">
+
+		<form action="index.php?ep=<?php echo $ep?>" method="post">
+			<h2 class="panel-title right-in-1">
+				<div class="h2-title"><?php echo $panelTitle ?></div>
+				<div class="action-btns">
+					<input type="submit" value="<?php echo($lang[41]);?>" class="right-in-10">
+					<input type="checkbox" checked name="yy" value="yes" class="hide"/>
+				</div>
+			</h2>
+			<section class="edit-title right-in-2"><h3><?php echo $lang[7]?> </h3><span><input type="text" name="newTitle" value="<?php echo $currentTitle ?>" /></span></section>
+			<section class="edit-date right-in-3">
+				<h3><?php echo $lang[8]?> </h3>
+				<span>
+					<input type="text" name="newMonth" value="<?php echo $currentMonth ?>" /><label for="newMonth"><?php echo $lang[45]?></label>
+					<input type="text" name="newDay" value="<?php echo $currentDay ?>" /><label for="newDay"><?php echo $lang[46]?></label>
+					<input type="text" name="newYear" value="<?php echo $currentYear ?>" /><label for="newYear"><?php echo $lang[47]?></label>
+					<input type="text" name="newHour" value="<?php echo $currentHour ?>" /><label for="newHour"><?php echo $lang[48]?></label>
+					<input type="text" name="newMinute" value="<?php echo $currentMinute ?>" /><label for="newMinute"><?php echo $lang[49]?></label>
+					<input type="text" name="newSecond" value="<?php echo $currentSecond ?>" /><label for="newSecond"><?php echo $lang[50]?></label>
+				</span></section>
+			<section class="edit-duration right-in-4">
+				<h3><?php echo $lang[9]?> </h3>
+				<span>
+					<input type="text" name="newHH" value="<?php echo $currentHH ?>" /><label for="newHH"><?php echo $lang[51]?></label>
+					<input type="text" name="newMM" value="<?php echo $currentMM ?>" /><label for="newMM"><?php echo $lang[52]?></label>
+					<input type="text" name="newSS" value="<?php echo $currentSS ?>" /><label for="newSS"><?php echo $lang[53]?></label>
+				</span>
+			</section>
+			<section class="edit-link right-in-5">
+				<h3>
+					<?php echo $lang[10]?>
+					<?php if ($currentLink) {echo("<em><a target=\"_blank\" href=\"$currentLink\">$lang[72]</a> ⎋</em>");}?>
+				</h3>
+				<span><input type="text" name="newLink" value="<?php echo $currentLink ?>" /></span>
+			</section>
+			<section class="edit-author right-in-6"><h3><?php echo $lang[11]?> </h3><span><input type="text" name="newAuthor" value="<?php echo $currentAuthor ?>" /></span></section>
+			<section class="edit-image right-in-7">
+				<h3>
+					<?php echo $lang[12]?>
+					<?php if ($currentImage) {echo("<em><a target=\"_blank\" href=\"$currentImage\">$lang[72]</a> ⎋</em>");}?>
+				</h3>
+				<span><input type="text" name="newImage" value="<?php echo $currentImage ?>" /></span>
+			</section>
+			<section class="edit-audio right-in-8">
+				<h3><?php echo $lang[13]?> <?php if ($currentFile) {echo("<em><a target=\"_blank\" href=\"$currentFile\">$lang[72]</a> ⎋</em>");}?></h3>
+				<span><input type="text" name="newFile" value="<?php echo $currentFile ?>" /></span>
+			</section>
+			<section class="edit-desc right-in-9"><h3><?php echo $lang[14]?> </h3><span><textarea name="newDesc"  /><?php echo $currentDesc ?></textarea></span></section>
 
 
-
-		<footer>
-			<input type="submit" value="<?php echo($lang[41]);?>" class="right-in-10">
-			<input type="checkbox" checked name="yy" value="yes" class="hide"/>
-		</footer>
-	</form>
+		</form>
+	</div>
 </article>
-
 
 
 <article class="dashboard panel-in <?php echo($showDashboard);?>">
@@ -602,11 +610,6 @@ class my_node extends SimpleXMLElement
 	</section>
 	<span><?php echo($settingsContent);?></span>
 </article>
-
-<aside>
-	<a href='?ep=-1' class="item add-new-item"><h1><?php echo($lang[6]);?></h1></a>
-	<?php echo($itemList);?>
-</aside>
 
 <section class="hidden-stuff">
 	<svg id="icon-delete" xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
