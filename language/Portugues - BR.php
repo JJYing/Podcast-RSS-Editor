@@ -11,8 +11,8 @@
 	$lang[9]='Duração:';
 	$lang[10]='Link:';
 	$lang[11]='Autor:';
-	$lang[12]='Imagem de capa:';
-	$lang[13]='Arquivo de áudio:';
+	$lang[12]='Capa URL:';
+	$lang[13]='Áudio URL:';
 	$lang[14]='Descrição:';
 	$lang[15]='Dias';
 	$lang[16]='desde o último episódio, e ciclo de atualização médio é de ';
