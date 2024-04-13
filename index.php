@@ -13,6 +13,8 @@
 </head>
 <body>
 <?php
+error_reporting(E_ALL ^ E_WARNING);
+
 include("config.php");
 include($language);
 
@@ -139,7 +141,7 @@ $latestDate  = strtotime(date('Y-m-d', strtotime($thisDate[0]))); // 取最新�
 $currentTimezone = substr($thisDate[0],-5,5);
 $totalHours = number_format(($totalSeconds / 3600),1);
 $averageMinutes = number_format(($totalSeconds / 60 / ($t-1)),1);
-$sinceLastUpdate = ceil((strtotime(now)-strtotime($thisDate[0]))/86400);
+$sinceLastUpdate = ceil((strtotime('now')-strtotime($thisDate[0]))/86400);
 if ($sinceLastUpdate <= 0) {$sinceLastUpdate = '0';}
 $totalHostsNo = count(array_unique($totalHostsArray));
 $c = array_count_values($totalHostsArray);
